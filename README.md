@@ -1,0 +1,1 @@
+# Recepcja-Testowanie-Oprogramowania-Gr.1

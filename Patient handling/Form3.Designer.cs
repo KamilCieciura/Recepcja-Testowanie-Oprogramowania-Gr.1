@@ -103,6 +103,7 @@
             button_cancel_add_patient_form.TabIndex = 16;
             button_cancel_add_patient_form.Text = "Cancel";
             button_cancel_add_patient_form.UseVisualStyleBackColor = true;
+            button_cancel_add_patient_form.Click += button_cancel_add_patient_form_Click;
             // 
             // Form_edit_patient
             // 

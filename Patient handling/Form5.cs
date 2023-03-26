@@ -1,5 +1,4 @@
-﻿using Patient_handling;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Patient_Handling
+namespace Patient_handling
 {
-    public partial class Form_accept_remove : Form
+    public partial class Form_filter_data : Form
     {
-        public Form_accept_remove()
+        public Form_filter_data()
         {
             InitializeComponent();
         }
 
-        private void button_no_remove_patient_accept_form_Click(object sender, EventArgs e)
+        private void button_cancel_add_patient_form_Click(object sender, EventArgs e)
         {
             Form_reception_menu formReceptionMenu = new Form_reception_menu();
             formReceptionMenu.Show();

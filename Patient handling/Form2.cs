@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Patient_handling;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,8 +25,9 @@ namespace Patient_Handling
 
         private void button_cancel_add_patient_form_Click(object sender, EventArgs e)
         {
-            Form_menu form = new Form_menu();
-            form.ShowDialog();
+            Form_reception_menu formReceptionMenu = new Form_reception_menu();
+            formReceptionMenu.Show();
+            this.Hide();
      
         }
     }

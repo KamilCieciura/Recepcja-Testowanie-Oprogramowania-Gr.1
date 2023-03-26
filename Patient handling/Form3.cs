@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Patient_handling;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace Patient_Handling
         public Form_edit_patient()
         {
             InitializeComponent();
+        }
+
+        private void button_cancel_add_patient_form_Click(object sender, EventArgs e)
+        {
+            Form_reception_menu formMenuReception = new Form_reception_menu();
+            formMenuReception.Show();
+            this.Hide();
         }
     }
 }

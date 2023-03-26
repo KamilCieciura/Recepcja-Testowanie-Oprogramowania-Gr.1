@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button_add_patient_form_data = new Button();
-            textBox_First_name = new TextBox();
-            textBox_last_name = new TextBox();
-            numericUpDown_age = new NumericUpDown();
-            textBox_phone_number = new TextBox();
-            textBox_adress_email = new TextBox();
-            textBox_social_security_number = new TextBox();
+            button_add_patient_form = new Button();
+            textBox_form_add_patient_First_name = new TextBox();
+            textBox_form_add_patient_last_name = new TextBox();
+            numericUpDown_form_add_patient_age = new NumericUpDown();
+            textBox_form_add_patient_phone_number = new TextBox();
+            textBox_form_add_patient_adress_email = new TextBox();
+            textBox_form_add_patient_social_security_number = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -42,59 +42,61 @@
             label5 = new Label();
             label6 = new Label();
             button_cancel_add_patient_form = new Button();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown_age).BeginInit();
+            label7 = new Label();
+            textBox_form_add_patient_residential_adress = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown_form_add_patient_age).BeginInit();
             SuspendLayout();
             // 
-            // button_add_patient_form_data
+            // button_add_patient_form
             // 
-            button_add_patient_form_data.Location = new Point(46, 313);
-            button_add_patient_form_data.Name = "button_add_patient_form_data";
-            button_add_patient_form_data.Size = new Size(74, 23);
-            button_add_patient_form_data.TabIndex = 0;
-            button_add_patient_form_data.Text = "Add";
-            button_add_patient_form_data.UseVisualStyleBackColor = true;
+            button_add_patient_form.Location = new Point(46, 362);
+            button_add_patient_form.Name = "button_add_patient_form";
+            button_add_patient_form.Size = new Size(74, 23);
+            button_add_patient_form.TabIndex = 0;
+            button_add_patient_form.Text = "Add";
+            button_add_patient_form.UseVisualStyleBackColor = true;
             // 
-            // textBox_First_name
+            // textBox_form_add_patient_First_name
             // 
-            textBox_First_name.Location = new Point(46, 50);
-            textBox_First_name.Name = "textBox_First_name";
-            textBox_First_name.Size = new Size(159, 23);
-            textBox_First_name.TabIndex = 1;
+            textBox_form_add_patient_First_name.Location = new Point(46, 50);
+            textBox_form_add_patient_First_name.Name = "textBox_form_add_patient_First_name";
+            textBox_form_add_patient_First_name.Size = new Size(159, 23);
+            textBox_form_add_patient_First_name.TabIndex = 1;
             // 
-            // textBox_last_name
+            // textBox_form_add_patient_last_name
             // 
-            textBox_last_name.Location = new Point(46, 97);
-            textBox_last_name.Name = "textBox_last_name";
-            textBox_last_name.Size = new Size(159, 23);
-            textBox_last_name.TabIndex = 2;
+            textBox_form_add_patient_last_name.Location = new Point(46, 97);
+            textBox_form_add_patient_last_name.Name = "textBox_form_add_patient_last_name";
+            textBox_form_add_patient_last_name.Size = new Size(159, 23);
+            textBox_form_add_patient_last_name.TabIndex = 2;
             // 
-            // numericUpDown_age
+            // numericUpDown_form_add_patient_age
             // 
-            numericUpDown_age.Location = new Point(46, 139);
-            numericUpDown_age.Name = "numericUpDown_age";
-            numericUpDown_age.Size = new Size(159, 23);
-            numericUpDown_age.TabIndex = 3;
+            numericUpDown_form_add_patient_age.Location = new Point(46, 139);
+            numericUpDown_form_add_patient_age.Name = "numericUpDown_form_add_patient_age";
+            numericUpDown_form_add_patient_age.Size = new Size(159, 23);
+            numericUpDown_form_add_patient_age.TabIndex = 3;
             // 
-            // textBox_phone_number
+            // textBox_form_add_patient_phone_number
             // 
-            textBox_phone_number.Location = new Point(45, 182);
-            textBox_phone_number.Name = "textBox_phone_number";
-            textBox_phone_number.Size = new Size(160, 23);
-            textBox_phone_number.TabIndex = 4;
+            textBox_form_add_patient_phone_number.Location = new Point(45, 182);
+            textBox_form_add_patient_phone_number.Name = "textBox_form_add_patient_phone_number";
+            textBox_form_add_patient_phone_number.Size = new Size(160, 23);
+            textBox_form_add_patient_phone_number.TabIndex = 4;
             // 
-            // textBox_adress_email
+            // textBox_form_add_patient_adress_email
             // 
-            textBox_adress_email.Location = new Point(46, 228);
-            textBox_adress_email.Name = "textBox_adress_email";
-            textBox_adress_email.Size = new Size(159, 23);
-            textBox_adress_email.TabIndex = 5;
+            textBox_form_add_patient_adress_email.Location = new Point(46, 228);
+            textBox_form_add_patient_adress_email.Name = "textBox_form_add_patient_adress_email";
+            textBox_form_add_patient_adress_email.Size = new Size(159, 23);
+            textBox_form_add_patient_adress_email.TabIndex = 5;
             // 
-            // textBox_social_security_number
+            // textBox_form_add_patient_social_security_number
             // 
-            textBox_social_security_number.Location = new Point(45, 275);
-            textBox_social_security_number.Name = "textBox_social_security_number";
-            textBox_social_security_number.Size = new Size(160, 23);
-            textBox_social_security_number.TabIndex = 6;
+            textBox_form_add_patient_social_security_number.Location = new Point(45, 324);
+            textBox_form_add_patient_social_security_number.Name = "textBox_form_add_patient_social_security_number";
+            textBox_form_add_patient_social_security_number.Size = new Size(160, 23);
+            textBox_form_add_patient_social_security_number.TabIndex = 6;
             // 
             // label1
             // 
@@ -144,7 +146,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(45, 257);
+            label6.Location = new Point(45, 306);
             label6.Name = "label6";
             label6.Size = new Size(127, 15);
             label6.TabIndex = 12;
@@ -152,7 +154,7 @@
             // 
             // button_cancel_add_patient_form
             // 
-            button_cancel_add_patient_form.Location = new Point(131, 313);
+            button_cancel_add_patient_form.Location = new Point(131, 362);
             button_cancel_add_patient_form.Name = "button_cancel_add_patient_form";
             button_cancel_add_patient_form.Size = new Size(74, 23);
             button_cancel_add_patient_form.TabIndex = 13;
@@ -160,11 +162,30 @@
             button_cancel_add_patient_form.UseVisualStyleBackColor = true;
             button_cancel_add_patient_form.Click += button_cancel_add_patient_form_Click;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(48, 257);
+            label7.Name = "label7";
+            label7.Size = new Size(100, 15);
+            label7.TabIndex = 15;
+            label7.Text = "Residential adress";
+            // 
+            // textBox_form_add_patient_residential_adress
+            // 
+            textBox_form_add_patient_residential_adress.Location = new Point(43, 274);
+            textBox_form_add_patient_residential_adress.Name = "textBox_form_add_patient_residential_adress";
+            textBox_form_add_patient_residential_adress.Size = new Size(160, 23);
+            textBox_form_add_patient_residential_adress.TabIndex = 14;
+            textBox_form_add_patient_residential_adress.TextChanged += textBox1_TextChanged;
+            // 
             // Form_add_patient
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(246, 360);
+            ClientSize = new Size(246, 404);
+            Controls.Add(label7);
+            Controls.Add(textBox_form_add_patient_residential_adress);
             Controls.Add(button_cancel_add_patient_form);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -172,29 +193,29 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox_social_security_number);
-            Controls.Add(textBox_adress_email);
-            Controls.Add(textBox_phone_number);
-            Controls.Add(numericUpDown_age);
-            Controls.Add(textBox_last_name);
-            Controls.Add(textBox_First_name);
-            Controls.Add(button_add_patient_form_data);
+            Controls.Add(textBox_form_add_patient_social_security_number);
+            Controls.Add(textBox_form_add_patient_adress_email);
+            Controls.Add(textBox_form_add_patient_phone_number);
+            Controls.Add(numericUpDown_form_add_patient_age);
+            Controls.Add(textBox_form_add_patient_last_name);
+            Controls.Add(textBox_form_add_patient_First_name);
+            Controls.Add(button_add_patient_form);
             Name = "Form_add_patient";
             Text = "Add new patient";
-            ((System.ComponentModel.ISupportInitialize)numericUpDown_age).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown_form_add_patient_age).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button_add_patient_form_data;
-        private TextBox textBox_First_name;
-        private TextBox textBox_last_name;
-        private NumericUpDown numericUpDown_age;
-        private TextBox textBox_phone_number;
-        private TextBox textBox_adress_email;
-        private TextBox textBox_social_security_number;
+        private Button button_add_patient_form;
+        private TextBox textBox_form_add_patient_First_name;
+        private TextBox textBox_form_add_patient_last_name;
+        private NumericUpDown numericUpDown_form_add_patient_age;
+        private TextBox textBox_form_add_patient_phone_number;
+        private TextBox textBox_form_add_patient_adress_email;
+        private TextBox textBox_form_add_patient_social_security_number;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -202,5 +223,7 @@
         private Label label5;
         private Label label6;
         private Button button_cancel_add_patient_form;
+        private Label label7;
+        private TextBox textBox_form_add_patient_residential_adress;
     }
 }

@@ -22,7 +22,7 @@ namespace Patient_handling
             Form_reception_menu formReceptionMenu = new Form_reception_menu();
             formReceptionMenu.Show();
             this.Hide();
-            
+
         }
     }
 }

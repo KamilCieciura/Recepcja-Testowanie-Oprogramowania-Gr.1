@@ -28,7 +28,12 @@ namespace Patient_Handling
             Form_reception_menu formReceptionMenu = new Form_reception_menu();
             formReceptionMenu.Show();
             this.Hide();
-     
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

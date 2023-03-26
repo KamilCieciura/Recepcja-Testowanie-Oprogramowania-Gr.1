@@ -20,6 +20,9 @@ namespace Patient_handling
             Form_add_patient formAddPatient = new Form_add_patient();
             formAddPatient.Show();
             this.Hide();
+
+
+            
         }
 
         private void button_menu_edit_patient_Click(object sender, EventArgs e)

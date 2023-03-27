@@ -1,9 +1,11 @@
 using Patient_Handling;
+using System.ComponentModel;
 
 namespace Patient_handling
 {
     public partial class Form_reception_menu : Form
     {
+        public BindingList<Patient> Patients { get; set; } = new BindingList<Patient>();
         public Form_reception_menu()
         {
             InitializeComponent();
@@ -13,16 +15,21 @@ namespace Patient_handling
 
 
             comboBox_menu_sort_data.Items.AddRange(listaStringow.ToArray());
+            dataGridView_patients.DataSource = Patients;
+        }
+        public void AddPatient(Patient patient)
+        {
+            Patients.Add(patient);
         }
 
         private void button_menu_add_patient_Click(object sender, EventArgs e)
         {
-            Form_add_patient formAddPatient = new Form_add_patient();
+            Form_add_patient formAddPatient = new Form_add_patient(this);
             formAddPatient.Show();
             this.Hide();
 
 
-            
+
         }
 
         private void button_menu_edit_patient_Click(object sender, EventArgs e)
@@ -44,6 +51,16 @@ namespace Patient_handling
             Form_accept_remove formAcceptRemove = new Form_accept_remove();
             formAcceptRemove.Show();
             this.Hide();
+        }
+
+        private void Form_reception_menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView_patients_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

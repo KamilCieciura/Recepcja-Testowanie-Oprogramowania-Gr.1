@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -45,6 +46,30 @@ namespace Patient_Handling
 
         private void button_add_patient_form_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(textBox_form_add_patient_First_name.Text) ||
+                string.IsNullOrEmpty(textBox_form_add_patient_last_name.Text) ||
+                string.IsNullOrEmpty(numericUpDown_form_add_patient_age.Text) ||
+                string.IsNullOrEmpty(textBox_form_add_patient_phone_number.Text) ||
+                string.IsNullOrEmpty(textBox_form_add_patient_adress_email.Text) ||
+                string.IsNullOrEmpty(textBox_form_add_patient_residential_adress.Text) ||
+                string.IsNullOrEmpty(textBox_form_add_patient_social_security_number.Text))
+            {
+                MessageBox.Show("Wszystkie pola muszą być wypełnione.");
+                return;
+            }
+
+            if (!Regex.IsMatch(textBox_form_add_patient_phone_number.Text, @"^\+?[0-9]{3}-?[0-9]{3}-?[0-9]{3}$"))
+            {
+                MessageBox.Show("Numer telefonu musi składać się z dziewięciu cyfr.");
+                return;
+            }
+
+            if (!Regex.IsMatch(textBox_form_add_patient_adress_email.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                MessageBox.Show("Adres email jest nieprawidłowy.");
+                return;
+            }
+
             Patient newPatient = new Patient
             {
                 FirstName = textBox_form_add_patient_First_name.Text,

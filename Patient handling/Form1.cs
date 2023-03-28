@@ -34,9 +34,20 @@ namespace Patient_handling
 
         private void button_menu_edit_patient_Click(object sender, EventArgs e)
         {
-            Form_edit_patient formEditPatientData = new Form_edit_patient();
-            formEditPatientData.Show();
-            this.Hide();
+            if (dataGridView_patients.CurrentRow != null)
+            {
+                Patient selectedPatient = (Patient)dataGridView_patients.CurrentRow.DataBoundItem;
+                Form_edit_patient formEditPatientData = new Form_edit_patient(selectedPatient);
+
+                if (formEditPatientData.ShowDialog() == DialogResult.OK)
+                {
+                    dataGridView_patients.Refresh();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a patient to edit.");
+            }
         }
 
         private void button_menu_filter_data_Click(object sender, EventArgs e)

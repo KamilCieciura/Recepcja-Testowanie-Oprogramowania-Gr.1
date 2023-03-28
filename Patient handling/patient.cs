@@ -15,5 +15,6 @@ namespace Patient_handling
         public string EmailAddress { get; set; }
         public string ResidentialAddress { get; set; }
         public string SocialSecurityNumber { get; set; }
+        public string Status { get; set; }
     }
 }

@@ -48,7 +48,7 @@ namespace Patient_Handling
         {
             if (string.IsNullOrEmpty(textBox_form_add_patient_First_name.Text) ||
                 string.IsNullOrEmpty(textBox_form_add_patient_last_name.Text) ||
-                string.IsNullOrEmpty(numericUpDown_form_add_patient_age.Text) ||
+                string.IsNullOrEmpty(dateTimePicker_form_add_patient_birthdate.Text) ||
                 string.IsNullOrEmpty(textBox_form_add_patient_phone_number.Text) ||
                 string.IsNullOrEmpty(textBox_form_add_patient_adress_email.Text) ||
                 string.IsNullOrEmpty(textBox_form_add_patient_residential_adress.Text) ||
@@ -74,7 +74,7 @@ namespace Patient_Handling
             {
                 FirstName = textBox_form_add_patient_First_name.Text,
                 LastName = textBox_form_add_patient_last_name.Text,
-                Age = int.Parse(numericUpDown_form_add_patient_age.Text),
+                Birthdate = dateTimePicker_form_add_patient_birthdate.Value,
                 PhoneNumber = textBox_form_add_patient_phone_number.Text,
                 EmailAddress = textBox_form_add_patient_adress_email.Text,
                 ResidentialAddress = textBox_form_add_patient_residential_adress.Text,

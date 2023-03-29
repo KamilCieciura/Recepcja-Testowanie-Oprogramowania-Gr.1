@@ -39,7 +39,7 @@
             columnId = new DataGridViewTextBoxColumn();
             columnFirstName = new DataGridViewTextBoxColumn();
             columnLastName = new DataGridViewTextBoxColumn();
-            columnAge = new DataGridViewTextBoxColumn();
+            columnBirthdate = new DataGridViewTextBoxColumn();
             columnPhoneNumber = new DataGridViewTextBoxColumn();
             columnEmailAddress = new DataGridViewTextBoxColumn();
             columnResidentialAddress = new DataGridViewTextBoxColumn();
@@ -51,7 +51,7 @@
             // dataGridView_patients
             // 
             dataGridView_patients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_patients.Columns.AddRange(new DataGridViewColumn[] { columnId, columnFirstName, columnLastName, columnAge, columnPhoneNumber, columnEmailAddress, columnResidentialAddress, columnPESEL, columnStatus });
+            dataGridView_patients.Columns.AddRange(new DataGridViewColumn[] { columnId, columnFirstName, columnLastName, columnBirthdate, columnPhoneNumber, columnEmailAddress, columnResidentialAddress, columnPESEL, columnStatus });
             dataGridView_patients.EditMode = DataGridViewEditMode.EditProgrammatically;
             dataGridView_patients.Location = new Point(78, 113);
             dataGridView_patients.Margin = new Padding(3, 4, 3, 4);
@@ -163,13 +163,13 @@
             columnLastName.Name = "columnLastName";
             columnLastName.Width = 125;
             // 
-            // columnAge
+            // columnBirthdate
             // 
-            columnAge.DataPropertyName = "Age";
-            columnAge.HeaderText = "Age";
-            columnAge.MinimumWidth = 6;
-            columnAge.Name = "columnAge";
-            columnAge.Width = 125;
+            columnBirthdate.DataPropertyName = "Birthdate";
+            columnBirthdate.HeaderText = "Birthdate";
+            columnBirthdate.MinimumWidth = 6;
+            columnBirthdate.Name = "columnBirthdate";
+            columnBirthdate.Width = 125;
             // 
             // columnPhoneNumber
             // 
@@ -245,7 +245,7 @@
         private DataGridViewTextBoxColumn columnId;
         private DataGridViewTextBoxColumn columnFirstName;
         private DataGridViewTextBoxColumn columnLastName;
-        private DataGridViewTextBoxColumn columnAge;
+        private DataGridViewTextBoxColumn columnBirthdate;
         private DataGridViewTextBoxColumn columnPhoneNumber;
         private DataGridViewTextBoxColumn columnEmailAddress;
         private DataGridViewTextBoxColumn columnResidentialAddress;

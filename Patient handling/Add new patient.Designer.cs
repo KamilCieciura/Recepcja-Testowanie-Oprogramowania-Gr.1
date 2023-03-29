@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            dateTimePicker_form_add_patient_birthdate = new DateTimePicker();
             button_add_patient_form = new Button();
             textBox_form_add_patient_First_name = new TextBox();
             textBox_form_add_patient_last_name = new TextBox();
-            numericUpDown_form_add_patient_age = new NumericUpDown();
             textBox_form_add_patient_phone_number = new TextBox();
             textBox_form_add_patient_adress_email = new TextBox();
             textBox_form_add_patient_social_security_number = new TextBox();
@@ -44,8 +44,15 @@
             button_cancel_add_patient_form = new Button();
             label7 = new Label();
             textBox_form_add_patient_residential_adress = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown_form_add_patient_age).BeginInit();
+            dateTimePicker1 = new DateTimePicker();
             SuspendLayout();
+            // 
+            // dateTimePicker_form_add_patient_birthdate
+            // 
+            dateTimePicker_form_add_patient_birthdate.Location = new Point(0, 0);
+            dateTimePicker_form_add_patient_birthdate.Name = "dateTimePicker_form_add_patient_birthdate";
+            dateTimePicker_form_add_patient_birthdate.Size = new Size(200, 27);
+            dateTimePicker_form_add_patient_birthdate.TabIndex = 0;
             // 
             // button_add_patient_form
             // 
@@ -73,14 +80,6 @@
             textBox_form_add_patient_last_name.Name = "textBox_form_add_patient_last_name";
             textBox_form_add_patient_last_name.Size = new Size(181, 27);
             textBox_form_add_patient_last_name.TabIndex = 2;
-            // 
-            // numericUpDown_form_add_patient_age
-            // 
-            numericUpDown_form_add_patient_age.Location = new Point(53, 185);
-            numericUpDown_form_add_patient_age.Margin = new Padding(3, 4, 3, 4);
-            numericUpDown_form_add_patient_age.Name = "numericUpDown_form_add_patient_age";
-            numericUpDown_form_add_patient_age.Size = new Size(182, 27);
-            numericUpDown_form_add_patient_age.TabIndex = 3;
             // 
             // textBox_form_add_patient_phone_number
             // 
@@ -129,9 +128,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(53, 163);
             label3.Name = "label3";
-            label3.Size = new Size(36, 20);
+            label3.Size = new Size(70, 20);
             label3.TabIndex = 9;
-            label3.Text = "Age";
+            label3.Text = "Birthdate";
             // 
             // label4
             // 
@@ -189,11 +188,19 @@
             textBox_form_add_patient_residential_adress.TabIndex = 14;
             textBox_form_add_patient_residential_adress.TextChanged += textBox1_TextChanged;
             // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(19, 186);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(250, 27);
+            dateTimePicker1.TabIndex = 16;
+            // 
             // Form_add_patient
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(281, 539);
+            Controls.Add(dateTimePicker1);
             Controls.Add(label7);
             Controls.Add(textBox_form_add_patient_residential_adress);
             Controls.Add(button_cancel_add_patient_form);
@@ -206,7 +213,6 @@
             Controls.Add(textBox_form_add_patient_social_security_number);
             Controls.Add(textBox_form_add_patient_adress_email);
             Controls.Add(textBox_form_add_patient_phone_number);
-            Controls.Add(numericUpDown_form_add_patient_age);
             Controls.Add(textBox_form_add_patient_last_name);
             Controls.Add(textBox_form_add_patient_First_name);
             Controls.Add(button_add_patient_form);
@@ -214,7 +220,6 @@
             Name = "Form_add_patient";
             Text = "Add new patient";
             Load += Form_add_patient_Load;
-            ((System.ComponentModel.ISupportInitialize)numericUpDown_form_add_patient_age).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -224,7 +229,7 @@
         private Button button_add_patient_form;
         private TextBox textBox_form_add_patient_First_name;
         private TextBox textBox_form_add_patient_last_name;
-        private NumericUpDown numericUpDown_form_add_patient_age;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_form_add_patient_birthdate;
         private TextBox textBox_form_add_patient_phone_number;
         private TextBox textBox_form_add_patient_adress_email;
         private TextBox textBox_form_add_patient_social_security_number;
@@ -237,5 +242,6 @@
         private Button button_cancel_add_patient_form;
         private Label label7;
         private TextBox textBox_form_add_patient_residential_adress;
+        private DateTimePicker dateTimePicker1;
     }
 }

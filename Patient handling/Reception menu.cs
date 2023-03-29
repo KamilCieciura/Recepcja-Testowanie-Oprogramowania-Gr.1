@@ -104,5 +104,11 @@ namespace Patient_handling
                 MessageBox.Show("Please select a patient to activate.");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            form_ReceptionMenu2 receptionMenu2 = new form_ReceptionMenu2();
+            receptionMenu2.Show();
+        }
     }
 }

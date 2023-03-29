@@ -37,7 +37,6 @@
             columnResidentialAddress = new DataGridViewTextBoxColumn();
             columnPESEL = new DataGridViewTextBoxColumn();
             columnStatus = new DataGridViewTextBoxColumn();
-            button_menu_add_patient = new Button();
             button_menu_edit_patient = new Button();
             button_menu_activate_patient = new Button();
             button_menu_remove_patient = new Button();
@@ -53,7 +52,7 @@
             dataGridView_patients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_patients.Columns.AddRange(new DataGridViewColumn[] { columnFirstName, columnLastName, columnBirthdate, columnPhoneNumber, columnEmailAddress, columnResidentialAddress, columnPESEL, columnStatus });
             dataGridView_patients.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dataGridView_patients.Location = new Point(68, 85);
+            dataGridView_patients.Location = new Point(22, 76);
             dataGridView_patients.Name = "dataGridView_patients";
             dataGridView_patients.RowHeadersVisible = false;
             dataGridView_patients.RowHeadersWidth = 51;
@@ -121,19 +120,9 @@
             columnStatus.MinimumWidth = 6;
             columnStatus.Name = "columnStatus";
             // 
-            // button_menu_add_patient
-            // 
-            button_menu_add_patient.Location = new Point(68, 249);
-            button_menu_add_patient.Name = "button_menu_add_patient";
-            button_menu_add_patient.Size = new Size(153, 23);
-            button_menu_add_patient.TabIndex = 1;
-            button_menu_add_patient.Text = "Add a patient";
-            button_menu_add_patient.UseVisualStyleBackColor = true;
-            button_menu_add_patient.Click += button_menu_add_patient_Click;
-            // 
             // button_menu_edit_patient
             // 
-            button_menu_edit_patient.Location = new Point(227, 249);
+            button_menu_edit_patient.Location = new Point(22, 240);
             button_menu_edit_patient.Name = "button_menu_edit_patient";
             button_menu_edit_patient.Size = new Size(153, 23);
             button_menu_edit_patient.TabIndex = 2;
@@ -143,7 +132,7 @@
             // 
             // button_menu_activate_patient
             // 
-            button_menu_activate_patient.Location = new Point(389, 249);
+            button_menu_activate_patient.Location = new Point(230, 240);
             button_menu_activate_patient.Name = "button_menu_activate_patient";
             button_menu_activate_patient.Size = new Size(153, 23);
             button_menu_activate_patient.TabIndex = 3;
@@ -153,7 +142,7 @@
             // 
             // button_menu_remove_patient
             // 
-            button_menu_remove_patient.Location = new Point(717, 249);
+            button_menu_remove_patient.Location = new Point(671, 240);
             button_menu_remove_patient.Name = "button_menu_remove_patient";
             button_menu_remove_patient.Size = new Size(153, 23);
             button_menu_remove_patient.TabIndex = 4;
@@ -164,14 +153,14 @@
             // comboBox_menu_sort_data
             // 
             comboBox_menu_sort_data.FormattingEnabled = true;
-            comboBox_menu_sort_data.Location = new Point(730, 36);
+            comboBox_menu_sort_data.Location = new Point(684, 27);
             comboBox_menu_sort_data.Name = "comboBox_menu_sort_data";
             comboBox_menu_sort_data.Size = new Size(140, 23);
             comboBox_menu_sort_data.TabIndex = 5;
             // 
             // button_menu_sort_data
             // 
-            button_menu_sort_data.Location = new Point(730, 57);
+            button_menu_sort_data.Location = new Point(684, 48);
             button_menu_sort_data.Name = "button_menu_sort_data";
             button_menu_sort_data.Size = new Size(140, 23);
             button_menu_sort_data.TabIndex = 6;
@@ -180,7 +169,7 @@
             // 
             // button_menu_filter_data
             // 
-            button_menu_filter_data.Location = new Point(316, 290);
+            button_menu_filter_data.Location = new Point(254, 281);
             button_menu_filter_data.Name = "button_menu_filter_data";
             button_menu_filter_data.Size = new Size(292, 23);
             button_menu_filter_data.TabIndex = 7;
@@ -190,7 +179,7 @@
             // 
             // button_menu_inactivate_patient
             // 
-            button_menu_inactivate_patient.Location = new Point(554, 249);
+            button_menu_inactivate_patient.Location = new Point(442, 240);
             button_menu_inactivate_patient.Name = "button_menu_inactivate_patient";
             button_menu_inactivate_patient.Size = new Size(153, 23);
             button_menu_inactivate_patient.TabIndex = 8;
@@ -202,7 +191,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(921, 354);
+            ClientSize = new Size(854, 354);
             Controls.Add(button_menu_inactivate_patient);
             Controls.Add(button_menu_filter_data);
             Controls.Add(button_menu_sort_data);
@@ -210,7 +199,6 @@
             Controls.Add(button_menu_remove_patient);
             Controls.Add(button_menu_activate_patient);
             Controls.Add(button_menu_edit_patient);
-            Controls.Add(button_menu_add_patient);
             Controls.Add(dataGridView_patients);
             Name = "Form_reception_menu";
             Text = "Reception menu";
@@ -222,7 +210,6 @@
         #endregion
 
         private DataGridView dataGridView_patients;
-        private Button button_menu_add_patient;
         private Button button_menu_edit_patient;
         private Button button_menu_activate_patient;
         private Button button_menu_remove_patient;

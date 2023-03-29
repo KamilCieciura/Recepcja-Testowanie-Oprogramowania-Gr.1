@@ -21,6 +21,8 @@ namespace Patient_Handling
             _formReceptionMenu = formReceptionMenu;
         }
 
+    
+
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 

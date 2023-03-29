@@ -91,7 +91,7 @@ namespace Patient_handling
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button_menu_inactivate_patient_Click(object sender, EventArgs e)
         {
             if (dataGridView_patients.CurrentRow != null)
             {

@@ -196,7 +196,7 @@
             button_menu_inactivate_patient.TabIndex = 8;
             button_menu_inactivate_patient.Text = "Inactivate patient account";
             button_menu_inactivate_patient.UseVisualStyleBackColor = true;
-            button_menu_inactivate_patient.Click += button1_Click;
+            button_menu_inactivate_patient.Click += button_menu_inactivate_patient_Click;
             // 
             // Form_reception_menu
             // 

@@ -78,7 +78,7 @@ namespace Patient_Handling
                 PhoneNumber = textBox_form_add_patient_phone_number.Text,
                 EmailAddress = textBox_form_add_patient_adress_email.Text,
                 ResidentialAddress = textBox_form_add_patient_residential_adress.Text,
-                SocialSecurityNumber = textBox_form_add_patient_social_security_number.Text
+                PESEL = textBox_form_add_patient_social_security_number.Text
             };
             _formReceptionMenu.AddPatient(newPatient);
 

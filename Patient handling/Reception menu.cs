@@ -57,14 +57,14 @@ namespace Patient_handling
         {
             Form_filter_data formFilterData = new Form_filter_data();
             formFilterData.Show();
-            this.Hide();
+         
         }
 
         private void button_menu_remove_patient_Click(object sender, EventArgs e)
         {
             Form_accept_remove formAcceptRemove = new Form_accept_remove();
             formAcceptRemove.Show();
-            this.Hide();
+         
         }
 
         private void Form_reception_menu_Load(object sender, EventArgs e)

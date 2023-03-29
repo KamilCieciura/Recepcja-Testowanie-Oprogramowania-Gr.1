@@ -23,8 +23,7 @@ namespace Patient_Handling
 
         private void button_cancel_add_patient_form_Click(object sender, EventArgs e)
         {
-            Form_reception_menu formMenuReception = new Form_reception_menu();
-            formMenuReception.Show();
+          
             this.Hide();
         }
 
@@ -57,7 +56,7 @@ namespace Patient_Handling
             _selectedPatient.ResidentialAddress = textBox_form_edit_patient_residential_adress.Text;
 
             this.DialogResult = DialogResult.OK;
-            this.Close();
+            this.Hide();
         }
 
         private void Form_edit_patient_Load(object sender, EventArgs e)

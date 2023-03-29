@@ -157,7 +157,7 @@
             btnEmployeeAdd.Location = new Point(0, 40);
             btnEmployeeAdd.Name = "btnEmployeeAdd";
             btnEmployeeAdd.Padding = new Padding(35, 0, 0, 0);
-            btnEmployeeAdd.Size = new Size(250, 40);
+            btnEmployeeAdd.Size = new Size(250, 43);
             btnEmployeeAdd.TabIndex = 1;
             btnEmployeeAdd.Tag = "Add";
             btnEmployeeAdd.Text = "Add";
@@ -276,9 +276,6 @@
         #endregion
 
         private Panel pnlSideMenu;
-        private Panel pnlDoctorSubmenu;
-        private Button btnDoctorAdd;
-        private Button btnDoctorList;
         private Button btnDoctor;
         private Panel pnlEmployeeSubmenu;
         private Button btnEmployeeAdd;
@@ -288,6 +285,9 @@
         private Button btnMenu;
         private Panel pnlTitle;
         private Label labelTitle;
-        private Panel panel1;
+        private Panel pnlDoctorSubmenu;
+        private Button btnDoctorAdd;
+        private Button btnDoctorList;
+        public Panel panel1;
     }
 }

@@ -32,6 +32,7 @@ namespace Patient_handling
         private void btnEmployeeList_Click(object sender, EventArgs e)
         {
 
+
             Form_reception_menu formReceptionMenu = new Form_reception_menu();
             formReceptionMenu.TopLevel = false;
             formReceptionMenu.FormBorderStyle = FormBorderStyle.None;
@@ -40,6 +41,8 @@ namespace Patient_handling
             panel1.Tag = formReceptionMenu;
             formReceptionMenu.BringToFront();
             formReceptionMenu.Show();
+
+
 
 
         }

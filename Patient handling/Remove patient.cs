@@ -20,8 +20,8 @@ namespace Patient_Handling
 
         private void button_no_remove_patient_accept_form_Click(object sender, EventArgs e)
         {
-            Form_reception_menu formReceptionMenu = new Form_reception_menu();
-            formReceptionMenu.Show();
+            //Form_reception_menu formReceptionMenu = new Form_reception_menu();
+            //formReceptionMenu.Show();
             this.Hide();
             
         }

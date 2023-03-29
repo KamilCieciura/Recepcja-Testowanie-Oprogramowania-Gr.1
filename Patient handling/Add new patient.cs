@@ -30,9 +30,10 @@ namespace Patient_Handling
 
         private void button_cancel_add_patient_form_Click(object sender, EventArgs e)
         {
-            Form_reception_menu formReceptionMenu = new Form_reception_menu();
-            formReceptionMenu.Show();
+          
+
             this.Hide();
+         
 
         }
 
@@ -86,6 +87,8 @@ namespace Patient_Handling
 
             this.Hide();
             _formReceptionMenu.Show();
+            
+
         }
     }
 }

@@ -43,60 +43,56 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(33, 52);
+            label2.Location = new Point(29, 39);
             label2.Name = "label2";
-            label2.Size = new Size(79, 20);
+            label2.Size = new Size(63, 15);
             label2.TabIndex = 10;
             label2.Text = "Last Name";
             // 
             // textBox_form_edit_patient_last_name
             // 
-            textBox_form_edit_patient_last_name.Location = new Point(33, 76);
-            textBox_form_edit_patient_last_name.Margin = new Padding(3, 4, 3, 4);
+            textBox_form_edit_patient_last_name.Location = new Point(29, 57);
             textBox_form_edit_patient_last_name.Name = "textBox_form_edit_patient_last_name";
-            textBox_form_edit_patient_last_name.Size = new Size(194, 27);
+            textBox_form_edit_patient_last_name.Size = new Size(170, 23);
             textBox_form_edit_patient_last_name.TabIndex = 9;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(37, 132);
+            label4.Location = new Point(32, 99);
             label4.Name = "label4";
-            label4.Size = new Size(105, 20);
+            label4.Size = new Size(86, 15);
             label4.TabIndex = 12;
             label4.Text = "Phone number";
             // 
             // textBox_form_edit_patient_phone_number
             // 
-            textBox_form_edit_patient_phone_number.Location = new Point(33, 156);
-            textBox_form_edit_patient_phone_number.Margin = new Padding(3, 4, 3, 4);
+            textBox_form_edit_patient_phone_number.Location = new Point(29, 117);
             textBox_form_edit_patient_phone_number.Name = "textBox_form_edit_patient_phone_number";
-            textBox_form_edit_patient_phone_number.Size = new Size(194, 27);
+            textBox_form_edit_patient_phone_number.Size = new Size(170, 23);
             textBox_form_edit_patient_phone_number.TabIndex = 11;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(37, 208);
+            label5.Location = new Point(32, 156);
             label5.Name = "label5";
-            label5.Size = new Size(92, 20);
+            label5.Size = new Size(72, 15);
             label5.TabIndex = 14;
             label5.Text = "Email adress";
             // 
             // textBox_form_edit_patient_adress
             // 
-            textBox_form_edit_patient_adress.Location = new Point(33, 232);
-            textBox_form_edit_patient_adress.Margin = new Padding(3, 4, 3, 4);
+            textBox_form_edit_patient_adress.Location = new Point(29, 174);
             textBox_form_edit_patient_adress.Name = "textBox_form_edit_patient_adress";
-            textBox_form_edit_patient_adress.Size = new Size(193, 27);
+            textBox_form_edit_patient_adress.Size = new Size(169, 23);
             textBox_form_edit_patient_adress.TabIndex = 13;
             // 
             // button_edit_patient_form
             // 
-            button_edit_patient_form.Location = new Point(33, 363);
-            button_edit_patient_form.Margin = new Padding(3, 4, 3, 4);
+            button_edit_patient_form.Location = new Point(29, 272);
             button_edit_patient_form.Name = "button_edit_patient_form";
-            button_edit_patient_form.Size = new Size(102, 28);
+            button_edit_patient_form.Size = new Size(89, 21);
             button_edit_patient_form.TabIndex = 15;
             button_edit_patient_form.Text = "Edit patient data";
             button_edit_patient_form.UseVisualStyleBackColor = true;
@@ -104,10 +100,9 @@
             // 
             // button_cancel_add_patient_form
             // 
-            button_cancel_add_patient_form.Location = new Point(152, 363);
-            button_cancel_add_patient_form.Margin = new Padding(3, 4, 3, 4);
+            button_cancel_add_patient_form.Location = new Point(133, 272);
             button_cancel_add_patient_form.Name = "button_cancel_add_patient_form";
-            button_cancel_add_patient_form.Size = new Size(74, 28);
+            button_cancel_add_patient_form.Size = new Size(65, 21);
             button_cancel_add_patient_form.TabIndex = 16;
             button_cancel_add_patient_form.Text = "Cancel";
             button_cancel_add_patient_form.UseVisualStyleBackColor = true;
@@ -116,25 +111,24 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(39, 281);
+            label7.Location = new Point(34, 211);
             label7.Name = "label7";
-            label7.Size = new Size(128, 20);
+            label7.Size = new Size(100, 15);
             label7.TabIndex = 18;
             label7.Text = "Residential adress";
             // 
             // textBox_form_edit_patient_residential_adress
             // 
-            textBox_form_edit_patient_residential_adress.Location = new Point(33, 304);
-            textBox_form_edit_patient_residential_adress.Margin = new Padding(3, 4, 3, 4);
+            textBox_form_edit_patient_residential_adress.Location = new Point(29, 228);
             textBox_form_edit_patient_residential_adress.Name = "textBox_form_edit_patient_residential_adress";
-            textBox_form_edit_patient_residential_adress.Size = new Size(193, 27);
+            textBox_form_edit_patient_residential_adress.Size = new Size(169, 23);
             textBox_form_edit_patient_residential_adress.TabIndex = 17;
             // 
             // Form_edit_patient
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(278, 443);
+            ClientSize = new Size(243, 332);
             Controls.Add(label7);
             Controls.Add(textBox_form_edit_patient_residential_adress);
             Controls.Add(button_cancel_add_patient_form);
@@ -145,7 +139,6 @@
             Controls.Add(textBox_form_edit_patient_phone_number);
             Controls.Add(label2);
             Controls.Add(textBox_form_edit_patient_last_name);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Form_edit_patient";
             Text = "Edit patient data";
             Load += Form_edit_patient_Load;

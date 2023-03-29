@@ -1,5 +1,6 @@
 using Patient_Handling;
 using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace Patient_handling
 {

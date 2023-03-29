@@ -53,7 +53,7 @@
             // 
             // button_cancel_add_patient_form
             // 
-            button_cancel_add_patient_form.Location = new Point(138, 378);
+            button_cancel_add_patient_form.Location = new Point(117, 388);
             button_cancel_add_patient_form.Name = "button_cancel_add_patient_form";
             button_cancel_add_patient_form.Size = new Size(74, 23);
             button_cancel_add_patient_form.TabIndex = 27;
@@ -64,16 +64,16 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(52, 322);
+            label6.Location = new Point(31, 332);
             label6.Name = "label6";
-            label6.Size = new Size(127, 15);
+            label6.Size = new Size(38, 15);
             label6.TabIndex = 26;
-            label6.Text = "Social security number";
+            label6.Text = "PESEL";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(55, 218);
+            label5.Location = new Point(34, 228);
             label5.Name = "label5";
             label5.Size = new Size(72, 15);
             label5.TabIndex = 25;
@@ -82,7 +82,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(55, 172);
+            label4.Location = new Point(34, 182);
             label4.Name = "label4";
             label4.Size = new Size(86, 15);
             label4.TabIndex = 24;
@@ -91,7 +91,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(53, 95);
+            label3.Location = new Point(32, 105);
             label3.Name = "label3";
             label3.Size = new Size(28, 15);
             label3.TabIndex = 23;
@@ -100,7 +100,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(55, 53);
+            label2.Location = new Point(34, 63);
             label2.Name = "label2";
             label2.Size = new Size(63, 15);
             label2.TabIndex = 22;
@@ -109,7 +109,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(55, 7);
+            label1.Location = new Point(34, 17);
             label1.Name = "label1";
             label1.Size = new Size(64, 15);
             label1.TabIndex = 21;
@@ -117,49 +117,49 @@
             // 
             // textBox_form_filter_data_social_security_number
             // 
-            textBox_form_filter_data_social_security_number.Location = new Point(52, 340);
+            textBox_form_filter_data_social_security_number.Location = new Point(31, 350);
             textBox_form_filter_data_social_security_number.Name = "textBox_form_filter_data_social_security_number";
             textBox_form_filter_data_social_security_number.Size = new Size(160, 23);
             textBox_form_filter_data_social_security_number.TabIndex = 20;
             // 
             // textBox_form_filter_data_adress_email
             // 
-            textBox_form_filter_data_adress_email.Location = new Point(53, 236);
+            textBox_form_filter_data_adress_email.Location = new Point(32, 246);
             textBox_form_filter_data_adress_email.Name = "textBox_form_filter_data_adress_email";
-            textBox_form_filter_data_adress_email.Size = new Size(159, 23);
+            textBox_form_filter_data_adress_email.Size = new Size(160, 23);
             textBox_form_filter_data_adress_email.TabIndex = 19;
             // 
             // textBox_form_filter_data_phone_number
             // 
-            textBox_form_filter_data_phone_number.Location = new Point(52, 190);
+            textBox_form_filter_data_phone_number.Location = new Point(31, 200);
             textBox_form_filter_data_phone_number.Name = "textBox_form_filter_data_phone_number";
             textBox_form_filter_data_phone_number.Size = new Size(160, 23);
             textBox_form_filter_data_phone_number.TabIndex = 18;
             // 
             // numericUpDown_form_filter_data_age_from
             // 
-            numericUpDown_form_filter_data_age_from.Location = new Point(94, 113);
+            numericUpDown_form_filter_data_age_from.Location = new Point(73, 127);
             numericUpDown_form_filter_data_age_from.Name = "numericUpDown_form_filter_data_age_from";
-            numericUpDown_form_filter_data_age_from.Size = new Size(118, 23);
+            numericUpDown_form_filter_data_age_from.Size = new Size(119, 23);
             numericUpDown_form_filter_data_age_from.TabIndex = 17;
             // 
             // textBox_form_filter_data_last_name
             // 
-            textBox_form_filter_data_last_name.Location = new Point(53, 70);
+            textBox_form_filter_data_last_name.Location = new Point(32, 80);
             textBox_form_filter_data_last_name.Name = "textBox_form_filter_data_last_name";
-            textBox_form_filter_data_last_name.Size = new Size(159, 23);
+            textBox_form_filter_data_last_name.Size = new Size(160, 23);
             textBox_form_filter_data_last_name.TabIndex = 16;
             // 
             // textBox_form_filter_data_First_name
             // 
-            textBox_form_filter_data_First_name.Location = new Point(53, 23);
+            textBox_form_filter_data_First_name.Location = new Point(31, 35);
             textBox_form_filter_data_First_name.Name = "textBox_form_filter_data_First_name";
-            textBox_form_filter_data_First_name.Size = new Size(159, 23);
+            textBox_form_filter_data_First_name.Size = new Size(160, 23);
             textBox_form_filter_data_First_name.TabIndex = 15;
             // 
             // button_add_patient_form_data
             // 
-            button_add_patient_form_data.Location = new Point(53, 378);
+            button_add_patient_form_data.Location = new Point(31, 388);
             button_add_patient_form_data.Name = "button_add_patient_form_data";
             button_add_patient_form_data.Size = new Size(74, 23);
             button_add_patient_form_data.TabIndex = 14;
@@ -168,7 +168,7 @@
             // 
             // numericUpDown_form_filter_data_age_to
             // 
-            numericUpDown_form_filter_data_age_to.Location = new Point(93, 142);
+            numericUpDown_form_filter_data_age_to.Location = new Point(72, 156);
             numericUpDown_form_filter_data_age_to.Name = "numericUpDown_form_filter_data_age_to";
             numericUpDown_form_filter_data_age_to.Size = new Size(119, 23);
             numericUpDown_form_filter_data_age_to.TabIndex = 28;
@@ -176,7 +176,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(54, 117);
+            label7.Location = new Point(33, 131);
             label7.Name = "label7";
             label7.Size = new Size(33, 15);
             label7.TabIndex = 29;
@@ -185,7 +185,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(57, 145);
+            label8.Location = new Point(36, 159);
             label8.Name = "label8";
             label8.Size = new Size(18, 15);
             label8.TabIndex = 30;
@@ -194,7 +194,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(57, 269);
+            label9.Location = new Point(36, 279);
             label9.Name = "label9";
             label9.Size = new Size(100, 15);
             label9.TabIndex = 32;
@@ -202,7 +202,7 @@
             // 
             // textBox_form_filter_data_residential_adress
             // 
-            textBox_form_filter_data_residential_adress.Location = new Point(52, 286);
+            textBox_form_filter_data_residential_adress.Location = new Point(31, 296);
             textBox_form_filter_data_residential_adress.Name = "textBox_form_filter_data_residential_adress";
             textBox_form_filter_data_residential_adress.Size = new Size(160, 23);
             textBox_form_filter_data_residential_adress.TabIndex = 31;
@@ -211,7 +211,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(264, 456);
+            ClientSize = new Size(226, 435);
             Controls.Add(label9);
             Controls.Add(textBox_form_filter_data_residential_adress);
             Controls.Add(label8);

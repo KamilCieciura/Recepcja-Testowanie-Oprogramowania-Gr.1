@@ -74,7 +74,7 @@ namespace Patient_Handling
             {
                 FirstName = textBox_form_add_patient_First_name.Text,
                 LastName = textBox_form_add_patient_last_name.Text,
-                Birthdate = dateTimePicker_form_add_patient_birthdate.Value,
+                Birthdate = dateTimePicker_form_add_patient_birthdate.Value.Date,
                 PhoneNumber = textBox_form_add_patient_phone_number.Text,
                 EmailAddress = textBox_form_add_patient_adress_email.Text,
                 ResidentialAddress = textBox_form_add_patient_residential_adress.Text,

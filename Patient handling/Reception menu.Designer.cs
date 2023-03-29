@@ -44,7 +44,7 @@
             comboBox_menu_sort_data = new ComboBox();
             button_menu_sort_data = new Button();
             button_menu_filter_data = new Button();
-            button1 = new Button();
+            button_menu_inactivate_patient = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView_patients).BeginInit();
             SuspendLayout();
             // 
@@ -188,21 +188,22 @@
             button_menu_filter_data.UseVisualStyleBackColor = true;
             button_menu_filter_data.Click += button_menu_filter_data_Click;
             // 
-            // button1
+            // button_menu_inactivate_patient
             // 
-            button1.Location = new Point(554, 249);
-            button1.Name = "button1";
-            button1.Size = new Size(153, 23);
-            button1.TabIndex = 8;
-            button1.Text = "Inactivate patient account";
-            button1.UseVisualStyleBackColor = true;
+            button_menu_inactivate_patient.Location = new Point(554, 249);
+            button_menu_inactivate_patient.Name = "button_menu_inactivate_patient";
+            button_menu_inactivate_patient.Size = new Size(153, 23);
+            button_menu_inactivate_patient.TabIndex = 8;
+            button_menu_inactivate_patient.Text = "Inactivate patient account";
+            button_menu_inactivate_patient.UseVisualStyleBackColor = true;
+            button_menu_inactivate_patient.Click += button1_Click;
             // 
             // Form_reception_menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(921, 354);
-            Controls.Add(button1);
+            Controls.Add(button_menu_inactivate_patient);
             Controls.Add(button_menu_filter_data);
             Controls.Add(button_menu_sort_data);
             Controls.Add(comboBox_menu_sort_data);
@@ -236,6 +237,6 @@
         private DataGridViewTextBoxColumn columnResidentialAddress;
         private DataGridViewTextBoxColumn columnPESEL;
         private DataGridViewTextBoxColumn columnStatus;
-        private Button button1;
+        private Button button_menu_inactivate_patient;
     }
 }

@@ -90,5 +90,19 @@ namespace Patient_handling
                 MessageBox.Show("Please select a patient to activate.");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_patients.CurrentRow != null)
+            {
+                Patient selectedPatient = (Patient)dataGridView_patients.CurrentRow.DataBoundItem;
+                selectedPatient.Status = "Inactive";
+                dataGridView_patients.Refresh();
+            }
+            else
+            {
+                MessageBox.Show("Please select a patient to activate.");
+            }
+        }
     }
 }

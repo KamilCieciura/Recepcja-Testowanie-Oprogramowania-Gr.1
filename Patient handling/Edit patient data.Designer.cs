@@ -94,7 +94,7 @@
             button_edit_patient_form.Name = "button_edit_patient_form";
             button_edit_patient_form.Size = new Size(89, 21);
             button_edit_patient_form.TabIndex = 15;
-            button_edit_patient_form.Text = "Edit patient data";
+            button_edit_patient_form.Text = "Save";
             button_edit_patient_form.UseVisualStyleBackColor = true;
             button_edit_patient_form.Click += button_edit_patient_form_Click;
             // 

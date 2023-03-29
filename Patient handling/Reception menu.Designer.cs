@@ -127,7 +127,7 @@
             button_menu_add_patient.Name = "button_menu_add_patient";
             button_menu_add_patient.Size = new Size(153, 23);
             button_menu_add_patient.TabIndex = 1;
-            button_menu_add_patient.Text = "Add patient";
+            button_menu_add_patient.Text = "Add a patient";
             button_menu_add_patient.UseVisualStyleBackColor = true;
             button_menu_add_patient.Click += button_menu_add_patient_Click;
             // 
@@ -137,7 +137,7 @@
             button_menu_edit_patient.Name = "button_menu_edit_patient";
             button_menu_edit_patient.Size = new Size(153, 23);
             button_menu_edit_patient.TabIndex = 2;
-            button_menu_edit_patient.Text = "Edit patient data";
+            button_menu_edit_patient.Text = "Edit patient's data";
             button_menu_edit_patient.UseVisualStyleBackColor = true;
             button_menu_edit_patient.Click += button_menu_edit_patient_Click;
             // 
@@ -147,7 +147,7 @@
             button_menu_activate_patient.Name = "button_menu_activate_patient";
             button_menu_activate_patient.Size = new Size(153, 23);
             button_menu_activate_patient.TabIndex = 3;
-            button_menu_activate_patient.Text = "Activate patient account";
+            button_menu_activate_patient.Text = "Activate patient";
             button_menu_activate_patient.UseVisualStyleBackColor = true;
             button_menu_activate_patient.Click += button_menu_activate_patient_Click;
             // 
@@ -157,7 +157,7 @@
             button_menu_remove_patient.Name = "button_menu_remove_patient";
             button_menu_remove_patient.Size = new Size(153, 23);
             button_menu_remove_patient.TabIndex = 4;
-            button_menu_remove_patient.Text = "Remove patient account";
+            button_menu_remove_patient.Text = "Delete";
             button_menu_remove_patient.UseVisualStyleBackColor = true;
             button_menu_remove_patient.Click += button_menu_remove_patient_Click;
             // 
@@ -194,7 +194,7 @@
             button_menu_inactivate_patient.Name = "button_menu_inactivate_patient";
             button_menu_inactivate_patient.Size = new Size(153, 23);
             button_menu_inactivate_patient.TabIndex = 8;
-            button_menu_inactivate_patient.Text = "Inactivate patient account";
+            button_menu_inactivate_patient.Text = "Inactivate patient";
             button_menu_inactivate_patient.UseVisualStyleBackColor = true;
             button_menu_inactivate_patient.Click += button_menu_inactivate_patient_Click;
             // 

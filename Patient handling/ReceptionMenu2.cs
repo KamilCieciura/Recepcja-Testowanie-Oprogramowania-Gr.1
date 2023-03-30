@@ -62,5 +62,18 @@ namespace Patient_handling
 
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form_filter_data formfilterdata = new Form_filter_data();
+            formfilterdata.TopLevel = false;
+            formfilterdata.FormBorderStyle = FormBorderStyle.None;
+            formfilterdata.Dock = DockStyle.Fill;
+            panel1.Controls.Add(formfilterdata);
+            panel1.Tag = formfilterdata;
+            formfilterdata.BringToFront();
+            formfilterdata.Show();
+
+        }
     }
 }

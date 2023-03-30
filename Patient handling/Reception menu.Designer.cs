@@ -42,7 +42,6 @@
             button_menu_remove_patient = new Button();
             comboBox_menu_sort_data = new ComboBox();
             button_menu_sort_data = new Button();
-            button_menu_filter_data = new Button();
             button_menu_inactivate_patient = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView_patients).BeginInit();
             SuspendLayout();
@@ -167,16 +166,6 @@
             button_menu_sort_data.Text = "Sort data";
             button_menu_sort_data.UseVisualStyleBackColor = true;
             // 
-            // button_menu_filter_data
-            // 
-            button_menu_filter_data.Location = new Point(254, 281);
-            button_menu_filter_data.Name = "button_menu_filter_data";
-            button_menu_filter_data.Size = new Size(292, 23);
-            button_menu_filter_data.TabIndex = 7;
-            button_menu_filter_data.Text = "Filter data";
-            button_menu_filter_data.UseVisualStyleBackColor = true;
-            button_menu_filter_data.Click += button_menu_filter_data_Click;
-            // 
             // button_menu_inactivate_patient
             // 
             button_menu_inactivate_patient.Location = new Point(442, 240);
@@ -193,7 +182,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(854, 354);
             Controls.Add(button_menu_inactivate_patient);
-            Controls.Add(button_menu_filter_data);
             Controls.Add(button_menu_sort_data);
             Controls.Add(comboBox_menu_sort_data);
             Controls.Add(button_menu_remove_patient);
@@ -215,7 +203,6 @@
         private Button button_menu_remove_patient;
         private ComboBox comboBox_menu_sort_data;
         private Button button_menu_sort_data;
-        private Button button_menu_filter_data;
         private DataGridViewTextBoxColumn columnFirstName;
         private DataGridViewTextBoxColumn columnLastName;
         private DataGridViewTextBoxColumn columnBirthdate;

@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             pnlSideMenu = new Panel();
-            pnlDoctorSubmenu = new Panel();
-            btnDoctorAdd = new Button();
-            btnDoctorList = new Button();
-            btnDoctor = new Button();
             pnlEmployeeSubmenu = new Panel();
             btnEmployeeAdd = new Button();
             btnEmployeeList = new Button();
@@ -42,19 +38,27 @@
             pnlTitle = new Panel();
             labelTitle = new Label();
             panel1 = new Panel();
+            button2 = new Button();
+            panel2 = new Panel();
+            button1 = new Button();
+            button3 = new Button();
+            panel3 = new Panel();
+            button4 = new Button();
+            button5 = new Button();
             pnlSideMenu.SuspendLayout();
-            pnlDoctorSubmenu.SuspendLayout();
             pnlEmployeeSubmenu.SuspendLayout();
             pnlLogo.SuspendLayout();
             pnlTitle.SuspendLayout();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // pnlSideMenu
             // 
             pnlSideMenu.AutoScroll = true;
             pnlSideMenu.BackColor = Color.FromArgb(23, 35, 49);
-            pnlSideMenu.Controls.Add(pnlDoctorSubmenu);
-            pnlSideMenu.Controls.Add(btnDoctor);
+            pnlSideMenu.Controls.Add(panel2);
+            pnlSideMenu.Controls.Add(button2);
             pnlSideMenu.Controls.Add(pnlEmployeeSubmenu);
             pnlSideMenu.Controls.Add(btnEmployee);
             pnlSideMenu.Controls.Add(pnlLogo);
@@ -64,84 +68,16 @@
             pnlSideMenu.Size = new Size(250, 617);
             pnlSideMenu.TabIndex = 1;
             // 
-            // pnlDoctorSubmenu
-            // 
-            pnlDoctorSubmenu.BackColor = Color.FromArgb(31, 47, 66);
-            pnlDoctorSubmenu.Controls.Add(btnDoctorAdd);
-            pnlDoctorSubmenu.Controls.Add(btnDoctorList);
-            pnlDoctorSubmenu.Dock = DockStyle.Top;
-            pnlDoctorSubmenu.Location = new Point(0, 298);
-            pnlDoctorSubmenu.Name = "pnlDoctorSubmenu";
-            pnlDoctorSubmenu.Size = new Size(250, 81);
-            pnlDoctorSubmenu.TabIndex = 4;
-            // 
-            // btnDoctorAdd
-            // 
-            btnDoctorAdd.BackColor = Color.FromArgb(0, 0, 0, 0);
-            btnDoctorAdd.Dock = DockStyle.Top;
-            btnDoctorAdd.FlatAppearance.BorderSize = 0;
-            btnDoctorAdd.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 189, 241);
-            btnDoctorAdd.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 189, 241);
-            btnDoctorAdd.FlatStyle = FlatStyle.Flat;
-            btnDoctorAdd.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDoctorAdd.ForeColor = Color.WhiteSmoke;
-            btnDoctorAdd.Location = new Point(0, 40);
-            btnDoctorAdd.Name = "btnDoctorAdd";
-            btnDoctorAdd.Padding = new Padding(35, 0, 0, 0);
-            btnDoctorAdd.Size = new Size(250, 40);
-            btnDoctorAdd.TabIndex = 1;
-            btnDoctorAdd.Tag = "Add";
-            btnDoctorAdd.Text = "Add";
-            btnDoctorAdd.TextAlign = ContentAlignment.MiddleLeft;
-            btnDoctorAdd.UseVisualStyleBackColor = false;
-            // 
-            // btnDoctorList
-            // 
-            btnDoctorList.BackColor = Color.FromArgb(0, 0, 0, 0);
-            btnDoctorList.Dock = DockStyle.Top;
-            btnDoctorList.FlatAppearance.BorderSize = 0;
-            btnDoctorList.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 189, 241);
-            btnDoctorList.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 189, 241);
-            btnDoctorList.FlatStyle = FlatStyle.Flat;
-            btnDoctorList.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDoctorList.ForeColor = Color.WhiteSmoke;
-            btnDoctorList.Location = new Point(0, 0);
-            btnDoctorList.Name = "btnDoctorList";
-            btnDoctorList.Padding = new Padding(35, 0, 0, 0);
-            btnDoctorList.Size = new Size(250, 40);
-            btnDoctorList.TabIndex = 0;
-            btnDoctorList.Tag = "List";
-            btnDoctorList.Text = "List";
-            btnDoctorList.TextAlign = ContentAlignment.MiddleLeft;
-            btnDoctorList.UseVisualStyleBackColor = false;
-            // 
-            // btnDoctor
-            // 
-            btnDoctor.BackColor = Color.FromArgb(23, 35, 49);
-            btnDoctor.Dock = DockStyle.Top;
-            btnDoctor.FlatAppearance.BorderSize = 0;
-            btnDoctor.FlatStyle = FlatStyle.Flat;
-            btnDoctor.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDoctor.ForeColor = Color.WhiteSmoke;
-            btnDoctor.Location = new Point(0, 253);
-            btnDoctor.Name = "btnDoctor";
-            btnDoctor.Padding = new Padding(10, 0, 0, 0);
-            btnDoctor.Size = new Size(250, 45);
-            btnDoctor.TabIndex = 3;
-            btnDoctor.Tag = "Doctor’s specializations";
-            btnDoctor.Text = "Medical Visit";
-            btnDoctor.TextAlign = ContentAlignment.MiddleLeft;
-            btnDoctor.UseVisualStyleBackColor = false;
-            // 
             // pnlEmployeeSubmenu
             // 
             pnlEmployeeSubmenu.BackColor = Color.FromArgb(31, 47, 66);
+            pnlEmployeeSubmenu.Controls.Add(panel3);
             pnlEmployeeSubmenu.Controls.Add(btnEmployeeAdd);
             pnlEmployeeSubmenu.Controls.Add(btnEmployeeList);
             pnlEmployeeSubmenu.Dock = DockStyle.Top;
             pnlEmployeeSubmenu.Location = new Point(0, 170);
             pnlEmployeeSubmenu.Name = "pnlEmployeeSubmenu";
-            pnlEmployeeSubmenu.Size = new Size(250, 83);
+            pnlEmployeeSubmenu.Size = new Size(250, 121);
             pnlEmployeeSubmenu.TabIndex = 2;
             // 
             // btnEmployeeAdd
@@ -157,7 +93,7 @@
             btnEmployeeAdd.Location = new Point(0, 40);
             btnEmployeeAdd.Name = "btnEmployeeAdd";
             btnEmployeeAdd.Padding = new Padding(35, 0, 0, 0);
-            btnEmployeeAdd.Size = new Size(250, 43);
+            btnEmployeeAdd.Size = new Size(250, 40);
             btnEmployeeAdd.TabIndex = 1;
             btnEmployeeAdd.Tag = "Add";
             btnEmployeeAdd.Text = "Add";
@@ -253,6 +189,127 @@
             panel1.Size = new Size(867, 492);
             panel1.TabIndex = 3;
             // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(23, 35, 49);
+            button2.Dock = DockStyle.Top;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.WhiteSmoke;
+            button2.Location = new Point(0, 291);
+            button2.Name = "button2";
+            button2.Padding = new Padding(10, 0, 0, 0);
+            button2.Size = new Size(250, 45);
+            button2.TabIndex = 3;
+            button2.Tag = "Employee";
+            button2.Text = "Medical Visit";
+            button2.TextAlign = ContentAlignment.MiddleLeft;
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(31, 47, 66);
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(button3);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 336);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(250, 79);
+            panel2.TabIndex = 4;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(0, 0, 0, 0);
+            button1.Dock = DockStyle.Top;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 189, 241);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 189, 241);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.WhiteSmoke;
+            button1.Location = new Point(0, 40);
+            button1.Name = "button1";
+            button1.Padding = new Padding(35, 0, 0, 0);
+            button1.Size = new Size(250, 40);
+            button1.TabIndex = 1;
+            button1.Tag = "Add";
+            button1.Text = "Add";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(0, 0, 0, 0);
+            button3.Dock = DockStyle.Top;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 189, 241);
+            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 189, 241);
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = Color.WhiteSmoke;
+            button3.Location = new Point(0, 0);
+            button3.Name = "button3";
+            button3.Padding = new Padding(35, 0, 0, 0);
+            button3.Size = new Size(250, 40);
+            button3.TabIndex = 0;
+            button3.Tag = "List";
+            button3.Text = "List";
+            button3.TextAlign = ContentAlignment.MiddleLeft;
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(31, 47, 66);
+            panel3.Controls.Add(button4);
+            panel3.Controls.Add(button5);
+            panel3.Dock = DockStyle.Top;
+            panel3.Location = new Point(0, 80);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(250, 121);
+            panel3.TabIndex = 3;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.FromArgb(0, 0, 0, 0);
+            button4.Dock = DockStyle.Top;
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 189, 241);
+            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 189, 241);
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = Color.WhiteSmoke;
+            button4.Location = new Point(0, 40);
+            button4.Name = "button4";
+            button4.Padding = new Padding(35, 0, 0, 0);
+            button4.Size = new Size(250, 40);
+            button4.TabIndex = 1;
+            button4.Tag = "Add";
+            button4.Text = "Add";
+            button4.TextAlign = ContentAlignment.MiddleLeft;
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.FromArgb(0, 0, 0, 0);
+            button5.Dock = DockStyle.Top;
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 189, 241);
+            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 189, 241);
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.ForeColor = Color.WhiteSmoke;
+            button5.Location = new Point(0, 0);
+            button5.Name = "button5";
+            button5.Padding = new Padding(35, 0, 0, 0);
+            button5.Size = new Size(250, 40);
+            button5.TabIndex = 0;
+            button5.Tag = "List";
+            button5.Text = "Filter data";
+            button5.TextAlign = ContentAlignment.MiddleLeft;
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
+            // 
             // form_ReceptionMenu2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -265,18 +322,18 @@
             Text = "ReceptionMenu2";
             Load += ReceptionMenu2_Load;
             pnlSideMenu.ResumeLayout(false);
-            pnlDoctorSubmenu.ResumeLayout(false);
             pnlEmployeeSubmenu.ResumeLayout(false);
             pnlLogo.ResumeLayout(false);
             pnlTitle.ResumeLayout(false);
             pnlTitle.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel pnlSideMenu;
-        private Button btnDoctor;
         private Panel pnlEmployeeSubmenu;
         private Button btnEmployeeAdd;
         private Button btnEmployeeList;
@@ -285,9 +342,13 @@
         private Button btnMenu;
         private Panel pnlTitle;
         private Label labelTitle;
-        private Panel pnlDoctorSubmenu;
-        private Button btnDoctorAdd;
-        private Button btnDoctorList;
         public Panel panel1;
+        private Panel panel2;
+        private Button button1;
+        private Button button3;
+        private Button button2;
+        private Panel panel3;
+        private Button button4;
+        private Button button5;
     }
 }

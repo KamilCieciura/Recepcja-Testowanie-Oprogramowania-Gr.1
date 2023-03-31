@@ -75,5 +75,31 @@ namespace Patient_handling
             formfilterdata.Show();
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ZarządzanieWizytami zarzadzaniewizytami = new ZarządzanieWizytami();
+            zarzadzaniewizytami.TopLevel = false;
+            zarzadzaniewizytami.FormBorderStyle = FormBorderStyle.None;
+            zarzadzaniewizytami.Dock = DockStyle.Fill;
+            panel1.Controls.Add(zarzadzaniewizytami);
+            panel1.Tag = zarzadzaniewizytami;
+            zarzadzaniewizytami.BringToFront();
+            zarzadzaniewizytami.Show();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            addNewVisit add = new addNewVisit();
+            add.TopLevel = false;
+            add.FormBorderStyle = FormBorderStyle.None;
+            add.Dock = DockStyle.Fill;
+            panel1.Controls.Add(add);
+            panel1.Tag = add;
+            add.BringToFront();
+            add.Show();
+
+        }
     }
 }

@@ -29,7 +29,14 @@
         private void InitializeComponent()
         {
             pnlSideMenu = new Panel();
+            panel2 = new Panel();
+            button1 = new Button();
+            button3 = new Button();
+            button2 = new Button();
             pnlEmployeeSubmenu = new Panel();
+            panel3 = new Panel();
+            button4 = new Button();
+            button5 = new Button();
             btnEmployeeAdd = new Button();
             btnEmployeeList = new Button();
             btnEmployee = new Button();
@@ -38,19 +45,12 @@
             pnlTitle = new Panel();
             labelTitle = new Label();
             panel1 = new Panel();
-            button2 = new Button();
-            panel2 = new Panel();
-            button1 = new Button();
-            button3 = new Button();
-            panel3 = new Panel();
-            button4 = new Button();
-            button5 = new Button();
             pnlSideMenu.SuspendLayout();
+            panel2.SuspendLayout();
             pnlEmployeeSubmenu.SuspendLayout();
+            panel3.SuspendLayout();
             pnlLogo.SuspendLayout();
             pnlTitle.SuspendLayout();
-            panel2.SuspendLayout();
-            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // pnlSideMenu
@@ -68,6 +68,77 @@
             pnlSideMenu.Size = new Size(250, 617);
             pnlSideMenu.TabIndex = 1;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(31, 47, 66);
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(button3);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 336);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(250, 79);
+            panel2.TabIndex = 4;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(0, 0, 0, 0);
+            button1.Dock = DockStyle.Top;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 189, 241);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 189, 241);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.WhiteSmoke;
+            button1.Location = new Point(0, 40);
+            button1.Name = "button1";
+            button1.Padding = new Padding(35, 0, 0, 0);
+            button1.Size = new Size(250, 40);
+            button1.TabIndex = 1;
+            button1.Tag = "Add";
+            button1.Text = "Add";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(0, 0, 0, 0);
+            button3.Dock = DockStyle.Top;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 189, 241);
+            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 189, 241);
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = Color.WhiteSmoke;
+            button3.Location = new Point(0, 0);
+            button3.Name = "button3";
+            button3.Padding = new Padding(35, 0, 0, 0);
+            button3.Size = new Size(250, 40);
+            button3.TabIndex = 0;
+            button3.Tag = "List";
+            button3.Text = "List";
+            button3.TextAlign = ContentAlignment.MiddleLeft;
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(23, 35, 49);
+            button2.Dock = DockStyle.Top;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.WhiteSmoke;
+            button2.Location = new Point(0, 291);
+            button2.Name = "button2";
+            button2.Padding = new Padding(10, 0, 0, 0);
+            button2.Size = new Size(250, 45);
+            button2.TabIndex = 3;
+            button2.Tag = "Employee";
+            button2.Text = "Medical Visit";
+            button2.TextAlign = ContentAlignment.MiddleLeft;
+            button2.UseVisualStyleBackColor = false;
+            // 
             // pnlEmployeeSubmenu
             // 
             pnlEmployeeSubmenu.BackColor = Color.FromArgb(31, 47, 66);
@@ -79,6 +150,58 @@
             pnlEmployeeSubmenu.Name = "pnlEmployeeSubmenu";
             pnlEmployeeSubmenu.Size = new Size(250, 121);
             pnlEmployeeSubmenu.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(31, 47, 66);
+            panel3.Controls.Add(button4);
+            panel3.Controls.Add(button5);
+            panel3.Dock = DockStyle.Top;
+            panel3.Location = new Point(0, 80);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(250, 121);
+            panel3.TabIndex = 3;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.FromArgb(0, 0, 0, 0);
+            button4.Dock = DockStyle.Top;
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 189, 241);
+            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 189, 241);
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = Color.WhiteSmoke;
+            button4.Location = new Point(0, 40);
+            button4.Name = "button4";
+            button4.Padding = new Padding(35, 0, 0, 0);
+            button4.Size = new Size(250, 40);
+            button4.TabIndex = 1;
+            button4.Tag = "Add";
+            button4.Text = "Add";
+            button4.TextAlign = ContentAlignment.MiddleLeft;
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.FromArgb(0, 0, 0, 0);
+            button5.Dock = DockStyle.Top;
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 189, 241);
+            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 189, 241);
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.ForeColor = Color.WhiteSmoke;
+            button5.Location = new Point(0, 0);
+            button5.Name = "button5";
+            button5.Padding = new Padding(35, 0, 0, 0);
+            button5.Size = new Size(250, 40);
+            button5.TabIndex = 0;
+            button5.Tag = "List";
+            button5.Text = "Filter data";
+            button5.TextAlign = ContentAlignment.MiddleLeft;
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // btnEmployeeAdd
             // 
@@ -189,127 +312,6 @@
             panel1.Size = new Size(867, 492);
             panel1.TabIndex = 3;
             // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(23, 35, 49);
-            button2.Dock = DockStyle.Top;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.WhiteSmoke;
-            button2.Location = new Point(0, 291);
-            button2.Name = "button2";
-            button2.Padding = new Padding(10, 0, 0, 0);
-            button2.Size = new Size(250, 45);
-            button2.TabIndex = 3;
-            button2.Tag = "Employee";
-            button2.Text = "Medical Visit";
-            button2.TextAlign = ContentAlignment.MiddleLeft;
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(31, 47, 66);
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(button3);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 336);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(250, 79);
-            panel2.TabIndex = 4;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(0, 0, 0, 0);
-            button1.Dock = DockStyle.Top;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 189, 241);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 189, 241);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.WhiteSmoke;
-            button1.Location = new Point(0, 40);
-            button1.Name = "button1";
-            button1.Padding = new Padding(35, 0, 0, 0);
-            button1.Size = new Size(250, 40);
-            button1.TabIndex = 1;
-            button1.Tag = "Add";
-            button1.Text = "Add";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.FromArgb(0, 0, 0, 0);
-            button3.Dock = DockStyle.Top;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 189, 241);
-            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 189, 241);
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = Color.WhiteSmoke;
-            button3.Location = new Point(0, 0);
-            button3.Name = "button3";
-            button3.Padding = new Padding(35, 0, 0, 0);
-            button3.Size = new Size(250, 40);
-            button3.TabIndex = 0;
-            button3.Tag = "List";
-            button3.Text = "List";
-            button3.TextAlign = ContentAlignment.MiddleLeft;
-            button3.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.FromArgb(31, 47, 66);
-            panel3.Controls.Add(button4);
-            panel3.Controls.Add(button5);
-            panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(0, 80);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(250, 121);
-            panel3.TabIndex = 3;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.FromArgb(0, 0, 0, 0);
-            button4.Dock = DockStyle.Top;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 189, 241);
-            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 189, 241);
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.ForeColor = Color.WhiteSmoke;
-            button4.Location = new Point(0, 40);
-            button4.Name = "button4";
-            button4.Padding = new Padding(35, 0, 0, 0);
-            button4.Size = new Size(250, 40);
-            button4.TabIndex = 1;
-            button4.Tag = "Add";
-            button4.Text = "Add";
-            button4.TextAlign = ContentAlignment.MiddleLeft;
-            button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.FromArgb(0, 0, 0, 0);
-            button5.Dock = DockStyle.Top;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 189, 241);
-            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 189, 241);
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.ForeColor = Color.WhiteSmoke;
-            button5.Location = new Point(0, 0);
-            button5.Name = "button5";
-            button5.Padding = new Padding(35, 0, 0, 0);
-            button5.Size = new Size(250, 40);
-            button5.TabIndex = 0;
-            button5.Tag = "List";
-            button5.Text = "Filter data";
-            button5.TextAlign = ContentAlignment.MiddleLeft;
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
-            // 
             // form_ReceptionMenu2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -322,12 +324,12 @@
             Text = "ReceptionMenu2";
             Load += ReceptionMenu2_Load;
             pnlSideMenu.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             pnlEmployeeSubmenu.ResumeLayout(false);
+            panel3.ResumeLayout(false);
             pnlLogo.ResumeLayout(false);
             pnlTitle.ResumeLayout(false);
             pnlTitle.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 

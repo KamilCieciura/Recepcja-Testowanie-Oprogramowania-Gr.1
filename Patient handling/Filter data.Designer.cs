@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button_cancel_add_patient_form = new Button();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
@@ -50,16 +49,6 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown_form_filter_data_age_from).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_form_filter_data_age_to).BeginInit();
             SuspendLayout();
-            // 
-            // button_cancel_add_patient_form
-            // 
-            button_cancel_add_patient_form.Location = new Point(117, 388);
-            button_cancel_add_patient_form.Name = "button_cancel_add_patient_form";
-            button_cancel_add_patient_form.Size = new Size(74, 23);
-            button_cancel_add_patient_form.TabIndex = 27;
-            button_cancel_add_patient_form.Text = "Cancel";
-            button_cancel_add_patient_form.UseVisualStyleBackColor = true;
-            button_cancel_add_patient_form.Click += button_cancel_add_patient_form_Click;
             // 
             // label6
             // 
@@ -161,7 +150,7 @@
             // 
             button_add_patient_form_data.Location = new Point(31, 388);
             button_add_patient_form_data.Name = "button_add_patient_form_data";
-            button_add_patient_form_data.Size = new Size(74, 23);
+            button_add_patient_form_data.Size = new Size(160, 23);
             button_add_patient_form_data.TabIndex = 14;
             button_add_patient_form_data.Text = "Filter";
             button_add_patient_form_data.UseVisualStyleBackColor = true;
@@ -217,7 +206,6 @@
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(numericUpDown_form_filter_data_age_to);
-            Controls.Add(button_cancel_add_patient_form);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -240,8 +228,6 @@
         }
 
         #endregion
-
-        private Button button_cancel_add_patient_form;
         private Label label6;
         private Label label5;
         private Label label4;

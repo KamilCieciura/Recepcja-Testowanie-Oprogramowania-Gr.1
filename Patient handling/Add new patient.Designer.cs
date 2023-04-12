@@ -41,7 +41,6 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            button_cancel_add_patient_form = new Button();
             label7 = new Label();
             textBox_form_add_patient_residential_adress = new TextBox();
             dateTimePicker1 = new DateTimePicker();
@@ -58,7 +57,7 @@
             // 
             button_add_patient_form.Location = new Point(31, 352);
             button_add_patient_form.Name = "button_add_patient_form";
-            button_add_patient_form.Size = new Size(91, 23);
+            button_add_patient_form.Size = new Size(219, 23);
             button_add_patient_form.TabIndex = 0;
             button_add_patient_form.Text = "Add";
             button_add_patient_form.UseVisualStyleBackColor = true;
@@ -153,16 +152,6 @@
             label6.TabIndex = 12;
             label6.Text = "PESEL";
             // 
-            // button_cancel_add_patient_form
-            // 
-            button_cancel_add_patient_form.Location = new Point(153, 352);
-            button_cancel_add_patient_form.Name = "button_cancel_add_patient_form";
-            button_cancel_add_patient_form.Size = new Size(97, 23);
-            button_cancel_add_patient_form.TabIndex = 13;
-            button_cancel_add_patient_form.Text = "Cancel";
-            button_cancel_add_patient_form.UseVisualStyleBackColor = true;
-            button_cancel_add_patient_form.Click += button_cancel_add_patient_form_Click;
-            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -199,7 +188,6 @@
             Controls.Add(dateTimePicker1);
             Controls.Add(label7);
             Controls.Add(textBox_form_add_patient_residential_adress);
-            Controls.Add(button_cancel_add_patient_form);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -234,7 +222,6 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private Button button_cancel_add_patient_form;
         private Label label7;
         private TextBox textBox_form_add_patient_residential_adress;
         private DateTimePicker dateTimePicker1;

@@ -21,7 +21,7 @@ namespace Patient_Handling
             _formReceptionMenu = formReceptionMenu;
         }
 
-    
+
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -30,10 +30,10 @@ namespace Patient_Handling
 
         private void button_cancel_add_patient_form_Click(object sender, EventArgs e)
         {
-          
+
 
             this.Hide();
-         
+
 
         }
 
@@ -87,7 +87,7 @@ namespace Patient_Handling
 
             this.Hide();
             _formReceptionMenu.Show();
-            
+
 
         }
     }

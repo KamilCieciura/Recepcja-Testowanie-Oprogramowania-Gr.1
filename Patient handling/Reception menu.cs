@@ -22,7 +22,7 @@ namespace Patient_handling
             DatabaseConnection databaseConnection = new DatabaseConnection();
 
             databaseConnection.LoadDataIntoDataGridView(dataGridView_patients, "Patients");
-  
+
         }
         public void AddPatient(Patient patient)
         {
@@ -85,9 +85,10 @@ namespace Patient_handling
 
         private void button_menu_activate_patient_Click(object sender, EventArgs e)
         {
+            Patient selectedPatient = (Patient)dataGridView_patients.CurrentRow.DataBoundItem;
             if (dataGridView_patients.CurrentRow != null)
             {
-                Patient selectedPatient = (Patient)dataGridView_patients.CurrentRow.DataBoundItem;
+           
                 selectedPatient.Status = "Active";
                 dataGridView_patients.Refresh();
             }
@@ -95,13 +96,30 @@ namespace Patient_handling
             {
                 MessageBox.Show("Please select a patient to activate.");
             }
+
+
+
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+
+            string[] columnNames = { "Status" };
+            string[] columnValues = { "1" };
+            string condition = $"ID = {selectedPatient}";
+            databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
+
+
+
+
+
+
+
         }
 
         private void button_menu_inactivate_patient_Click(object sender, EventArgs e)
         {
+            Patient selectedPatient = (Patient)dataGridView_patients.CurrentRow.DataBoundItem;
             if (dataGridView_patients.CurrentRow != null)
             {
-                Patient selectedPatient = (Patient)dataGridView_patients.CurrentRow.DataBoundItem;
+           
                 selectedPatient.Status = "Inactive";
                 dataGridView_patients.Refresh();
             }
@@ -109,6 +127,13 @@ namespace Patient_handling
             {
                 MessageBox.Show("Please select a patient to activate.");
             }
+
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+
+            string[] columnNames = { "Status" };
+            string[] columnValues = { "0" };
+            string condition = $"ID = {selectedPatient}";
+            databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
         }
 
         private void button1_Click(object sender, EventArgs e)

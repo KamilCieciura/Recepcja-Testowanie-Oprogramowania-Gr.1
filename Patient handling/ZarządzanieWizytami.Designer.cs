@@ -148,6 +148,7 @@
             Controls.Add(dataGridView_lista_wizyt);
             Name = "ZarządzanieWizytami";
             Text = "ZarządzanieWizytami";
+            Load += ZarządzanieWizytami_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView_lista_wizyt).EndInit();
             ResumeLayout(false);
         }

@@ -57,6 +57,21 @@ namespace Patient_Handling
 
             this.DialogResult = DialogResult.OK;
             this.Hide();
+   
+
+
+
+
+
+
+            DatabaseConnection databaseConnection= new DatabaseConnection();
+
+            string[] columnNames = { "LastName", "PhoneNumber","EmailAdress","ResidentialAdress" };
+            string[] columnValues = { textBox_form_edit_patient_last_name.Text, textBox_form_edit_patient_phone_number.Text, textBox_form_edit_patient_adress.Text,textBox_form_edit_patient_residential_adress.Text };
+            string condition = $"ID = {_selectedPatient}";
+            databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
+            
+
         }
 
         private void Form_edit_patient_Load(object sender, EventArgs e)
@@ -66,5 +81,14 @@ namespace Patient_Handling
             textBox_form_edit_patient_adress.Text = _selectedPatient.EmailAddress;
             textBox_form_edit_patient_residential_adress.Text = _selectedPatient.ResidentialAddress;
         }
+
+
+
+
+       
+        
+
+
+
     }
 }

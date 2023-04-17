@@ -89,6 +89,15 @@ namespace Patient_Handling
             _formReceptionMenu.Show();
 
 
+
+            DatabaseConnection databaseConnection=new DatabaseConnection();
+
+            string[] columnNames = { "FirstName", "LastName", "BirthDate","PhoneNumber","EmailAdress","ResidentialAdress","Pesel" };
+            string[] columnValues = { textBox_form_add_patient_First_name.Text, textBox_form_add_patient_last_name.Text,
+            dateTimePicker1.Value.ToString(),textBox_form_add_patient_phone_number.Text,textBox_form_add_patient_adress_email.Text,
+                textBox_form_add_patient_residential_adress.Text,textBox_form_add_patient_social_security_number.Text};
+            databaseConnection.InsertDataToDatabase("Patients", columnNames, columnValues);
+
         }
     }
 }

@@ -15,12 +15,20 @@ namespace Patient_handling
         public ZarządzanieWizytami()
         {
             InitializeComponent();
+
+            DatabaseConnection database = new DatabaseConnection();
+            database.LoadDataIntoDataGridView(dataGridView_lista_wizyt, "MedicalVisit");
         }
 
         private void button_edit_appointment_Click(object sender, EventArgs e)
         {
             EditAppointment editAppointment = new EditAppointment();
             editAppointment.Show();
+        }
+
+        private void ZarządzanieWizytami_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

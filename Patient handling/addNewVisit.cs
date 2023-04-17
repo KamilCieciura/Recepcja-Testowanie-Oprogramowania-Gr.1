@@ -16,5 +16,13 @@ namespace Patient_handling
         {
             InitializeComponent();
         }
+
+        private void button_add_visit_Click(object sender, EventArgs e)
+        {
+
+
+
+
+        }
     }
 }

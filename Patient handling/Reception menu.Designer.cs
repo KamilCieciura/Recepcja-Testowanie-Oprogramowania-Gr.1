@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             dataGridView_patients = new DataGridView();
+            button_menu_edit_patient = new Button();
+            button_menu_activate_patient = new Button();
+            button_menu_remove_patient = new Button();
+            comboBox_menu_sort_data = new ComboBox();
+            button_menu_sort_data = new Button();
+            button_menu_inactivate_patient = new Button();
+            id = new DataGridViewTextBoxColumn();
             columnFirstName = new DataGridViewTextBoxColumn();
             columnLastName = new DataGridViewTextBoxColumn();
             columnBirthdate = new DataGridViewTextBoxColumn();
@@ -37,19 +44,13 @@
             columnResidentialAddress = new DataGridViewTextBoxColumn();
             columnPESEL = new DataGridViewTextBoxColumn();
             columnStatus = new DataGridViewTextBoxColumn();
-            button_menu_edit_patient = new Button();
-            button_menu_activate_patient = new Button();
-            button_menu_remove_patient = new Button();
-            comboBox_menu_sort_data = new ComboBox();
-            button_menu_sort_data = new Button();
-            button_menu_inactivate_patient = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView_patients).BeginInit();
             SuspendLayout();
             // 
             // dataGridView_patients
             // 
             dataGridView_patients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_patients.Columns.AddRange(new DataGridViewColumn[] { columnFirstName, columnLastName, columnBirthdate, columnPhoneNumber, columnEmailAddress, columnResidentialAddress, columnPESEL, columnStatus });
+            dataGridView_patients.Columns.AddRange(new DataGridViewColumn[] { id, columnFirstName, columnLastName, columnBirthdate, columnPhoneNumber, columnEmailAddress, columnResidentialAddress, columnPESEL, columnStatus });
             dataGridView_patients.EditMode = DataGridViewEditMode.EditProgrammatically;
             dataGridView_patients.Location = new Point(22, 76);
             dataGridView_patients.Name = "dataGridView_patients";
@@ -61,63 +62,6 @@
             dataGridView_patients.TabIndex = 0;
             dataGridView_patients.VirtualMode = true;
             dataGridView_patients.CellContentClick += dataGridView_patients_CellContentClick;
-            // 
-            // columnFirstName
-            // 
-            columnFirstName.DataPropertyName = "FirstName";
-            columnFirstName.HeaderText = "First Name";
-            columnFirstName.MinimumWidth = 6;
-            columnFirstName.Name = "columnFirstName";
-            // 
-            // columnLastName
-            // 
-            columnLastName.DataPropertyName = "LastName";
-            columnLastName.HeaderText = "Last Name";
-            columnLastName.MinimumWidth = 6;
-            columnLastName.Name = "columnLastName";
-            // 
-            // columnBirthdate
-            // 
-            columnBirthdate.DataPropertyName = "Birthdate";
-            columnBirthdate.HeaderText = "Birth date";
-            columnBirthdate.MaxInputLength = 10;
-            columnBirthdate.MinimumWidth = 6;
-            columnBirthdate.Name = "columnBirthdate";
-            // 
-            // columnPhoneNumber
-            // 
-            columnPhoneNumber.DataPropertyName = "PhoneNumber";
-            columnPhoneNumber.HeaderText = "Phone Number";
-            columnPhoneNumber.MinimumWidth = 6;
-            columnPhoneNumber.Name = "columnPhoneNumber";
-            // 
-            // columnEmailAddress
-            // 
-            columnEmailAddress.DataPropertyName = "EmailAddress";
-            columnEmailAddress.HeaderText = "Email Address";
-            columnEmailAddress.MinimumWidth = 6;
-            columnEmailAddress.Name = "columnEmailAddress";
-            // 
-            // columnResidentialAddress
-            // 
-            columnResidentialAddress.DataPropertyName = "ResidentialAddress";
-            columnResidentialAddress.HeaderText = "Residential Address";
-            columnResidentialAddress.MinimumWidth = 6;
-            columnResidentialAddress.Name = "columnResidentialAddress";
-            // 
-            // columnPESEL
-            // 
-            columnPESEL.DataPropertyName = "PESEL";
-            columnPESEL.HeaderText = "PESEL";
-            columnPESEL.MinimumWidth = 6;
-            columnPESEL.Name = "columnPESEL";
-            // 
-            // columnStatus
-            // 
-            columnStatus.DataPropertyName = "Status";
-            columnStatus.HeaderText = "Status";
-            columnStatus.MinimumWidth = 6;
-            columnStatus.Name = "columnStatus";
             // 
             // button_menu_edit_patient
             // 
@@ -176,6 +120,69 @@
             button_menu_inactivate_patient.UseVisualStyleBackColor = true;
             button_menu_inactivate_patient.Click += button_menu_inactivate_patient_Click;
             // 
+            // id
+            // 
+            id.HeaderText = "id";
+            id.Name = "id";
+            id.Visible = false;
+            // 
+            // columnFirstName
+            // 
+            columnFirstName.DataPropertyName = "FirstName";
+            columnFirstName.HeaderText = "First Name";
+            columnFirstName.MinimumWidth = 6;
+            columnFirstName.Name = "columnFirstName";
+            // 
+            // columnLastName
+            // 
+            columnLastName.DataPropertyName = "LastName";
+            columnLastName.HeaderText = "Last Name";
+            columnLastName.MinimumWidth = 6;
+            columnLastName.Name = "columnLastName";
+            // 
+            // columnBirthdate
+            // 
+            columnBirthdate.DataPropertyName = "Birthdate";
+            columnBirthdate.HeaderText = "Birth date";
+            columnBirthdate.MaxInputLength = 10;
+            columnBirthdate.MinimumWidth = 6;
+            columnBirthdate.Name = "columnBirthdate";
+            // 
+            // columnPhoneNumber
+            // 
+            columnPhoneNumber.DataPropertyName = "PhoneNumber";
+            columnPhoneNumber.HeaderText = "Phone Number";
+            columnPhoneNumber.MinimumWidth = 6;
+            columnPhoneNumber.Name = "columnPhoneNumber";
+            // 
+            // columnEmailAddress
+            // 
+            columnEmailAddress.DataPropertyName = "EmailAddress";
+            columnEmailAddress.HeaderText = "Email Address";
+            columnEmailAddress.MinimumWidth = 6;
+            columnEmailAddress.Name = "columnEmailAddress";
+            // 
+            // columnResidentialAddress
+            // 
+            columnResidentialAddress.DataPropertyName = "ResidentialAddress";
+            columnResidentialAddress.HeaderText = "Residential Address";
+            columnResidentialAddress.MinimumWidth = 6;
+            columnResidentialAddress.Name = "columnResidentialAddress";
+            // 
+            // columnPESEL
+            // 
+            columnPESEL.DataPropertyName = "PESEL";
+            columnPESEL.HeaderText = "PESEL";
+            columnPESEL.MinimumWidth = 6;
+            columnPESEL.Name = "columnPESEL";
+            // 
+            // columnStatus
+            // 
+            columnStatus.DataPropertyName = "Status";
+            columnStatus.HeaderText = "Status";
+            columnStatus.MinimumWidth = 6;
+            columnStatus.Name = "columnStatus";
+            // 
             // Form_reception_menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -203,6 +210,8 @@
         private Button button_menu_remove_patient;
         private ComboBox comboBox_menu_sort_data;
         private Button button_menu_sort_data;
+        private Button button_menu_inactivate_patient;
+        private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn columnFirstName;
         private DataGridViewTextBoxColumn columnLastName;
         private DataGridViewTextBoxColumn columnBirthdate;
@@ -211,6 +220,5 @@
         private DataGridViewTextBoxColumn columnResidentialAddress;
         private DataGridViewTextBoxColumn columnPESEL;
         private DataGridViewTextBoxColumn columnStatus;
-        private Button button_menu_inactivate_patient;
     }
 }

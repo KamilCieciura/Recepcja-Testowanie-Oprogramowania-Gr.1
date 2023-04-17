@@ -115,6 +115,7 @@
             button_add_visit.TabIndex = 8;
             button_add_visit.Text = "Add ";
             button_add_visit.UseVisualStyleBackColor = true;
+            button_add_visit.Click += button_add_visit_Click;
             // 
             // addNewVisit
             // 

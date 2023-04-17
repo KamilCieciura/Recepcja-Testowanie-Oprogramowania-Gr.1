@@ -1,6 +1,7 @@
 using Patient_Handling;
 using System.ComponentModel;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Patient_handling
 {
@@ -17,6 +18,11 @@ namespace Patient_handling
 
             comboBox_menu_sort_data.Items.AddRange(listaStringow.ToArray());
             dataGridView_patients.DataSource = Patients;
+
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+
+            databaseConnection.LoadDataIntoDataGridView(dataGridView_patients, "Patients");
+  
         }
         public void AddPatient(Patient patient)
         {

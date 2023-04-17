@@ -292,6 +292,7 @@
             pnlTitle.Name = "pnlTitle";
             pnlTitle.Size = new Size(867, 125);
             pnlTitle.TabIndex = 2;
+            pnlTitle.Paint += pnlTitle_Paint;
             // 
             // labelTitle
             // 

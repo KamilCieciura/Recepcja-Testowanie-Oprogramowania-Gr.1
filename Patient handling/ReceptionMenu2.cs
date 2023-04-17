@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.DataFormats;
+using System.Data.SqlClient;
 
 namespace Patient_handling
 {
@@ -17,6 +18,13 @@ namespace Patient_handling
         public form_ReceptionMenu2()
         {
             InitializeComponent();
+
+
+
+
+      
+
+
         }
 
         private void btnEmployee_Click(object sender, EventArgs e)
@@ -99,6 +107,11 @@ namespace Patient_handling
             panel1.Tag = add;
             add.BringToFront();
             add.Show();
+
+        }
+
+        private void pnlTitle_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

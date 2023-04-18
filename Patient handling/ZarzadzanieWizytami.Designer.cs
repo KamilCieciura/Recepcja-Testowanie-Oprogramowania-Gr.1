@@ -29,56 +29,25 @@
         private void InitializeComponent()
         {
             dataGridView_lista_wizyt = new DataGridView();
-            Patient = new DataGridViewTextBoxColumn();
-            Doctor = new DataGridViewTextBoxColumn();
-            date_of_visit = new DataGridViewTextBoxColumn();
-            appointment_time = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewButtonColumn();
             comboBox_sort_visit = new ComboBox();
             button_sort_visit = new Button();
             button_edit_appointment = new Button();
             button_cancel_visit = new Button();
             button_Send_confirmation = new Button();
             button_Clear_the_calendar = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView_lista_wizyt).BeginInit();
             SuspendLayout();
             // 
             // dataGridView_lista_wizyt
             // 
             dataGridView_lista_wizyt.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_lista_wizyt.Columns.AddRange(new DataGridViewColumn[] { Patient, Doctor, date_of_visit, appointment_time, Column1 });
             dataGridView_lista_wizyt.Location = new Point(29, 65);
             dataGridView_lista_wizyt.Name = "dataGridView_lista_wizyt";
             dataGridView_lista_wizyt.RowHeadersVisible = false;
             dataGridView_lista_wizyt.RowTemplate.Height = 25;
             dataGridView_lista_wizyt.Size = new Size(500, 150);
             dataGridView_lista_wizyt.TabIndex = 0;
-            // 
-            // Patient
-            // 
-            Patient.HeaderText = "Patient";
-            Patient.Name = "Patient";
-            // 
-            // Doctor
-            // 
-            Doctor.HeaderText = "Doctor";
-            Doctor.Name = "Doctor";
-            // 
-            // date_of_visit
-            // 
-            date_of_visit.HeaderText = "Date of visit";
-            date_of_visit.Name = "date_of_visit";
-            // 
-            // appointment_time
-            // 
-            appointment_time.HeaderText = "Appointment time";
-            appointment_time.Name = "appointment_time";
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "details";
-            Column1.Name = "Column1";
-            Column1.Text = "details";
             // 
             // comboBox_sort_visit
             // 
@@ -118,7 +87,7 @@
             // 
             // button_Send_confirmation
             // 
-            button_Send_confirmation.Location = new Point(270, 230);
+            button_Send_confirmation.Location = new Point(274, 230);
             button_Send_confirmation.Name = "button_Send_confirmation";
             button_Send_confirmation.Size = new Size(125, 26);
             button_Send_confirmation.TabIndex = 5;
@@ -127,18 +96,28 @@
             // 
             // button_Clear_the_calendar
             // 
-            button_Clear_the_calendar.Location = new Point(413, 230);
+            button_Clear_the_calendar.Location = new Point(29, 36);
             button_Clear_the_calendar.Name = "button_Clear_the_calendar";
-            button_Clear_the_calendar.Size = new Size(116, 26);
+            button_Clear_the_calendar.Size = new Size(129, 26);
             button_Clear_the_calendar.TabIndex = 6;
             button_Clear_the_calendar.Text = "Clear the calendar";
             button_Clear_the_calendar.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(411, 230);
+            button1.Name = "button1";
+            button1.Size = new Size(118, 26);
+            button1.TabIndex = 7;
+            button1.Text = "visit details";
+            button1.UseVisualStyleBackColor = true;
             // 
             // ZarzadzanieWizytami
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(565, 315);
+            ClientSize = new Size(680, 315);
+            Controls.Add(button1);
             Controls.Add(button_Clear_the_calendar);
             Controls.Add(button_Send_confirmation);
             Controls.Add(button_cancel_visit);
@@ -158,14 +137,10 @@
         private DataGridView dataGridView_lista_wizyt;
         private ComboBox comboBox_sort_visit;
         private Button button_sort_visit;
-        private DataGridViewTextBoxColumn Patient;
-        private DataGridViewTextBoxColumn Doctor;
-        private DataGridViewTextBoxColumn date_of_visit;
-        private DataGridViewTextBoxColumn appointment_time;
-        private DataGridViewButtonColumn Column1;
         private Button button_edit_appointment;
         private Button button_cancel_visit;
         private Button button_Send_confirmation;
         private Button button_Clear_the_calendar;
+        private Button button1;
     }
 }

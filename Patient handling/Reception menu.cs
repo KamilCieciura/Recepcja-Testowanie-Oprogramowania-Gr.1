@@ -183,12 +183,12 @@ namespace Patient_handling
         {
             if (comboBox_menu_sort_data.SelectedIndex == 0)
             {
-                // Sortuj dane rosn¹co wed³ug wybranej kolumny
+   
                 dataGridView_patients.Sort(dataGridView_patients.Columns["columnfirstName"], ListSortDirection.Ascending);
             }
             else if (comboBox_menu_sort_data.SelectedIndex == 1)
             {
-                // Sortuj dane malej¹co wed³ug wybranej kolumny
+         
                 dataGridView_patients.Sort(dataGridView_patients.Columns["columnLastName"], ListSortDirection.Descending);
             }
 

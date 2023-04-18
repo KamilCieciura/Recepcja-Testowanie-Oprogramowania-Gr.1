@@ -30,8 +30,6 @@
         {
             button_menu_activate_patient = new Button();
             button_menu_remove_patient = new Button();
-            comboBox_menu_sort_data = new ComboBox();
-            button_menu_sort_data = new Button();
             dataGridView_patients = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView_patients).BeginInit();
             SuspendLayout();
@@ -56,24 +54,6 @@
             button_menu_remove_patient.UseVisualStyleBackColor = true;
             button_menu_remove_patient.Click += button_menu_remove_patient_Click;
             // 
-            // comboBox_menu_sort_data
-            // 
-            comboBox_menu_sort_data.FormattingEnabled = true;
-            comboBox_menu_sort_data.Location = new Point(662, 21);
-            comboBox_menu_sort_data.Name = "comboBox_menu_sort_data";
-            comboBox_menu_sort_data.Size = new Size(140, 23);
-            comboBox_menu_sort_data.TabIndex = 5;
-            // 
-            // button_menu_sort_data
-            // 
-            button_menu_sort_data.Location = new Point(662, 42);
-            button_menu_sort_data.Name = "button_menu_sort_data";
-            button_menu_sort_data.Size = new Size(140, 23);
-            button_menu_sort_data.TabIndex = 6;
-            button_menu_sort_data.Text = "Sort data";
-            button_menu_sort_data.UseVisualStyleBackColor = true;
-            button_menu_sort_data.Click += button_menu_sort_data_Click;
-            // 
             // dataGridView_patients
             // 
             dataGridView_patients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -94,8 +74,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(854, 354);
             Controls.Add(dataGridView_patients);
-            Controls.Add(button_menu_sort_data);
-            Controls.Add(comboBox_menu_sort_data);
             Controls.Add(button_menu_remove_patient);
             Controls.Add(button_menu_activate_patient);
             Name = "Form_reception_menu";
@@ -108,8 +86,6 @@
         #endregion
         private Button button_menu_activate_patient;
         private Button button_menu_remove_patient;
-        private ComboBox comboBox_menu_sort_data;
-        private Button button_menu_sort_data;
         private DataGridView dataGridView_patients;
     }
 }

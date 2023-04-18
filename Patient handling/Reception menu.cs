@@ -18,7 +18,7 @@ namespace Patient_handling
             listaStringow.Add("sort from z to a");
 
 
-            comboBox_menu_sort_data.Items.AddRange(listaStringow.ToArray());
+            /*comboBox_menu_sort_data.Items.AddRange(listaStringow.ToArray());*/
             dataGridView_patients.DataSource = Patients;
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
@@ -181,7 +181,7 @@ namespace Patient_handling
 
         private void button_menu_sort_data_Click(object sender, EventArgs e)
         {
-            if (comboBox_menu_sort_data.SelectedIndex == 0)
+           /*if (comboBox_menu_sort_data.SelectedIndex == 0)
             {
 
                 dataGridView_patients.Sort(dataGridView_patients.Columns["columnfirstName"], ListSortDirection.Ascending);
@@ -191,7 +191,7 @@ namespace Patient_handling
 
                 dataGridView_patients.Sort(dataGridView_patients.Columns["columnLastName"], ListSortDirection.Descending);
             }
-
+           */
         }
     }
 }

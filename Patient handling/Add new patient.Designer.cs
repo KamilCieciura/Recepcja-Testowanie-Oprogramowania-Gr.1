@@ -44,6 +44,8 @@
             label7 = new Label();
             textBox_form_add_patient_residential_adress = new TextBox();
             dateTimePicker1 = new DateTimePicker();
+            comboBox_gender = new ComboBox();
+            label8 = new Label();
             SuspendLayout();
             // 
             // dateTimePicker_form_add_patient_birthdate
@@ -55,7 +57,7 @@
             // 
             // button_add_patient_form
             // 
-            button_add_patient_form.Location = new Point(31, 352);
+            button_add_patient_form.Location = new Point(31, 399);
             button_add_patient_form.Name = "button_add_patient_form";
             button_add_patient_form.Size = new Size(219, 23);
             button_add_patient_form.TabIndex = 0;
@@ -79,21 +81,21 @@
             // 
             // textBox_form_add_patient_phone_number
             // 
-            textBox_form_add_patient_phone_number.Location = new Point(31, 172);
+            textBox_form_add_patient_phone_number.Location = new Point(31, 219);
             textBox_form_add_patient_phone_number.Name = "textBox_form_add_patient_phone_number";
             textBox_form_add_patient_phone_number.Size = new Size(219, 23);
             textBox_form_add_patient_phone_number.TabIndex = 4;
             // 
             // textBox_form_add_patient_adress_email
             // 
-            textBox_form_add_patient_adress_email.Location = new Point(31, 218);
+            textBox_form_add_patient_adress_email.Location = new Point(31, 265);
             textBox_form_add_patient_adress_email.Name = "textBox_form_add_patient_adress_email";
             textBox_form_add_patient_adress_email.Size = new Size(219, 23);
             textBox_form_add_patient_adress_email.TabIndex = 5;
             // 
             // textBox_form_add_patient_social_security_number
             // 
-            textBox_form_add_patient_social_security_number.Location = new Point(31, 314);
+            textBox_form_add_patient_social_security_number.Location = new Point(31, 361);
             textBox_form_add_patient_social_security_number.Name = "textBox_form_add_patient_social_security_number";
             textBox_form_add_patient_social_security_number.Size = new Size(219, 23);
             textBox_form_add_patient_social_security_number.TabIndex = 6;
@@ -128,7 +130,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(31, 154);
+            label4.Location = new Point(31, 201);
             label4.Name = "label4";
             label4.Size = new Size(86, 15);
             label4.TabIndex = 10;
@@ -137,7 +139,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(31, 200);
+            label5.Location = new Point(31, 247);
             label5.Name = "label5";
             label5.Size = new Size(72, 15);
             label5.TabIndex = 11;
@@ -146,7 +148,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(31, 296);
+            label6.Location = new Point(31, 343);
             label6.Name = "label6";
             label6.Size = new Size(38, 15);
             label6.TabIndex = 12;
@@ -155,7 +157,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(31, 247);
+            label7.Location = new Point(31, 294);
             label7.Name = "label7";
             label7.Size = new Size(100, 15);
             label7.TabIndex = 15;
@@ -163,7 +165,7 @@
             // 
             // textBox_form_add_patient_residential_adress
             // 
-            textBox_form_add_patient_residential_adress.Location = new Point(31, 265);
+            textBox_form_add_patient_residential_adress.Location = new Point(31, 312);
             textBox_form_add_patient_residential_adress.Name = "textBox_form_add_patient_residential_adress";
             textBox_form_add_patient_residential_adress.Size = new Size(219, 23);
             textBox_form_add_patient_residential_adress.TabIndex = 14;
@@ -171,20 +173,38 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(31, 129);
-            dateTimePicker1.Margin = new Padding(3, 2, 3, 2);
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(31, 130);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(219, 23);
+            dateTimePicker1.Size = new Size(200, 23);
             dateTimePicker1.TabIndex = 16;
-            dateTimePicker1.Value = new DateTime(2023, 3, 29, 0, 0, 0, 0);
+            dateTimePicker1.Value = new DateTime(2023, 4, 6, 0, 0, 0, 0);
+            // 
+            // comboBox_gender
+            // 
+            comboBox_gender.FormattingEnabled = true;
+            comboBox_gender.Items.AddRange(new object[] { "M", "K" });
+            comboBox_gender.Location = new Point(31, 175);
+            comboBox_gender.Name = "comboBox_gender";
+            comboBox_gender.Size = new Size(200, 23);
+            comboBox_gender.TabIndex = 17;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(31, 157);
+            label8.Name = "label8";
+            label8.Size = new Size(25, 15);
+            label8.TabIndex = 18;
+            label8.Text = "Sex";
             // 
             // Form_add_patient
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(286, 404);
+            ClientSize = new Size(394, 429);
+            Controls.Add(label8);
+            Controls.Add(comboBox_gender);
             Controls.Add(dateTimePicker1);
             Controls.Add(label7);
             Controls.Add(textBox_form_add_patient_residential_adress);
@@ -225,5 +245,7 @@
         private Label label7;
         private TextBox textBox_form_add_patient_residential_adress;
         private DateTimePicker dateTimePicker1;
+        private ComboBox comboBox_gender;
+        private Label label8;
     }
 }

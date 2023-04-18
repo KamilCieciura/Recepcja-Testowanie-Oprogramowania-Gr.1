@@ -65,7 +65,7 @@
             pnlSideMenu.Dock = DockStyle.Left;
             pnlSideMenu.Location = new Point(0, 0);
             pnlSideMenu.Name = "pnlSideMenu";
-            pnlSideMenu.Size = new Size(250, 617);
+            pnlSideMenu.Size = new Size(250, 701);
             pnlSideMenu.TabIndex = 1;
             // 
             // panel2
@@ -157,7 +157,7 @@
             panel3.Controls.Add(button4);
             panel3.Controls.Add(button5);
             panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(0, 80);
+            panel3.Location = new Point(0, 67);
             panel3.Name = "panel3";
             panel3.Size = new Size(250, 121);
             panel3.TabIndex = 3;
@@ -172,15 +172,16 @@
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = Color.WhiteSmoke;
-            button4.Location = new Point(0, 40);
+            button4.Location = new Point(0, 31);
             button4.Name = "button4";
             button4.Padding = new Padding(35, 0, 0, 0);
-            button4.Size = new Size(250, 40);
-            button4.TabIndex = 1;
+            button4.Size = new Size(250, 23);
+            button4.TabIndex = 2;
             button4.Tag = "Add";
-            button4.Text = "Add";
+            button4.Text = "Edit patient Data";
             button4.TextAlign = ContentAlignment.MiddleLeft;
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -195,7 +196,7 @@
             button5.Location = new Point(0, 0);
             button5.Name = "button5";
             button5.Padding = new Padding(35, 0, 0, 0);
-            button5.Size = new Size(250, 40);
+            button5.Size = new Size(250, 31);
             button5.TabIndex = 0;
             button5.Tag = "List";
             button5.Text = "Filter data";
@@ -213,10 +214,10 @@
             btnEmployeeAdd.FlatStyle = FlatStyle.Flat;
             btnEmployeeAdd.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnEmployeeAdd.ForeColor = Color.WhiteSmoke;
-            btnEmployeeAdd.Location = new Point(0, 40);
+            btnEmployeeAdd.Location = new Point(0, 36);
             btnEmployeeAdd.Name = "btnEmployeeAdd";
             btnEmployeeAdd.Padding = new Padding(35, 0, 0, 0);
-            btnEmployeeAdd.Size = new Size(250, 40);
+            btnEmployeeAdd.Size = new Size(250, 31);
             btnEmployeeAdd.TabIndex = 1;
             btnEmployeeAdd.Tag = "Add";
             btnEmployeeAdd.Text = "Add";
@@ -237,7 +238,7 @@
             btnEmployeeList.Location = new Point(0, 0);
             btnEmployeeList.Name = "btnEmployeeList";
             btnEmployeeList.Padding = new Padding(35, 0, 0, 0);
-            btnEmployeeList.Size = new Size(250, 40);
+            btnEmployeeList.Size = new Size(250, 36);
             btnEmployeeList.TabIndex = 0;
             btnEmployeeList.Tag = "List";
             btnEmployeeList.Text = "List";
@@ -290,7 +291,7 @@
             pnlTitle.Dock = DockStyle.Top;
             pnlTitle.Location = new Point(250, 0);
             pnlTitle.Name = "pnlTitle";
-            pnlTitle.Size = new Size(867, 125);
+            pnlTitle.Size = new Size(1073, 125);
             pnlTitle.TabIndex = 2;
             pnlTitle.Paint += pnlTitle_Paint;
             // 
@@ -310,14 +311,14 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(250, 125);
             panel1.Name = "panel1";
-            panel1.Size = new Size(867, 492);
+            panel1.Size = new Size(1073, 576);
             panel1.TabIndex = 3;
             // 
             // form_ReceptionMenu2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1117, 617);
+            ClientSize = new Size(1323, 701);
             Controls.Add(panel1);
             Controls.Add(pnlTitle);
             Controls.Add(pnlSideMenu);
@@ -351,7 +352,7 @@
         private Button button3;
         private Button button2;
         private Panel panel3;
-        private Button button4;
         private Button button5;
+        private Button button4;
     }
 }

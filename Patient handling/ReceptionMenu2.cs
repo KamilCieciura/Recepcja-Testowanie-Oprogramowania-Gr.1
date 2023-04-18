@@ -14,9 +14,9 @@ using System.Data.SqlClient;
 
 namespace Patient_handling
 {
-    public partial class form_ReceptionMenu2 :Form
+    public partial class form_ReceptionMenu2 : Form
     {
-        
+
         public form_ReceptionMenu2()
         {
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace Patient_handling
 
 
 
-      
+
 
 
         }
@@ -52,9 +52,9 @@ namespace Patient_handling
             formReceptionMenu.BringToFront();
             formReceptionMenu.Show();
 
-  
 
-    
+
+
 
 
         }
@@ -117,6 +117,19 @@ namespace Patient_handling
         private void pnlTitle_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            Form_edit_patient formeditpatient = new Form_edit_patient();
+            formeditpatient.TopLevel = false;
+            formeditpatient.FormBorderStyle = FormBorderStyle.None;
+            formeditpatient.Dock = DockStyle.Fill;
+            panel1.Controls.Add(formeditpatient);
+            panel1.Tag = formeditpatient;
+            formeditpatient.BringToFront();
+            formeditpatient.Show();
         }
     }
 }

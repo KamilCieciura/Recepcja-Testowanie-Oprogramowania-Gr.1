@@ -134,11 +134,11 @@
             button_Clear_the_calendar.Text = "Clear the calendar";
             button_Clear_the_calendar.UseVisualStyleBackColor = true;
             // 
-            // ZarządzanieWizytami
+            // ZarzadzanieWizytami
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(572, 313);
+            ClientSize = new Size(565, 315);
             Controls.Add(button_Clear_the_calendar);
             Controls.Add(button_Send_confirmation);
             Controls.Add(button_cancel_visit);
@@ -146,7 +146,7 @@
             Controls.Add(button_sort_visit);
             Controls.Add(comboBox_sort_visit);
             Controls.Add(dataGridView_lista_wizyt);
-            Name = "ZarządzanieWizytami";
+            Name = "ZarzadzanieWizytami";
             Text = "ZarządzanieWizytami";
             Load += ZarządzanieWizytami_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView_lista_wizyt).EndInit();

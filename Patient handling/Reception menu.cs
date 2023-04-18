@@ -8,6 +8,7 @@ namespace Patient_handling
 {
     public partial class Form_reception_menu : Form
     {
+
         public BindingList<Patient> Patients { get; set; } = new BindingList<Patient>();
         public Form_reception_menu()
         {
@@ -46,20 +47,32 @@ namespace Patient_handling
 
         private void button_menu_edit_patient_Click(object sender, EventArgs e)
         {
-            if (dataGridView_patients.CurrentRow != null)
-            {
-                Patient selectedPatient = (Patient)dataGridView_patients.CurrentRow.DataBoundItem;
-                Form_edit_patient formEditPatientData = new Form_edit_patient(selectedPatient);
 
-                if (formEditPatientData.ShowDialog() == DialogResult.OK)
-                {
-                    dataGridView_patients.Refresh();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please select a patient to edit.");
-            }
+
+            /* if (dataGridView_patients.CurrentRow != null)
+             {
+
+                 Form_edit_patient formEditPatientData = new Form_edit_patient(selectedPatient);
+
+                 if (formEditPatientData.ShowDialog() == DialogResult.OK)
+                 {
+                     dataGridView_patients.Refresh();
+                 }
+             }
+             else
+             {
+                 MessageBox.Show("Please select a patient to edit.");
+             }
+             */
+
+
+
+
+
+
+
+
+
         }
 
         private void button_menu_filter_data_Click(object sender, EventArgs e)
@@ -85,6 +98,8 @@ namespace Patient_handling
         {
 
         }
+
+
 
         private void button_menu_activate_patient_Click(object sender, EventArgs e)
         {
@@ -153,12 +168,12 @@ namespace Patient_handling
 
         private void button_menu_sort_data_Click(object sender, EventArgs e)
         {
-            if (comboBox_menu_sort_data.SelectedIndex==0)
+            if (comboBox_menu_sort_data.SelectedIndex == 0)
             {
                 // Sortuj dane rosn¹co wed³ug wybranej kolumny
                 dataGridView_patients.Sort(dataGridView_patients.Columns["columnfirstName"], ListSortDirection.Ascending);
             }
-            else if (comboBox_menu_sort_data.SelectedIndex==1)
+            else if (comboBox_menu_sort_data.SelectedIndex == 1)
             {
                 // Sortuj dane malej¹co wed³ug wybranej kolumny
                 dataGridView_patients.Sort(dataGridView_patients.Columns["columnLastName"], ListSortDirection.Descending);

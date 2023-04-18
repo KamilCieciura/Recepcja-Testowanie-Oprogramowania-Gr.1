@@ -13,23 +13,27 @@ namespace Patient_Handling
 {
     public partial class Form_edit_patient : Form
     {
-        private Patient _selectedPatient;
+        /*private Patient _selectedPatient;*/
 
-        public Form_edit_patient(Patient selectedPatient)
+        public Form_edit_patient()/*Patient *//*selectedPatient*/
         {
             InitializeComponent();
-            _selectedPatient = selectedPatient;
+            /*_selectedPatient = selectedPatient;*/
+
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+
+            databaseConnection.LoadDataIntoDataGridView(dataGridView_patients, "Patients");
         }
 
         private void button_cancel_add_patient_form_Click(object sender, EventArgs e)
         {
-          
+
             this.Hide();
         }
 
         private void button_edit_patient_form_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox_form_edit_patient_last_name.Text) ||
+           /* if (string.IsNullOrEmpty(textBox_form_edit_patient_last_name.Text) ||
                 string.IsNullOrEmpty(textBox_form_edit_patient_phone_number.Text) ||
                 string.IsNullOrEmpty(textBox_form_edit_patient_adress.Text) ||
                 string.IsNullOrEmpty(textBox_form_edit_patient_residential_adress.Text))
@@ -50,45 +54,80 @@ namespace Patient_Handling
                 return;
             }
 
-            _selectedPatient.LastName = textBox_form_edit_patient_last_name.Text;
+            /*_selectedPatient.LastName = textBox_form_edit_patient_last_name.Text;
             _selectedPatient.PhoneNumber = textBox_form_edit_patient_phone_number.Text;
             _selectedPatient.EmailAddress = textBox_form_edit_patient_adress.Text;
             _selectedPatient.ResidentialAddress = textBox_form_edit_patient_residential_adress.Text;
-
+            
             this.DialogResult = DialogResult.OK;
             this.Hide();
-   
+
+            */
 
 
 
+          int selcetedPatientId = Convert.ToInt32(dataGridView_patients.SelectedRows[0].Cells["ID"].Value);
 
+            DatabaseConnection databaseConnection = new DatabaseConnection();
 
+            if (textBox_form_edit_patient_last_name.Text != "" && textBox_form_edit_patient_phone_number.Text != "" && textBox_form_edit_patient_residential_adress.Text != "" && textBox_form_edit_patient_residential_adress.Text != "")
+            {
 
-            DatabaseConnection databaseConnection= new DatabaseConnection();
+                string[] columnNames = { "LastName", "PhoneNumber", "EmailAdress", "ResidentialAdress" };
+                string[] columnValues = { textBox_form_edit_patient_last_name.Text, textBox_form_edit_patient_phone_number.Text, textBox_form_edit_patient_adress.Text, textBox_form_edit_patient_residential_adress.Text };
+                string condition = $"ID = {selcetedPatientId}";
+                databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
+            }
+            else
+            {
+                if (textBox_form_edit_patient_last_name.Text != "")
+                {
+                    string[] columnNames = { "LastName" };
+                    string[] columnValues = { textBox_form_edit_patient_last_name.Text };
+                    string condition = $"ID = {selcetedPatientId}";
+                    databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
+                }
+                if (textBox_form_edit_patient_phone_number.Text != "")
+                {
 
-            string[] columnNames = { "LastName", "PhoneNumber","EmailAdress","ResidentialAdress" };
-            string[] columnValues = { textBox_form_edit_patient_last_name.Text, textBox_form_edit_patient_phone_number.Text, textBox_form_edit_patient_adress.Text,textBox_form_edit_patient_residential_adress.Text };
-            string condition = $"ID = {_selectedPatient}";
-            databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
-            
+                    string[] columnNames = { "PhoneNumber", };
+                    string[] columnValues = {textBox_form_edit_patient_phone_number.Text };
+                    string condition = $"ID = {selcetedPatientId}";
+                    databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
 
+                }
+                if(textBox_form_edit_patient_adress.Text!="")
+                {
+                    string[] columnNames = { "EmailAdress" };
+                    string[] columnValues = {  textBox_form_edit_patient_adress.Text};
+                    string condition = $"ID = {selcetedPatientId}";
+                    databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
+
+                }
+                if(textBox_form_edit_patient_residential_adress.Text!="")
+                {
+                    string[] columnNames = {  "ResidentialAdress" };
+                    string[] columnValues = {  textBox_form_edit_patient_residential_adress.Text };
+                    string condition = $"ID = {selcetedPatientId}";
+                    databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
+
+                }
+              
+            }
+         
         }
 
         private void Form_edit_patient_Load(object sender, EventArgs e)
         {
-            textBox_form_edit_patient_last_name.Text = _selectedPatient.LastName;
+            /*textBox_form_edit_patient_last_name.Text = _selectedPatient.LastName;
             textBox_form_edit_patient_phone_number.Text = _selectedPatient.PhoneNumber;
             textBox_form_edit_patient_adress.Text = _selectedPatient.EmailAddress;
-            textBox_form_edit_patient_residential_adress.Text = _selectedPatient.ResidentialAddress;
+            textBox_form_edit_patient_residential_adress.Text = _selectedPatient.ResidentialAddress;*/
         }
 
+        private void dataGridView_patients_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-
-
-       
-        
-
-
-
+        }
     }
 }

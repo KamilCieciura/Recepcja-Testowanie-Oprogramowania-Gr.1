@@ -38,6 +38,8 @@
             button_cancel_add_patient_form = new Button();
             label7 = new Label();
             textBox_form_edit_patient_residential_adress = new TextBox();
+            dataGridView_patients = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_patients).BeginInit();
             SuspendLayout();
             // 
             // label2
@@ -124,11 +126,27 @@
             textBox_form_edit_patient_residential_adress.Size = new Size(169, 23);
             textBox_form_edit_patient_residential_adress.TabIndex = 17;
             // 
+            // dataGridView_patients
+            // 
+            dataGridView_patients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView_patients.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dataGridView_patients.Location = new Point(242, 57);
+            dataGridView_patients.Name = "dataGridView_patients";
+            dataGridView_patients.RowHeadersVisible = false;
+            dataGridView_patients.RowHeadersWidth = 51;
+            dataGridView_patients.RowTemplate.Height = 25;
+            dataGridView_patients.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView_patients.Size = new Size(757, 219);
+            dataGridView_patients.TabIndex = 19;
+            dataGridView_patients.VirtualMode = true;
+            dataGridView_patients.CellContentClick += dataGridView_patients_CellContentClick;
+            // 
             // Form_edit_patient
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(243, 332);
+            ClientSize = new Size(1141, 480);
+            Controls.Add(dataGridView_patients);
             Controls.Add(label7);
             Controls.Add(textBox_form_edit_patient_residential_adress);
             Controls.Add(button_cancel_add_patient_form);
@@ -142,6 +160,7 @@
             Name = "Form_edit_patient";
             Text = "Edit patient data";
             Load += Form_edit_patient_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView_patients).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -158,5 +177,6 @@
         private Button button_cancel_add_patient_form;
         private Label label7;
         private TextBox textBox_form_edit_patient_residential_adress;
+        private DataGridView dataGridView_patients;
     }
 }

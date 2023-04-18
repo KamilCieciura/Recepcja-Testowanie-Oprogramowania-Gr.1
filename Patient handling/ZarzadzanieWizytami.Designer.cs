@@ -1,6 +1,6 @@
 ﻿namespace Patient_handling
 {
-    partial class ZarządzanieWizytami
+    partial class ZarzadzanieWizytami
     {
         /// <summary>
         /// Required designer variable.

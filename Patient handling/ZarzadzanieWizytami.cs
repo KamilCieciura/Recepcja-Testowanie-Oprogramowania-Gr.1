@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Patient_handling
 {
-    public partial class ZarządzanieWizytami : Form
+    public partial class ZarzadzanieWizytami : Form
     {
-        public ZarządzanieWizytami()
+        public ZarzadzanieWizytami()
         {
             InitializeComponent();
 

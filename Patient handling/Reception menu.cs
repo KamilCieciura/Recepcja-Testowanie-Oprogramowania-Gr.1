@@ -144,7 +144,7 @@ namespace Patient_handling
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Zarz¹dzanieWizytami f = new Zarz¹dzanieWizytami();
+            ZarzadzanieWizytami f = new ZarzadzanieWizytami();
             f.Show();
         }
     }

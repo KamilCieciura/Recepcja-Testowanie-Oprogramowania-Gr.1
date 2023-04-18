@@ -28,25 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button_menu_edit_patient = new Button();
             button_menu_activate_patient = new Button();
             button_menu_remove_patient = new Button();
             comboBox_menu_sort_data = new ComboBox();
             button_menu_sort_data = new Button();
-            button_menu_inactivate_patient = new Button();
             dataGridView_patients = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView_patients).BeginInit();
             SuspendLayout();
-            // 
-            // button_menu_edit_patient
-            // 
-            button_menu_edit_patient.Location = new Point(22, 240);
-            button_menu_edit_patient.Name = "button_menu_edit_patient";
-            button_menu_edit_patient.Size = new Size(153, 23);
-            button_menu_edit_patient.TabIndex = 2;
-            button_menu_edit_patient.Text = "Edit patient's data";
-            button_menu_edit_patient.UseVisualStyleBackColor = true;
-            button_menu_edit_patient.Click += button_menu_edit_patient_Click;
             // 
             // button_menu_activate_patient
             // 
@@ -60,7 +48,7 @@
             // 
             // button_menu_remove_patient
             // 
-            button_menu_remove_patient.Location = new Point(671, 240);
+            button_menu_remove_patient.Location = new Point(401, 240);
             button_menu_remove_patient.Name = "button_menu_remove_patient";
             button_menu_remove_patient.Size = new Size(153, 23);
             button_menu_remove_patient.TabIndex = 4;
@@ -86,16 +74,6 @@
             button_menu_sort_data.UseVisualStyleBackColor = true;
             button_menu_sort_data.Click += button_menu_sort_data_Click;
             // 
-            // button_menu_inactivate_patient
-            // 
-            button_menu_inactivate_patient.Location = new Point(442, 240);
-            button_menu_inactivate_patient.Name = "button_menu_inactivate_patient";
-            button_menu_inactivate_patient.Size = new Size(153, 23);
-            button_menu_inactivate_patient.TabIndex = 8;
-            button_menu_inactivate_patient.Text = "Inactivate patient";
-            button_menu_inactivate_patient.UseVisualStyleBackColor = true;
-            button_menu_inactivate_patient.Click += button_menu_inactivate_patient_Click;
-            // 
             // dataGridView_patients
             // 
             dataGridView_patients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -116,12 +94,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(854, 354);
             Controls.Add(dataGridView_patients);
-            Controls.Add(button_menu_inactivate_patient);
             Controls.Add(button_menu_sort_data);
             Controls.Add(comboBox_menu_sort_data);
             Controls.Add(button_menu_remove_patient);
             Controls.Add(button_menu_activate_patient);
-            Controls.Add(button_menu_edit_patient);
             Name = "Form_reception_menu";
             Text = "Reception menu";
             Load += Form_reception_menu_Load;
@@ -130,12 +106,10 @@
         }
 
         #endregion
-        private Button button_menu_edit_patient;
         private Button button_menu_activate_patient;
         private Button button_menu_remove_patient;
         private ComboBox comboBox_menu_sort_data;
         private Button button_menu_sort_data;
-        private Button button_menu_inactivate_patient;
         private DataGridView dataGridView_patients;
     }
 }

@@ -84,8 +84,16 @@ namespace Patient_handling
 
         private void button_menu_remove_patient_Click(object sender, EventArgs e)
         {
-            Form_accept_remove formAcceptRemove = new Form_accept_remove();
-            formAcceptRemove.Show();
+            int selcetedPatientId = Convert.ToInt32(dataGridView_patients.SelectedRows[0].Cells["ID"].Value);
+
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+
+            string[] columnNames = { "Status" };
+            string[] columnValues = { "0" };
+            string condition = $"ID = {selcetedPatientId}";
+            databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
+
+            this.Hide();
 
         }
 
@@ -103,9 +111,10 @@ namespace Patient_handling
 
         private void button_menu_activate_patient_Click(object sender, EventArgs e)
         {
-            Patient selectedPatient = (Patient)dataGridView_patients.CurrentRow.DataBoundItem;
+            /*
             if (dataGridView_patients.CurrentRow != null)
             {
+                Patient selectedPatient = (Patient)dataGridView_patients.CurrentRow.DataBoundItem;
 
                 selectedPatient.Status = "Active";
                 dataGridView_patients.Refresh();
@@ -114,15 +123,19 @@ namespace Patient_handling
             {
                 MessageBox.Show("Please select a patient to activate.");
             }
+            */
 
-
+            int selcetedPatientId = Convert.ToInt32(dataGridView_patients.SelectedRows[0].Cells["ID"].Value);
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
 
             string[] columnNames = { "Status" };
             string[] columnValues = { "1" };
-            string condition = $"ID = {selectedPatient}";
+            string condition = $"ID = {selcetedPatientId}";
             databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
+
+            this.Hide();
+
 
 
 

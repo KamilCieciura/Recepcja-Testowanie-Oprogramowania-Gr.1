@@ -114,6 +114,7 @@ namespace Patient_Handling
                 }
               
             }
+            this.Hide();
          
         }
 

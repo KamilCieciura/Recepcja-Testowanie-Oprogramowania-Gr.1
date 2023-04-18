@@ -11,10 +11,12 @@ using System.Windows.Forms;
 using static System.Windows.Forms.DataFormats;
 using System.Data.SqlClient;
 
+
 namespace Patient_handling
 {
-    public partial class form_ReceptionMenu2 : Form
+    public partial class form_ReceptionMenu2 :Form
     {
+        
         public form_ReceptionMenu2()
         {
             InitializeComponent();
@@ -50,7 +52,9 @@ namespace Patient_handling
             formReceptionMenu.BringToFront();
             formReceptionMenu.Show();
 
+  
 
+    
 
 
         }

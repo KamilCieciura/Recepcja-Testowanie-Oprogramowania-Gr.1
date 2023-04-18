@@ -2,6 +2,7 @@ using Patient_Handling;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.DirectoryServices;
 
 namespace Patient_handling
 {
@@ -22,6 +23,8 @@ namespace Patient_handling
             DatabaseConnection databaseConnection = new DatabaseConnection();
 
             databaseConnection.LoadDataIntoDataGridView(dataGridView_patients, "Patients");
+
+
 
         }
         public void AddPatient(Patient patient)
@@ -146,6 +149,21 @@ namespace Patient_handling
         {
             Zarz¹dzanieWizytami f = new Zarz¹dzanieWizytami();
             f.Show();
+        }
+
+        private void button_menu_sort_data_Click(object sender, EventArgs e)
+        {
+            if (comboBox_menu_sort_data.SelectedIndex==0)
+            {
+                // Sortuj dane rosn¹co wed³ug wybranej kolumny
+                dataGridView_patients.Sort(dataGridView_patients.Columns["columnfirstName"], ListSortDirection.Ascending);
+            }
+            else if (comboBox_menu_sort_data.SelectedIndex==1)
+            {
+                // Sortuj dane malej¹co wed³ug wybranej kolumny
+                dataGridView_patients.Sort(dataGridView_patients.Columns["columnLastName"], ListSortDirection.Descending);
+            }
+
         }
     }
 }

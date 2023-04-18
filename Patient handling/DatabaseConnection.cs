@@ -97,7 +97,58 @@ namespace Patient_handling
         }
 
 
+        public void LoadPatientsAndDoctorsToComboBoxes(ComboBox cbPatients, ComboBox cbDoctors)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
 
+                    // Pobieranie pacjentów
+                    string queryPatients = "SELECT FirstName, LastName FROM Patients";
+                    SqlCommand commandPatients = new SqlCommand(queryPatients, connection);
+                    SqlDataReader readerPatients = commandPatients.ExecuteReader();
+                    if (readerPatients.HasRows)
+                    {
+                        while (readerPatients.Read())
+                        {
+                            string firstName = readerPatients["FirstName"].ToString();
+                            string lastName = readerPatients["LastName"].ToString();
+                            cbPatients.Items.Add($"{firstName} {lastName}");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Brak danych o pacjentach w bazie danych.");
+                    }
+                    readerPatients.Close();
+
+                    // Pobieranie doktorów
+                    string queryDoctors = "SELECT FirstName, LastName FROM Employees";
+                    SqlCommand commandDoctors = new SqlCommand(queryDoctors, connection);
+                    SqlDataReader readerDoctors = commandDoctors.ExecuteReader();
+                    if (readerDoctors.HasRows)
+                    {
+                        while (readerDoctors.Read())
+                        {
+                            string firstName = readerDoctors["FirstName"].ToString();
+                            string lastName = readerDoctors["LastName"].ToString();
+                            cbDoctors.Items.Add($"{firstName} {lastName}");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Brak danych o doktorach w bazie danych.");
+                    }
+                    readerDoctors.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Wystąpił błąd podczas wczytywania danych: " + ex.Message);
+            }
+        }
 
 
 

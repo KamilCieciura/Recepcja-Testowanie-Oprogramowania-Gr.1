@@ -9,7 +9,7 @@ namespace Patient_handling
 {
     public class Patient
     {
-        private int _id;
+    
         private string _firstName;
         private string _lastName;
         private DateTime _birthdate;
@@ -19,11 +19,6 @@ namespace Patient_handling
         private string _pesel;
         private string _status;
 
-        public int Id
-        {
-            get => _id;
-            set => _id = value;
-        }
 
         public string FirstName
         {

@@ -26,9 +26,9 @@ namespace Patient_handling
         }
         public void AddPatient(Patient patient)
         {
-            int maxId = Patients.Any() ? Patients.Max(p => p.Id) : 0;
+            /*int maxId = Patients.Any() ? Patients.Max(p => p.Id) : 0;
             patient.Id = maxId + 1;
-            Patients.Add(patient);
+            Patients.Add(patient);*/
         }
 
         private void button_menu_add_patient_Click(object sender, EventArgs e)
@@ -88,7 +88,7 @@ namespace Patient_handling
             Patient selectedPatient = (Patient)dataGridView_patients.CurrentRow.DataBoundItem;
             if (dataGridView_patients.CurrentRow != null)
             {
-           
+
                 selectedPatient.Status = "Active";
                 dataGridView_patients.Refresh();
             }
@@ -119,7 +119,7 @@ namespace Patient_handling
             Patient selectedPatient = (Patient)dataGridView_patients.CurrentRow.DataBoundItem;
             if (dataGridView_patients.CurrentRow != null)
             {
-           
+
                 selectedPatient.Status = "Inactive";
                 dataGridView_patients.Refresh();
             }

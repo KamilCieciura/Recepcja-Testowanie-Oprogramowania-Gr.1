@@ -35,7 +35,6 @@
             comboBox_menu_sort_data = new ComboBox();
             button_menu_sort_data = new Button();
             button_menu_inactivate_patient = new Button();
-            id = new DataGridViewTextBoxColumn();
             columnFirstName = new DataGridViewTextBoxColumn();
             columnLastName = new DataGridViewTextBoxColumn();
             columnBirthdate = new DataGridViewTextBoxColumn();
@@ -50,7 +49,7 @@
             // dataGridView_patients
             // 
             dataGridView_patients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_patients.Columns.AddRange(new DataGridViewColumn[] { id, columnFirstName, columnLastName, columnBirthdate, columnPhoneNumber, columnEmailAddress, columnResidentialAddress, columnPESEL, columnStatus });
+            dataGridView_patients.Columns.AddRange(new DataGridViewColumn[] { columnFirstName, columnLastName, columnBirthdate, columnPhoneNumber, columnEmailAddress, columnResidentialAddress, columnPESEL, columnStatus });
             dataGridView_patients.EditMode = DataGridViewEditMode.EditProgrammatically;
             dataGridView_patients.Location = new Point(22, 76);
             dataGridView_patients.Name = "dataGridView_patients";
@@ -119,12 +118,6 @@
             button_menu_inactivate_patient.Text = "Inactivate patient";
             button_menu_inactivate_patient.UseVisualStyleBackColor = true;
             button_menu_inactivate_patient.Click += button_menu_inactivate_patient_Click;
-            // 
-            // id
-            // 
-            id.HeaderText = "id";
-            id.Name = "id";
-            id.Visible = false;
             // 
             // columnFirstName
             // 
@@ -211,7 +204,6 @@
         private ComboBox comboBox_menu_sort_data;
         private Button button_menu_sort_data;
         private Button button_menu_inactivate_patient;
-        private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn columnFirstName;
         private DataGridViewTextBoxColumn columnLastName;
         private DataGridViewTextBoxColumn columnBirthdate;

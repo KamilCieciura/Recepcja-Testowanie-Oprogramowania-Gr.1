@@ -46,8 +46,10 @@
             label8 = new Label();
             label9 = new Label();
             textBox_form_filter_data_residential_adress = new TextBox();
+            dataGridView_patients = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_form_filter_data_age_from).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_form_filter_data_age_to).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_patients).BeginInit();
             SuspendLayout();
             // 
             // label6
@@ -196,11 +198,26 @@
             textBox_form_filter_data_residential_adress.Size = new Size(160, 23);
             textBox_form_filter_data_residential_adress.TabIndex = 31;
             // 
+            // dataGridView_patients
+            // 
+            dataGridView_patients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView_patients.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dataGridView_patients.Location = new Point(210, 35);
+            dataGridView_patients.Name = "dataGridView_patients";
+            dataGridView_patients.RowHeadersVisible = false;
+            dataGridView_patients.RowHeadersWidth = 51;
+            dataGridView_patients.RowTemplate.Height = 25;
+            dataGridView_patients.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView_patients.Size = new Size(802, 165);
+            dataGridView_patients.TabIndex = 33;
+            dataGridView_patients.VirtualMode = true;
+            // 
             // Form_filter_data
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(226, 435);
+            ClientSize = new Size(1110, 435);
+            Controls.Add(dataGridView_patients);
             Controls.Add(label9);
             Controls.Add(textBox_form_filter_data_residential_adress);
             Controls.Add(label8);
@@ -223,6 +240,7 @@
             Text = "Filter data";
             ((System.ComponentModel.ISupportInitialize)numericUpDown_form_filter_data_age_from).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown_form_filter_data_age_to).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_patients).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -246,5 +264,6 @@
         private Label label8;
         private Label label9;
         private TextBox textBox_form_filter_data_residential_adress;
+        private DataGridView dataGridView_patients;
     }
 }

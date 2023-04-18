@@ -39,14 +39,14 @@ namespace Patient_handling
             listaStringow.Add("18:30");
             listaStringow.Add("19:00");
             listaStringow.Add("19:30");
-           
+
             comboBox_hour_add.Items.AddRange(listaStringow.ToArray());
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
 
             databaseConnection.LoadPatientsAndDoctorsToComboBoxes(comboBox_patinet_add, comboBox_doctor_add);
 
-            
+
 
         }
 
@@ -54,7 +54,7 @@ namespace Patient_handling
         {
             DatabaseConnection conn = new DatabaseConnection();
 
-            
+
 
 
 

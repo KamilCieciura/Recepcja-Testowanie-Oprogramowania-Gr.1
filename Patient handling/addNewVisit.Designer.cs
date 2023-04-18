@@ -37,6 +37,8 @@
             label3 = new Label();
             label4 = new Label();
             button_add_visit = new Button();
+            dataGridView_patients = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_patients).BeginInit();
             SuspendLayout();
             // 
             // comboBox_patinet_add
@@ -117,11 +119,26 @@
             button_add_visit.UseVisualStyleBackColor = true;
             button_add_visit.Click += button_add_visit_Click;
             // 
+            // dataGridView_patients
+            // 
+            dataGridView_patients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView_patients.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dataGridView_patients.Location = new Point(179, 34);
+            dataGridView_patients.Name = "dataGridView_patients";
+            dataGridView_patients.RowHeadersVisible = false;
+            dataGridView_patients.RowHeadersWidth = 51;
+            dataGridView_patients.RowTemplate.Height = 25;
+            dataGridView_patients.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView_patients.Size = new Size(679, 156);
+            dataGridView_patients.TabIndex = 21;
+            dataGridView_patients.VirtualMode = true;
+            // 
             // addNewVisit
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(183, 248);
+            ClientSize = new Size(913, 309);
+            Controls.Add(dataGridView_patients);
             Controls.Add(button_add_visit);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -133,6 +150,7 @@
             Controls.Add(comboBox_patinet_add);
             Name = "addNewVisit";
             Text = "addNewVisit";
+            ((System.ComponentModel.ISupportInitialize)dataGridView_patients).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -148,5 +166,6 @@
         private Label label3;
         private Label label4;
         private Button button_add_visit;
+        private DataGridView dataGridView_patients;
     }
 }

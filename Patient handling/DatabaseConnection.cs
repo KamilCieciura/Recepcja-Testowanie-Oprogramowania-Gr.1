@@ -121,6 +121,7 @@ namespace Patient_handling
                     else
                     {
                         MessageBox.Show("Brak danych o pacjentach w bazie danych.");
+                        return;
                     }
                     readerPatients.Close();
 
@@ -140,6 +141,7 @@ namespace Patient_handling
                     else
                     {
                         MessageBox.Show("Brak danych o doktorach w bazie danych.");
+                        return;
                     }
                     readerDoctors.Close();
                 }

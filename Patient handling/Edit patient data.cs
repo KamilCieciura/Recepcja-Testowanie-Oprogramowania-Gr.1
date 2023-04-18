@@ -115,7 +115,9 @@ namespace Patient_Handling
               
             }
             this.Hide();
-         
+
+
+
         }
 
         private void Form_edit_patient_Load(object sender, EventArgs e)

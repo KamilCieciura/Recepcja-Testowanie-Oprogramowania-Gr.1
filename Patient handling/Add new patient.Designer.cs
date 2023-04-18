@@ -188,6 +188,7 @@
             comboBox_gender.Name = "comboBox_gender";
             comboBox_gender.Size = new Size(200, 23);
             comboBox_gender.TabIndex = 17;
+            comboBox_gender.SelectedIndexChanged += comboBox_gender_SelectedIndexChanged;
             // 
             // label8
             // 

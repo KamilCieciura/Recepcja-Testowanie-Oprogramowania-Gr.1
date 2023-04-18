@@ -152,13 +152,14 @@ namespace Patient_Handling
 
         private void button_add_patient_form_Click(object sender, EventArgs e)
         {
+            /*
             if (string.IsNullOrEmpty(textBox_form_add_patient_First_name.Text) ||
-                string.IsNullOrEmpty(textBox_form_add_patient_last_name.Text) ||
-                string.IsNullOrEmpty(dateTimePicker_form_add_patient_birthdate.Text) ||
-                string.IsNullOrEmpty(textBox_form_add_patient_phone_number.Text) ||
-                string.IsNullOrEmpty(textBox_form_add_patient_adress_email.Text) ||
-                string.IsNullOrEmpty(textBox_form_add_patient_residential_adress.Text) ||
-                string.IsNullOrEmpty(textBox_form_add_patient_social_security_number.Text))
+                 string.IsNullOrEmpty(textBox_form_add_patient_last_name.Text) ||
+                 string.IsNullOrEmpty(dateTimePicker_form_add_patient_birthdate.Text) ||
+                 string.IsNullOrEmpty(textBox_form_add_patient_phone_number.Text) ||
+                 string.IsNullOrEmpty(textBox_form_add_patient_adress_email.Text) ||
+                 string.IsNullOrEmpty(textBox_form_add_patient_residential_adress.Text) ||
+                 string.IsNullOrEmpty(textBox_form_add_patient_social_security_number.Text))
             {
                 MessageBox.Show("Wszystkie pola muszą być wypełnione.");
                 return;
@@ -182,34 +183,34 @@ namespace Patient_Handling
                 return;
             }
 
-            Patient newPatient = new Patient
-            {
-                FirstName = textBox_form_add_patient_First_name.Text,
-                LastName = textBox_form_add_patient_last_name.Text,
-                Birthdate = dateTimePicker_form_add_patient_birthdate.Value.Date,
-                PhoneNumber = textBox_form_add_patient_phone_number.Text,
-                EmailAddress = textBox_form_add_patient_adress_email.Text,
-                ResidentialAddress = textBox_form_add_patient_residential_adress.Text,
-                PESEL = textBox_form_add_patient_social_security_number.Text
-            };
+            /* Patient newPatient = new Patient
+             {
+                 FirstName = textBox_form_add_patient_First_name.Text,
+                 LastName = textBox_form_add_patient_last_name.Text,
+                 Birthdate = dateTimePicker_form_add_patient_birthdate.Value.Date,
+                 PhoneNumber = textBox_form_add_patient_phone_number.Text,
+                 EmailAddress = textBox_form_add_patient_adress_email.Text,
+                 ResidentialAddress = textBox_form_add_patient_residential_adress.Text,
+                 PESEL = textBox_form_add_patient_social_security_number.Text
+             };
 
-            _formReceptionMenu.AddPatient(newPatient);
+             _formReceptionMenu.AddPatient(newPatient);
+            */
 
-            this.Hide();
-            _formReceptionMenu.Show();
-
-
-
+            
             DatabaseConnection databaseConnection = new DatabaseConnection();
 
-            string[] columnNames = { "FirstName", "LastName", "BirthDate", "PhoneNumber", "EmailAdress", "ResidentialAdress", "Pesel" };
+            string[] columnNames = { "FirstName", "LastName", "BirthDate", "Sex","PhoneNumber", "EmailAdress", "ResidentialAdress", "Pesel" };
             string[] columnValues = {textBox_form_add_patient_First_name.Text , textBox_form_add_patient_last_name.Text,
-            dateTimePicker1.Value.Date.ToString("yyyy-MM-dd"),textBox_form_add_patient_phone_number.Text,textBox_form_add_patient_adress_email.Text,
+            dateTimePicker1.Value.Date.ToString("yyyy-MM-dd"),comboBox_gender.Text,textBox_form_add_patient_phone_number.Text,textBox_form_add_patient_adress_email.Text,
                 textBox_form_add_patient_residential_adress.Text,textBox_form_add_patient_social_security_number.Text};
             databaseConnection.InsertDataToDatabase("Patients", columnNames, columnValues);
-
+            this.Hide();
         }
 
-        
+        private void comboBox_gender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

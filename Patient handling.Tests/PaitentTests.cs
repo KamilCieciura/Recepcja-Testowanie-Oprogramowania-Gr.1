@@ -8,7 +8,7 @@ using Patient_Handling;
 
 namespace Patient_Handling.Tests
 {
-    internal class PaitentTests
+    public class PaitentTests
     {
         [TestClass]
         public class PatientTests

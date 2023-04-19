@@ -30,13 +30,13 @@
         {
             button_menu_activate_patient = new Button();
             button_menu_remove_patient = new Button();
-            dataGridView_patients = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView_patients).BeginInit();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // button_menu_activate_patient
             // 
-            button_menu_activate_patient.Location = new Point(230, 240);
+            button_menu_activate_patient.Location = new Point(317, 240);
             button_menu_activate_patient.Name = "button_menu_activate_patient";
             button_menu_activate_patient.Size = new Size(153, 23);
             button_menu_activate_patient.TabIndex = 3;
@@ -46,7 +46,7 @@
             // 
             // button_menu_remove_patient
             // 
-            button_menu_remove_patient.Location = new Point(401, 240);
+            button_menu_remove_patient.Location = new Point(488, 240);
             button_menu_remove_patient.Name = "button_menu_remove_patient";
             button_menu_remove_patient.Size = new Size(153, 23);
             button_menu_remove_patient.TabIndex = 4;
@@ -54,38 +54,35 @@
             button_menu_remove_patient.UseVisualStyleBackColor = true;
             button_menu_remove_patient.Click += button_menu_remove_patient_Click;
             // 
-            // dataGridView_patients
+            // dataGridView1
             // 
-            dataGridView_patients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_patients.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dataGridView_patients.Location = new Point(22, 69);
-            dataGridView_patients.Name = "dataGridView_patients";
-            dataGridView_patients.RowHeadersVisible = false;
-            dataGridView_patients.RowHeadersWidth = 51;
-            dataGridView_patients.RowTemplate.Height = 25;
-            dataGridView_patients.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView_patients.Size = new Size(802, 165);
-            dataGridView_patients.TabIndex = 20;
-            dataGridView_patients.VirtualMode = true;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(12, 84);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(988, 150);
+            dataGridView1.TabIndex = 5;
             // 
             // Form_reception_menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(854, 354);
-            Controls.Add(dataGridView_patients);
+            ClientSize = new Size(1031, 354);
+            Controls.Add(dataGridView1);
             Controls.Add(button_menu_remove_patient);
             Controls.Add(button_menu_activate_patient);
             Name = "Form_reception_menu";
             Text = "Reception menu";
             Load += Form_reception_menu_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView_patients).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
         private Button button_menu_activate_patient;
         private Button button_menu_remove_patient;
-        private DataGridView dataGridView_patients;
+        private DataGridView dataGridView1;
     }
 }

@@ -19,11 +19,11 @@ namespace Patient_handling
 
 
             /*comboBox_menu_sort_data.Items.AddRange(listaStringow.ToArray());*/
-            dataGridView_patients.DataSource = Patients;
+            /*dataGridView1.DataSource = Patients;*/
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
 
-            databaseConnection.LoadDataIntoDataGridView(dataGridView_patients, "Patients");
+            databaseConnection.LoadDataIntoDataGridView(dataGridView1, "Patients");
 
 
 
@@ -84,7 +84,7 @@ namespace Patient_handling
 
         private void button_menu_remove_patient_Click(object sender, EventArgs e)
         {
-            int selcetedPatientId = Convert.ToInt32(dataGridView_patients.SelectedRows[0].Cells["ID"].Value);
+            int selcetedPatientId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["ID"].Value);
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
 
@@ -125,7 +125,7 @@ namespace Patient_handling
             }
             */
 
-            int selcetedPatientId = Convert.ToInt32(dataGridView_patients.SelectedRows[0].Cells["ID"].Value);
+            int selcetedPatientId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["ID"].Value);
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
 
@@ -147,12 +147,12 @@ namespace Patient_handling
 
         private void button_menu_inactivate_patient_Click(object sender, EventArgs e)
         {
-            Patient selectedPatient = (Patient)dataGridView_patients.CurrentRow.DataBoundItem;
-            if (dataGridView_patients.CurrentRow != null)
+            Patient selectedPatient = (Patient)dataGridView1.CurrentRow.DataBoundItem;
+            if (dataGridView1.CurrentRow != null)
             {
 
                 selectedPatient.Status = "Inactive";
-                dataGridView_patients.Refresh();
+                dataGridView1.Refresh();
             }
             else
             {
@@ -181,17 +181,17 @@ namespace Patient_handling
 
         private void button_menu_sort_data_Click(object sender, EventArgs e)
         {
-           /*if (comboBox_menu_sort_data.SelectedIndex == 0)
-            {
+            /*if (comboBox_menu_sort_data.SelectedIndex == 0)
+             {
 
-                dataGridView_patients.Sort(dataGridView_patients.Columns["columnfirstName"], ListSortDirection.Ascending);
-            }
-            else if (comboBox_menu_sort_data.SelectedIndex == 1)
-            {
+                 dataGridView_patients.Sort(dataGridView_patients.Columns["columnfirstName"], ListSortDirection.Ascending);
+             }
+             else if (comboBox_menu_sort_data.SelectedIndex == 1)
+             {
 
-                dataGridView_patients.Sort(dataGridView_patients.Columns["columnLastName"], ListSortDirection.Descending);
-            }
-           */
+                 dataGridView_patients.Sort(dataGridView_patients.Columns["columnLastName"], ListSortDirection.Descending);
+             }
+            */
         }
     }
 }

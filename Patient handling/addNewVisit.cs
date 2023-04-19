@@ -12,6 +12,9 @@ namespace Patient_handling
 {
     public partial class addNewVisit : Form
     {
+        private Dictionary<int, string> _patientIdsAndNames;
+        private Dictionary<int, string> _doctorIdsAndNames;
+
         public addNewVisit()
         {
             InitializeComponent();
@@ -44,22 +47,29 @@ namespace Patient_handling
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
 
-            databaseConnection.LoadPatientsAndDoctorsToComboBoxes(comboBox_patinet_add, comboBox_doctor_add);
+            (_patientIdsAndNames, _doctorIdsAndNames) = databaseConnection.LoadPatientsAndDoctorsToComboBoxes(comboBox_patinet_add, comboBox_doctor_add);
 
             databaseConnection.LoadDataIntoDataGridView(dataGridView_patients, "MedicalVisit");
-
-
-
         }
 
         private void button_add_visit_Click(object sender, EventArgs e)
         {
             DatabaseConnection conn = new DatabaseConnection();
 
+            int patientId = _patientIdsAndNames.FirstOrDefault(x => x.Value == comboBox_patinet_add.SelectedItem.ToString()).Key;
+            int doctorId = _doctorIdsAndNames.FirstOrDefault(x => x.Value == comboBox_doctor_add.SelectedItem.ToString()).Key;
 
+            
+            string[] columnNames = { "Patient", "Doctor", "Date", "Hour" };
+            string visitDate = dateTimePicker_add_visit.Value.ToString("yyyy-MM-dd");
+            string visitTime = comboBox_hour_add.SelectedItem.ToString();
+            string[] columnValues = { patientId.ToString(), doctorId.ToString(), visitDate, visitTime };
 
+            
+            conn.InsertDataToDatabase("MedicalVisit", columnNames, columnValues);
 
-
+            
+            conn.LoadDataIntoDataGridView(dataGridView_patients, "MedicalVisit");
         }
 
         private void addNewVisit_Load(object sender, EventArgs e)

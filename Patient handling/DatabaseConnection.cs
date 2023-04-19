@@ -97,8 +97,11 @@ namespace Patient_handling
         }
 
 
-        public void LoadPatientsAndDoctorsToComboBoxes(ComboBox cbPatients, ComboBox cbDoctors)
+        public (Dictionary<int, string>, Dictionary<int, string>) LoadPatientsAndDoctorsToComboBoxes(ComboBox cbPatients, ComboBox cbDoctors)
         {
+            Dictionary<int, string> patientIdsAndNames = new Dictionary<int, string>();
+            Dictionary<int, string> doctorIdsAndNames = new Dictionary<int, string>();
+
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -106,42 +109,46 @@ namespace Patient_handling
                     connection.Open();
 
                     // Pobieranie pacjentów
-                    string queryPatients = "SELECT FirstName, LastName FROM Patients";
+                    string queryPatients = "SELECT Id, FirstName, LastName FROM Patients";
                     SqlCommand commandPatients = new SqlCommand(queryPatients, connection);
                     SqlDataReader readerPatients = commandPatients.ExecuteReader();
                     if (readerPatients.HasRows)
                     {
                         while (readerPatients.Read())
                         {
+                            int id = Convert.ToInt32(readerPatients["Id"]);
                             string firstName = readerPatients["FirstName"].ToString();
                             string lastName = readerPatients["LastName"].ToString();
                             cbPatients.Items.Add($"{firstName} {lastName}");
+                            patientIdsAndNames.Add(id, $"{firstName} {lastName}");
                         }
                     }
                     else
                     {
                         MessageBox.Show("Brak danych o pacjentach w bazie danych.");
-                        return;
+                        return (patientIdsAndNames, doctorIdsAndNames);
                     }
                     readerPatients.Close();
 
                     // Pobieranie doktorów
-                    string queryDoctors = "SELECT FirstName, LastName FROM Employees";
+                    string queryDoctors = "SELECT Id, FirstName, LastName FROM Employees";
                     SqlCommand commandDoctors = new SqlCommand(queryDoctors, connection);
                     SqlDataReader readerDoctors = commandDoctors.ExecuteReader();
                     if (readerDoctors.HasRows)
                     {
                         while (readerDoctors.Read())
                         {
+                            int id = Convert.ToInt32(readerDoctors["Id"]);
                             string firstName = readerDoctors["FirstName"].ToString();
                             string lastName = readerDoctors["LastName"].ToString();
                             cbDoctors.Items.Add($"{firstName} {lastName}");
+                            doctorIdsAndNames.Add(id, $"{firstName} {lastName}");
                         }
                     }
                     else
                     {
                         MessageBox.Show("Brak danych o doktorach w bazie danych.");
-                        return;
+                        return (patientIdsAndNames, doctorIdsAndNames);
                     }
                     readerDoctors.Close();
                 }
@@ -150,7 +157,10 @@ namespace Patient_handling
             {
                 MessageBox.Show("Wystąpił błąd podczas wczytywania danych: " + ex.Message);
             }
+
+            return (patientIdsAndNames, doctorIdsAndNames);
         }
+
 
         public DataTable FilterData(string tableName, Dictionary<string, string> filters)
         {

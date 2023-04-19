@@ -50,7 +50,7 @@
             button_menu_remove_patient.Name = "button_menu_remove_patient";
             button_menu_remove_patient.Size = new Size(153, 23);
             button_menu_remove_patient.TabIndex = 4;
-            button_menu_remove_patient.Text = "Delete";
+            button_menu_remove_patient.Text = "Deactivate patient";
             button_menu_remove_patient.UseVisualStyleBackColor = true;
             button_menu_remove_patient.Click += button_menu_remove_patient_Click;
             // 

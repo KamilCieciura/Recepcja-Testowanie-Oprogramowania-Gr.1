@@ -346,7 +346,7 @@
             Controls.Add(pnlTitle);
             Controls.Add(pnlSideMenu);
             Name = "form_ReceptionMenu2";
-            Text = "ReceptionMenu2";
+            Text = " ";
             Load += ReceptionMenu2_Load;
             pnlSideMenu.ResumeLayout(false);
             panel2.ResumeLayout(false);

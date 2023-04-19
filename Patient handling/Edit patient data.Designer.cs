@@ -145,7 +145,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1255, 480);
+            ClientSize = new Size(1285, 501);
             Controls.Add(dataGridView_patients);
             Controls.Add(label7);
             Controls.Add(textBox_form_edit_patient_residential_adress);

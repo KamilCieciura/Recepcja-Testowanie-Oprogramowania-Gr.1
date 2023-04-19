@@ -85,6 +85,14 @@ namespace Patient_handling
         private void button_menu_remove_patient_Click(object sender, EventArgs e)
         {
             int selcetedPatientId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["ID"].Value);
+            int selcetedPatientStatus= Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Status"].Value);
+
+            if (selcetedPatientStatus == 0)
+            {
+                MessageBox.Show("this patient is already inactive");
+                return;
+
+            }
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
 
@@ -126,16 +134,26 @@ namespace Patient_handling
             */
 
             int selcetedPatientId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["ID"].Value);
+            int selcetedPatientStatus = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Status"].Value);
 
-            DatabaseConnection databaseConnection = new DatabaseConnection();
+            if (selcetedPatientStatus == 1)
+            {
+                MessageBox.Show("this patient is already active");
+                return;
 
-            string[] columnNames = { "Status" };
-            string[] columnValues = { "1" };
-            string condition = $"ID = {selcetedPatientId}";
-            databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
+            }
+            else
+            {
 
-            this.Hide();
+                DatabaseConnection databaseConnection = new DatabaseConnection();
 
+                string[] columnNames = { "Status" };
+                string[] columnValues = { "1" };
+                string condition = $"ID = {selcetedPatientId}";
+                databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
+
+                this.Hide();
+            }
 
 
 

@@ -21,7 +21,7 @@ namespace Patient_Handling
             _formReceptionMenu = formReceptionMenu;
         }
 
-        private static bool pesel(string pesel, DateTime birth, string sex)
+        public static bool IsValidPesel(string pesel, DateTime birth, string sex)
         {
             string dayOfBirth, monthOfBirth;
             char gender;
@@ -188,7 +188,7 @@ namespace Patient_Handling
                 MessageBox.Show("Numer PESEL musi składać się z 11 cyfr.");
                 return;
             }
-            if (!pesel(textBox_form_add_patient_social_security_number.Text, DateTime.Parse(dateTimePicker1.Text), comboBox_gender.SelectedItem.ToString()))
+            if (!IsValidPesel(textBox_form_add_patient_social_security_number.Text, DateTime.Parse(dateTimePicker1.Text), comboBox_gender.SelectedItem.ToString()))
             {
 
                 MessageBox.Show("Pesel nie zgadza się z datą urodzenia!");

@@ -323,7 +323,7 @@
             labelTitle.AutoSize = true;
             labelTitle.Font = new Font("Microsoft Sans Serif", 30F, FontStyle.Bold, GraphicsUnit.Point);
             labelTitle.ForeColor = Color.WhiteSmoke;
-            labelTitle.Location = new Point(103, 36);
+            labelTitle.Location = new Point(416, 38);
             labelTitle.Name = "labelTitle";
             labelTitle.Size = new Size(325, 46);
             labelTitle.TabIndex = 0;

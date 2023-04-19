@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -71,20 +72,30 @@ namespace Patient_Handling
              this.Hide();
 
              */
-
+            if (!Regex.IsMatch(textBox_form_edit_patient_phone_number.Text, @"^\+?[0-9]{3}-?[0-9]{3}-?[0-9]{3}$"))
+            {
+                MessageBox.Show("Numer telefonu musi składać się z dziewięciu cyfr.");
+                return;
+            }
 
 
             int selcetedPatientId = Convert.ToInt32(dataGridView_patients.SelectedRows[0].Cells["ID"].Value);
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
+            string[] columnNames = { "LastName", "PhoneNumber", "EmailAdress", "ResidentialAdress" };
+            string[] columnValues = { textBox_form_edit_patient_last_name.Text, textBox_form_edit_patient_phone_number.Text, textBox_form_edit_patient_adress.Text, textBox_form_edit_patient_residential_adress.Text };
+            string condition = $"ID = {selcetedPatientId}";
+            databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
 
-            if (textBox_form_edit_patient_last_name.Text != "" && textBox_form_edit_patient_phone_number.Text != "" && textBox_form_edit_patient_residential_adress.Text != "" && textBox_form_edit_patient_residential_adress.Text != "")
+
+            /* if (textBox_form_edit_patient_last_name.Text != "" && textBox_form_edit_patient_phone_number.Text != "" && textBox_form_edit_patient_residential_adress.Text != "" && textBox_form_edit_patient_residential_adress.Text != "")
             {
+            string[] columnNames = { "LastName", "PhoneNumber", "EmailAdress", "ResidentialAdress" };
+            string[] columnValues = { textBox_form_edit_patient_last_name.Text, textBox_form_edit_patient_phone_number.Text, textBox_form_edit_patient_adress.Text, textBox_form_edit_patient_residential_adress.Text };
+            string condition = $"ID = {selcetedPatientId}";
+            databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
 
-                string[] columnNames = { "LastName", "PhoneNumber", "EmailAdress", "ResidentialAdress" };
-                string[] columnValues = { textBox_form_edit_patient_last_name.Text, textBox_form_edit_patient_phone_number.Text, textBox_form_edit_patient_adress.Text, textBox_form_edit_patient_residential_adress.Text };
-                string condition = $"ID = {selcetedPatientId}";
-                databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
+
             }
             else
             {
@@ -122,6 +133,7 @@ namespace Patient_Handling
                 }
 
             }
+            */
             this.Hide();
 
 

@@ -45,6 +45,7 @@
             dataGridView_lista_wizyt.RowTemplate.Height = 25;
             dataGridView_lista_wizyt.Size = new Size(500, 150);
             dataGridView_lista_wizyt.TabIndex = 0;
+            dataGridView_lista_wizyt.CellContentClick += dataGridView_lista_wizyt_CellContentClick;
             // 
             // button_cancel_visit
             // 

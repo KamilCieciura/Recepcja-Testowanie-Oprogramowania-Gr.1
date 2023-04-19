@@ -30,5 +30,10 @@ namespace Patient_handling
         {
 
         }
+
+        private void dataGridView_lista_wizyt_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

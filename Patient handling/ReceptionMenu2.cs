@@ -22,8 +22,7 @@ namespace Patient_handling
             InitializeComponent();
 
 
-
-
+     
 
 
 

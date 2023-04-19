@@ -46,6 +46,8 @@ namespace Patient_handling
 
             databaseConnection.LoadPatientsAndDoctorsToComboBoxes(comboBox_patinet_add, comboBox_doctor_add);
 
+            databaseConnection.LoadDataIntoDataGridView(dataGridView_patients, "MedicalVisit");
+
 
 
         }

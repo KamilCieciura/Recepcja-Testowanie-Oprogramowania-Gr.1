@@ -45,6 +45,7 @@
             pnlTitle = new Panel();
             labelTitle = new Label();
             panel1 = new Panel();
+            button6 = new Button();
             pnlSideMenu.SuspendLayout();
             panel2.SuspendLayout();
             pnlEmployeeSubmenu.SuspendLayout();
@@ -71,12 +72,13 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(31, 47, 66);
+            panel2.Controls.Add(button6);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(button3);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 336);
             panel2.Name = "panel2";
-            panel2.Size = new Size(250, 79);
+            panel2.Size = new Size(250, 114);
             panel2.TabIndex = 4;
             // 
             // button1
@@ -89,10 +91,10 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.WhiteSmoke;
-            button1.Location = new Point(0, 40);
+            button1.Location = new Point(0, 42);
             button1.Name = "button1";
             button1.Padding = new Padding(35, 0, 0, 0);
-            button1.Size = new Size(250, 40);
+            button1.Size = new Size(250, 39);
             button1.TabIndex = 1;
             button1.Tag = "Add";
             button1.Text = "Add";
@@ -113,7 +115,7 @@
             button3.Location = new Point(0, 0);
             button3.Name = "button3";
             button3.Padding = new Padding(35, 0, 0, 0);
-            button3.Size = new Size(250, 40);
+            button3.Size = new Size(250, 42);
             button3.TabIndex = 0;
             button3.Tag = "List";
             button3.Text = "List";
@@ -314,6 +316,27 @@
             panel1.Size = new Size(1073, 576);
             panel1.TabIndex = 3;
             // 
+            // button6
+            // 
+            button6.BackColor = Color.FromArgb(0, 0, 0, 0);
+            button6.Dock = DockStyle.Top;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 189, 241);
+            button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 189, 241);
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button6.ForeColor = Color.WhiteSmoke;
+            button6.Location = new Point(0, 81);
+            button6.Name = "button6";
+            button6.Padding = new Padding(35, 0, 0, 0);
+            button6.Size = new Size(250, 33);
+            button6.TabIndex = 2;
+            button6.Tag = "Add";
+            button6.Text = "Edit_appoitment";
+            button6.TextAlign = ContentAlignment.MiddleLeft;
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
+            // 
             // form_ReceptionMenu2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -354,5 +377,6 @@
         private Panel panel3;
         private Button button5;
         private Button button4;
+        private Button button6;
     }
 }

@@ -131,6 +131,9 @@ namespace Patient_Handling
         private void dataGridView_patients_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+
+
+
         }
     }
 }

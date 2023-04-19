@@ -34,6 +34,8 @@
             label2 = new Label();
             button_edit_appointment = new Button();
             button_Cancel_edit = new Button();
+            dataGridView_lista_wizyt = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_lista_wizyt).BeginInit();
             SuspendLayout();
             // 
             // dateTimePicker_edit_appointment
@@ -88,11 +90,22 @@
             button_Cancel_edit.Text = "Cancel";
             button_Cancel_edit.UseVisualStyleBackColor = true;
             // 
+            // dataGridView_lista_wizyt
+            // 
+            dataGridView_lista_wizyt.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView_lista_wizyt.Location = new Point(196, 12);
+            dataGridView_lista_wizyt.Name = "dataGridView_lista_wizyt";
+            dataGridView_lista_wizyt.RowHeadersVisible = false;
+            dataGridView_lista_wizyt.RowTemplate.Height = 25;
+            dataGridView_lista_wizyt.Size = new Size(500, 150);
+            dataGridView_lista_wizyt.TabIndex = 6;
+            // 
             // EditAppointment
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(181, 174);
+            ClientSize = new Size(763, 226);
+            Controls.Add(dataGridView_lista_wizyt);
             Controls.Add(button_Cancel_edit);
             Controls.Add(button_edit_appointment);
             Controls.Add(label2);
@@ -101,6 +114,8 @@
             Controls.Add(dateTimePicker_edit_appointment);
             Name = "EditAppointment";
             Text = "EditAppointment";
+            Load += EditAppointment_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView_lista_wizyt).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -113,5 +128,6 @@
         private Label label2;
         private Button button_edit_appointment;
         private Button button_Cancel_edit;
+        private DataGridView dataGridView_lista_wizyt;
     }
 }

@@ -150,6 +150,7 @@
             Controls.Add(comboBox_patinet_add);
             Name = "addNewVisit";
             Text = "addNewVisit";
+            Load += addNewVisit_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView_patients).EndInit();
             ResumeLayout(false);
             PerformLayout();

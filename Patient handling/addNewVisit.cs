@@ -59,5 +59,10 @@ namespace Patient_handling
 
 
         }
+
+        private void addNewVisit_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

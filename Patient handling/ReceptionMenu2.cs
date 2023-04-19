@@ -131,5 +131,23 @@ namespace Patient_handling
             formeditpatient.BringToFront();
             formeditpatient.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+            EditAppointment editAppointment = new EditAppointment();
+            editAppointment.TopLevel = false;
+            editAppointment.FormBorderStyle = FormBorderStyle.None;
+            editAppointment.Dock = DockStyle.Fill;
+            panel1.Controls.Add(editAppointment);
+            panel1.Tag = editAppointment;
+            editAppointment.BringToFront();
+            editAppointment.Show();
+        }
+
+
+
+
     }
+    
 }

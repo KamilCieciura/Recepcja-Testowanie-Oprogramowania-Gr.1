@@ -30,6 +30,7 @@
         {
             pnlSideMenu = new Panel();
             panel2 = new Panel();
+            button6 = new Button();
             button1 = new Button();
             button3 = new Button();
             button2 = new Button();
@@ -45,7 +46,6 @@
             pnlTitle = new Panel();
             labelTitle = new Label();
             panel1 = new Panel();
-            button6 = new Button();
             pnlSideMenu.SuspendLayout();
             panel2.SuspendLayout();
             pnlEmployeeSubmenu.SuspendLayout();
@@ -80,6 +80,27 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(250, 114);
             panel2.TabIndex = 4;
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.FromArgb(0, 0, 0, 0);
+            button6.Dock = DockStyle.Top;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 189, 241);
+            button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 189, 241);
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button6.ForeColor = Color.WhiteSmoke;
+            button6.Location = new Point(0, 81);
+            button6.Name = "button6";
+            button6.Padding = new Padding(35, 0, 0, 0);
+            button6.Size = new Size(250, 33);
+            button6.TabIndex = 2;
+            button6.Tag = "Add";
+            button6.Text = "Edit_appoitment";
+            button6.TextAlign = ContentAlignment.MiddleLeft;
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // button1
             // 
@@ -293,7 +314,7 @@
             pnlTitle.Dock = DockStyle.Top;
             pnlTitle.Location = new Point(250, 0);
             pnlTitle.Name = "pnlTitle";
-            pnlTitle.Size = new Size(1073, 125);
+            pnlTitle.Size = new Size(1317, 125);
             pnlTitle.TabIndex = 2;
             pnlTitle.Paint += pnlTitle_Paint;
             // 
@@ -313,35 +334,14 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(250, 125);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1073, 576);
+            panel1.Size = new Size(1317, 576);
             panel1.TabIndex = 3;
-            // 
-            // button6
-            // 
-            button6.BackColor = Color.FromArgb(0, 0, 0, 0);
-            button6.Dock = DockStyle.Top;
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 189, 241);
-            button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 189, 241);
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button6.ForeColor = Color.WhiteSmoke;
-            button6.Location = new Point(0, 81);
-            button6.Name = "button6";
-            button6.Padding = new Padding(35, 0, 0, 0);
-            button6.Size = new Size(250, 33);
-            button6.TabIndex = 2;
-            button6.Tag = "Add";
-            button6.Text = "Edit_appoitment";
-            button6.TextAlign = ContentAlignment.MiddleLeft;
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
             // 
             // form_ReceptionMenu2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1323, 701);
+            ClientSize = new Size(1567, 701);
             Controls.Add(panel1);
             Controls.Add(pnlTitle);
             Controls.Add(pnlSideMenu);

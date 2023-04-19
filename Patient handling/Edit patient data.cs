@@ -33,40 +33,40 @@ namespace Patient_Handling
 
         private void button_edit_patient_form_Click(object sender, EventArgs e)
         {
-           /* if (string.IsNullOrEmpty(textBox_form_edit_patient_last_name.Text) ||
-                string.IsNullOrEmpty(textBox_form_edit_patient_phone_number.Text) ||
-                string.IsNullOrEmpty(textBox_form_edit_patient_adress.Text) ||
-                string.IsNullOrEmpty(textBox_form_edit_patient_residential_adress.Text))
-            {
-                MessageBox.Show("Wszystkie pola muszą być wypełnione.");
-                return;
-            }
+            /* if (string.IsNullOrEmpty(textBox_form_edit_patient_last_name.Text) ||
+                 string.IsNullOrEmpty(textBox_form_edit_patient_phone_number.Text) ||
+                 string.IsNullOrEmpty(textBox_form_edit_patient_adress.Text) ||
+                 string.IsNullOrEmpty(textBox_form_edit_patient_residential_adress.Text))
+             {
+                 MessageBox.Show("Wszystkie pola muszą być wypełnione.");
+                 return;
+             }
 
-            if (!System.Text.RegularExpressions.Regex.IsMatch(textBox_form_edit_patient_phone_number.Text, @"^\+?[0-9]{3}-?[0-9]{3}-?[0-9]{3}$"))
-            {
-                MessageBox.Show("Numer telefonu musi składać się z dziewięciu cyfr.");
-                return;
-            }
+             if (!System.Text.RegularExpressions.Regex.IsMatch(textBox_form_edit_patient_phone_number.Text, @"^\+?[0-9]{3}-?[0-9]{3}-?[0-9]{3}$"))
+             {
+                 MessageBox.Show("Numer telefonu musi składać się z dziewięciu cyfr.");
+                 return;
+             }
 
-            if (!System.Text.RegularExpressions.Regex.IsMatch(textBox_form_edit_patient_adress.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
-            {
-                MessageBox.Show("Adres email jest nieprawidłowy.");
-                return;
-            }
+             if (!System.Text.RegularExpressions.Regex.IsMatch(textBox_form_edit_patient_adress.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+             {
+                 MessageBox.Show("Adres email jest nieprawidłowy.");
+                 return;
+             }
 
-            /*_selectedPatient.LastName = textBox_form_edit_patient_last_name.Text;
-            _selectedPatient.PhoneNumber = textBox_form_edit_patient_phone_number.Text;
-            _selectedPatient.EmailAddress = textBox_form_edit_patient_adress.Text;
-            _selectedPatient.ResidentialAddress = textBox_form_edit_patient_residential_adress.Text;
-            
-            this.DialogResult = DialogResult.OK;
-            this.Hide();
+             /*_selectedPatient.LastName = textBox_form_edit_patient_last_name.Text;
+             _selectedPatient.PhoneNumber = textBox_form_edit_patient_phone_number.Text;
+             _selectedPatient.EmailAddress = textBox_form_edit_patient_adress.Text;
+             _selectedPatient.ResidentialAddress = textBox_form_edit_patient_residential_adress.Text;
 
-            */
+             this.DialogResult = DialogResult.OK;
+             this.Hide();
+
+             */
 
 
 
-          int selcetedPatientId = Convert.ToInt32(dataGridView_patients.SelectedRows[0].Cells["ID"].Value);
+            int selcetedPatientId = Convert.ToInt32(dataGridView_patients.SelectedRows[0].Cells["ID"].Value);
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
 
@@ -91,28 +91,28 @@ namespace Patient_Handling
                 {
 
                     string[] columnNames = { "PhoneNumber", };
-                    string[] columnValues = {textBox_form_edit_patient_phone_number.Text };
+                    string[] columnValues = { textBox_form_edit_patient_phone_number.Text };
                     string condition = $"ID = {selcetedPatientId}";
                     databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
 
                 }
-                if(textBox_form_edit_patient_adress.Text!="")
+                if (textBox_form_edit_patient_adress.Text != "")
                 {
                     string[] columnNames = { "EmailAdress" };
-                    string[] columnValues = {  textBox_form_edit_patient_adress.Text};
+                    string[] columnValues = { textBox_form_edit_patient_adress.Text };
                     string condition = $"ID = {selcetedPatientId}";
                     databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
 
                 }
-                if(textBox_form_edit_patient_residential_adress.Text!="")
+                if (textBox_form_edit_patient_residential_adress.Text != "")
                 {
-                    string[] columnNames = {  "ResidentialAdress" };
-                    string[] columnValues = {  textBox_form_edit_patient_residential_adress.Text };
+                    string[] columnNames = { "ResidentialAdress" };
+                    string[] columnValues = { textBox_form_edit_patient_residential_adress.Text };
                     string condition = $"ID = {selcetedPatientId}";
                     databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
 
                 }
-              
+
             }
             this.Hide();
 

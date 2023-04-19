@@ -136,7 +136,7 @@
             dataGridView_patients.RowHeadersWidth = 51;
             dataGridView_patients.RowTemplate.Height = 25;
             dataGridView_patients.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView_patients.Size = new Size(757, 219);
+            dataGridView_patients.Size = new Size(994, 219);
             dataGridView_patients.TabIndex = 19;
             dataGridView_patients.VirtualMode = true;
             dataGridView_patients.CellContentClick += dataGridView_patients_CellContentClick;
@@ -145,7 +145,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1141, 480);
+            ClientSize = new Size(1255, 480);
             Controls.Add(dataGridView_patients);
             Controls.Add(label7);
             Controls.Add(textBox_form_edit_patient_residential_adress);

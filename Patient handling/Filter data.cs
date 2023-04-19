@@ -73,12 +73,12 @@ namespace Patient_handling
 
             if (!string.IsNullOrWhiteSpace(textBox_form_filter_data_adress_email.Text))
             {
-                query.Append(" AND EmailAddress LIKE '%" + textBox_form_filter_data_adress_email.Text + "%'");
+                query.Append(" AND Emailadress LIKE '%" + textBox_form_filter_data_adress_email.Text + "%'");
             }
 
             if (!string.IsNullOrWhiteSpace(textBox_form_filter_data_residential_adress.Text))
             {
-                query.Append(" AND ResidentialAddress LIKE '%" + textBox_form_filter_data_residential_adress.Text + "%'");
+                query.Append(" AND ResidentialAdress LIKE '%" + textBox_form_filter_data_residential_adress.Text + "%'");
             }
 
             if (!string.IsNullOrWhiteSpace(textBox_form_filter_data_social_security_number.Text))

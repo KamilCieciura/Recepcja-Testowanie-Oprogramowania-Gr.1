@@ -152,8 +152,54 @@ namespace Patient_handling
             }
         }
 
+        public DataTable FilterData(string tableName, Dictionary<string, string> filters)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
 
-     
+                string query = $"SELECT * FROM {tableName}";
+
+                if (filters.Count > 0)
+                {
+                    query += " WHERE ";
+                    query += string.Join(" AND ", filters.Select(f => $"{f.Key} LIKE '{f.Value}'"));
+                }
+
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+
+                connection.Close();
+
+                return dataTable;
+            }
+        }
+        public DataTable ExecuteQuery(string query)
+        {
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
+                    dataAdapter.Fill(dataTable);
+
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error executing query: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return dataTable;
+        }
+
+
 
 
 

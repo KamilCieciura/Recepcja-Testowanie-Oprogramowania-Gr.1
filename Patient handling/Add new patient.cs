@@ -152,7 +152,7 @@ namespace Patient_Handling
 
         private void button_add_patient_form_Click(object sender, EventArgs e)
         {
-            /*
+            
             if (string.IsNullOrEmpty(textBox_form_add_patient_First_name.Text) ||
                  string.IsNullOrEmpty(textBox_form_add_patient_last_name.Text) ||
                  string.IsNullOrEmpty(dateTimePicker_form_add_patient_birthdate.Text) ||
@@ -176,14 +176,21 @@ namespace Patient_Handling
                 MessageBox.Show("Adres email jest nieprawidłowy.");
                 return;
             }
-            if (!pesel(textBox_form_add_patient_social_security_number.Text, DateTime.Parse(dateTimePicker1.Text), comboBox_gender.SelectedItem.ToString()))
+            if (string.IsNullOrEmpty(textBox_form_add_patient_social_security_number.Text))
             {
-
-                MessageBox.Show("Pesel nie zgadza się z datą urodzenia!");
+                MessageBox.Show("Numer PESEL nie może być pusty.");
                 return;
             }
 
-            /* Patient newPatient = new Patient
+            string pesel = textBox_form_add_patient_social_security_number.Text;
+
+            if (pesel.Length != 11 || !pesel.All(char.IsDigit))
+            {
+                MessageBox.Show("Numer PESEL musi składać się z 11 cyfr.");
+                return;
+            }
+
+            Patient newPatient = new Patient
              {
                  FirstName = textBox_form_add_patient_First_name.Text,
                  LastName = textBox_form_add_patient_last_name.Text,
@@ -195,7 +202,7 @@ namespace Patient_Handling
              };
 
              _formReceptionMenu.AddPatient(newPatient);
-            */
+            
 
             
             DatabaseConnection databaseConnection = new DatabaseConnection();

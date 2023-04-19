@@ -23,6 +23,14 @@ namespace Patient_Handling
             DatabaseConnection databaseConnection = new DatabaseConnection();
 
             databaseConnection.LoadDataIntoDataGridView(dataGridView_patients, "Patients");
+
+            if (dataGridView_patients.Rows.Count > 0)
+            {
+                //Wywołujemy metodę CellClick dla pierwszego wiersza
+                DataGridViewCellEventArgs args = new DataGridViewCellEventArgs(0, 0);
+                DataGridView_patients_CellClick(this, args);
+            }
+            this.dataGridView_patients.SelectionChanged += new System.EventHandler(this.DataGridView_patients_SelectionChanged);
         }
 
         private void button_cancel_add_patient_form_Click(object sender, EventArgs e)
@@ -130,10 +138,45 @@ namespace Patient_Handling
 
         private void dataGridView_patients_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+           
 
 
 
+        }
 
+        private void textBox_form_edit_patient_last_name_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+        private void UpdateTextBoxValues(DataGridViewRow selectedRow)
+        {
+            string lastname = selectedRow.Cells["LastName"].Value.ToString();
+            string phonenumber = selectedRow.Cells["PhoneNumber"].Value.ToString();
+            string email = selectedRow.Cells["EmailAdress"].Value.ToString();
+            string residentialadress = selectedRow.Cells["ResidentialAdress"].Value.ToString();
+
+            textBox_form_edit_patient_last_name.Text = lastname;
+            textBox_form_edit_patient_phone_number.Text = phonenumber;
+            textBox_form_edit_patient_adress.Text = email;
+            textBox_form_edit_patient_residential_adress.Text = residentialadress;
+        }
+
+        private void DataGridView_patients_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow selectedRow = dataGridView_patients.Rows[e.RowIndex];
+                UpdateTextBoxValues(selectedRow);
+            }
+
+        }
+        private void DataGridView_patients_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView_patients.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView_patients.SelectedRows[0];
+                UpdateTextBoxValues(selectedRow);
+            }
         }
     }
 }

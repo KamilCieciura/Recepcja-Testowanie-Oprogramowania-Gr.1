@@ -21,10 +21,13 @@ namespace Patient_handling
             /*comboBox_menu_sort_data.Items.AddRange(listaStringow.ToArray());*/
             /*dataGridView1.DataSource = Patients;*/
 
+ 
+
             DatabaseConnection databaseConnection = new DatabaseConnection();
 
             databaseConnection.LoadDataIntoDataGridView(dataGridView1, "Patients");
 
+    
 
 
         }
@@ -142,8 +145,8 @@ namespace Patient_handling
                 return;
 
             }
-            else
-            {
+            
+            
 
                 DatabaseConnection databaseConnection = new DatabaseConnection();
 
@@ -153,7 +156,7 @@ namespace Patient_handling
                 databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
 
                 this.Hide();
-            }
+            
 
 
 

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Patient_handling
 {
@@ -34,6 +35,8 @@ namespace Patient_handling
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
                     DataTable dataTable = new DataTable();
                     dataAdapter.Fill(dataTable);
+               
+
 
                     dataGridView.DataSource = dataTable; // ustawienie źródła danych dla DataGridView
 

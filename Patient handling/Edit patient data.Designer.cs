@@ -57,6 +57,7 @@
             textBox_form_edit_patient_last_name.Name = "textBox_form_edit_patient_last_name";
             textBox_form_edit_patient_last_name.Size = new Size(170, 23);
             textBox_form_edit_patient_last_name.TabIndex = 9;
+            textBox_form_edit_patient_last_name.TextChanged += textBox_form_edit_patient_last_name_TextChanged;
             // 
             // label4
             // 

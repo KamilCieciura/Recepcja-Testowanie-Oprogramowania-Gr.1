@@ -9,7 +9,7 @@ namespace Patient_handling
     public partial class Form_reception_menu : Form
     {
 
-        public BindingList<Patient> Patients { get; set; } = new BindingList<Patient>();
+       // public BindingList<Patient> Patients { get; set; } = new BindingList<Patient>();
         public Form_reception_menu()
         {
             InitializeComponent();
@@ -21,13 +21,13 @@ namespace Patient_handling
             /*comboBox_menu_sort_data.Items.AddRange(listaStringow.ToArray());*/
             /*dataGridView1.DataSource = Patients;*/
 
- 
+
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
 
             databaseConnection.LoadDataIntoDataGridView(dataGridView1, "Patients");
 
-    
+
 
 
         }
@@ -88,7 +88,7 @@ namespace Patient_handling
         private void button_menu_remove_patient_Click(object sender, EventArgs e)
         {
             int selcetedPatientId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["ID"].Value);
-            int selcetedPatientStatus= Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Status"].Value);
+            int selcetedPatientStatus = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["Status"].Value);
 
             if (selcetedPatientStatus == 0)
             {
@@ -148,15 +148,15 @@ namespace Patient_handling
                 return;
 
             }
-            
-            
 
-                DatabaseConnection databaseConnection = new DatabaseConnection();
 
-                string[] columnNames = { "Status" };
-                string[] columnValues = { "1" };
-                string condition = $"ID = {selcetedPatientId}";
-                databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
+
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+
+            string[] columnNames = { "Status" };
+            string[] columnValues = { "1" };
+            string condition = $"ID = {selcetedPatientId}";
+            databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
 
             DatabaseConnection databaseConnection1 = new DatabaseConnection();
 
@@ -171,53 +171,6 @@ namespace Patient_handling
 
         }
 
-        private void button_menu_inactivate_patient_Click(object sender, EventArgs e)
-        {
-            Patient selectedPatient = (Patient)dataGridView1.CurrentRow.DataBoundItem;
-            if (dataGridView1.CurrentRow != null)
-            {
-
-                selectedPatient.Status = "Inactive";
-                dataGridView1.Refresh();
-            }
-            else
-            {
-                MessageBox.Show("Please select a patient to activate.");
-            }
-
-            DatabaseConnection databaseConnection = new DatabaseConnection();
-
-            string[] columnNames = { "Status" };
-            string[] columnValues = { "0" };
-            string condition = $"ID = {selectedPatient}";
-            databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            form_ReceptionMenu2 receptionMenu2 = new form_ReceptionMenu2();
-            receptionMenu2.Show();
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            ZarzadzanieWizytami f = new ZarzadzanieWizytami();
-            f.Show();
-        }
-
-        private void button_menu_sort_data_Click(object sender, EventArgs e)
-        {
-            /*if (comboBox_menu_sort_data.SelectedIndex == 0)
-             {
-
-                 dataGridView_patients.Sort(dataGridView_patients.Columns["columnfirstName"], ListSortDirection.Ascending);
-             }
-             else if (comboBox_menu_sort_data.SelectedIndex == 1)
-             {
-
-                 dataGridView_patients.Sort(dataGridView_patients.Columns["columnLastName"], ListSortDirection.Descending);
-             }
-            */
-        }
+   
     }
 }

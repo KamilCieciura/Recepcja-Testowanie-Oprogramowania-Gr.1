@@ -152,71 +152,75 @@ namespace Patient_Handling
 
         private void button_add_patient_form_Click(object sender, EventArgs e)
         {
-            
-            if (string.IsNullOrEmpty(textBox_form_add_patient_First_name.Text) ||
-                 string.IsNullOrEmpty(textBox_form_add_patient_last_name.Text) ||
-                 string.IsNullOrEmpty(dateTimePicker_form_add_patient_birthdate.Text) ||
-                 string.IsNullOrEmpty(textBox_form_add_patient_phone_number.Text) ||
-                 string.IsNullOrEmpty(textBox_form_add_patient_adress_email.Text) ||
-                 string.IsNullOrEmpty(textBox_form_add_patient_residential_adress.Text) ||
-                 string.IsNullOrEmpty(textBox_form_add_patient_social_security_number.Text))
+
+
+            Patient newPatient = new Patient
             {
-                MessageBox.Show("Wszystkie pola muszą być wypełnione.");
-                return;
-            }
-
-            if (!Regex.IsMatch(textBox_form_add_patient_phone_number.Text, @"^\+?[0-9]{3}-?[0-9]{3}-?[0-9]{3}$"))
-            {
-                MessageBox.Show("Numer telefonu musi składać się z dziewięciu cyfr.");
-                return;
-            }
-
-            if (!Regex.IsMatch(textBox_form_add_patient_adress_email.Text, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
-            {
-                MessageBox.Show("Adres email jest nieprawidłowy.");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(textBox_form_add_patient_social_security_number.Text))
-            {
-                MessageBox.Show("Numer PESEL nie może być pusty.");
-                return;
-            }
-
-            if (textBox_form_add_patient_social_security_number.Text.Length != 11)
-            {
-                MessageBox.Show("Numer PESEL musi składać się z 11 cyfr.");
-                return;
-            }
-            if (!IsValidPesel(textBox_form_add_patient_social_security_number.Text, DateTime.Parse(dateTimePicker1.Text), comboBox_gender.SelectedItem.ToString()))
-            {
-
-                MessageBox.Show("Pesel nie zgadza się z datą urodzenia!");
-                return;
-            }
+                FirstName = textBox_form_add_patient_First_name.Text,
+                LastName = textBox_form_add_patient_last_name.Text,
+                Birthdate = dateTimePicker_form_add_patient_birthdate.Value.Date,
+                Sex = comboBox_gender.Text,
+                PhoneNumber = textBox_form_add_patient_phone_number.Text,
+                EmailAddress = textBox_form_add_patient_adress_email.Text,
+                ResidentialAddress = textBox_form_add_patient_residential_adress.Text,
+                Pesel = textBox_form_add_patient_social_security_number.Text
+            };
 
 
-            /* Patient newPatient = new Patient
+
+
+
+            if (string.IsNullOrEmpty(newPatient.FirstName) ||
+                  string.IsNullOrEmpty(newPatient.LastName) ||
+                  string.IsNullOrEmpty(newPatient.Birthdate.ToString()) ||
+                  string.IsNullOrEmpty(newPatient.PhoneNumber) ||
+                  string.IsNullOrEmpty(newPatient.Sex) ||
+                  string.IsNullOrEmpty(newPatient.EmailAddress) ||
+                  string.IsNullOrEmpty(newPatient.ResidentialAddress) ||
+                  string.IsNullOrEmpty(newPatient.Pesel))
              {
-                 FirstName = textBox_form_add_patient_First_name.Text,
-                 LastName = textBox_form_add_patient_last_name.Text,
-                 Birthdate = dateTimePicker_form_add_patient_birthdate.Value.Date,
-                 PhoneNumber = textBox_form_add_patient_phone_number.Text,
-                 EmailAddress = textBox_form_add_patient_adress_email.Text,
-                 ResidentialAddress = textBox_form_add_patient_residential_adress.Text,
-                 PESEL = textBox_form_add_patient_social_security_number.Text
-             };
+                 MessageBox.Show("Wszystkie pola muszą być wypełnione.");
+                 return;
+             }
 
-             _formReceptionMenu.AddPatient(newPatient);
-            */
+             if (!Regex.IsMatch(newPatient.PhoneNumber, @"^\+?[0-9]{3}-?[0-9]{3}-?[0-9]{3}$"))
+             {
+                 MessageBox.Show("Numer telefonu musi składać się z dziewięciu cyfr.");
+                 return;
+             }
+
+             if (!Regex.IsMatch(newPatient.EmailAddress, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+             {
+                 MessageBox.Show("Adres email jest nieprawidłowy.");
+                 return;
+             }
+
+             if (string.IsNullOrEmpty(newPatient.Pesel))
+             {
+                 MessageBox.Show("Numer PESEL nie może być pusty.");
+                 return;
+             }
+
+             if (newPatient.Pesel.Length != 11)
+             {
+                 MessageBox.Show("Numer PESEL musi składać się z 11 cyfr.");
+                 return;
+             }
+             if (!IsValidPesel(newPatient.Pesel, DateTime.Parse(dateTimePicker1.Text), comboBox_gender.SelectedItem.ToString()))
+             {
+
+                 MessageBox.Show("Pesel nie zgadza się z datą urodzenia!");
+                 return;
+             }
+
+            
 
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
 
             string[] columnNames = { "FirstName", "LastName", "BirthDate", "Sex", "PhoneNumber", "EmailAdress", "ResidentialAdress", "Pesel" };
-            string[] columnValues = {textBox_form_add_patient_First_name.Text , textBox_form_add_patient_last_name.Text,
-            dateTimePicker1.Value.Date.ToString("yyyy-MM-dd"),comboBox_gender.Text,textBox_form_add_patient_phone_number.Text,textBox_form_add_patient_adress_email.Text,
-                textBox_form_add_patient_residential_adress.Text,textBox_form_add_patient_social_security_number.Text};
+            string[] columnValues = {newPatient.FirstName,newPatient.LastName,newPatient.Birthdate.ToString("yyyy-MM-dd"),newPatient.Sex,newPatient.PhoneNumber,
+                newPatient.EmailAddress,newPatient.ResidentialAddress,newPatient.Pesel};
             databaseConnection.InsertDataToDatabase("Patients", columnNames, columnValues);
             this.Hide();
         }

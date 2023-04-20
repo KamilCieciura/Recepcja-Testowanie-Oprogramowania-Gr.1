@@ -124,9 +124,11 @@
             dataGridView_patients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_patients.EditMode = DataGridViewEditMode.EditProgrammatically;
             dataGridView_patients.Location = new Point(179, 34);
+            dataGridView_patients.MultiSelect = false;
             dataGridView_patients.Name = "dataGridView_patients";
             dataGridView_patients.RowHeadersVisible = false;
             dataGridView_patients.RowHeadersWidth = 51;
+            dataGridView_patients.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridView_patients.RowTemplate.Height = 25;
             dataGridView_patients.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView_patients.Size = new Size(502, 156);

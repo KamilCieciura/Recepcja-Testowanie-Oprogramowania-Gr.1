@@ -94,9 +94,12 @@
             // 
             dataGridView_lista_wizyt.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_lista_wizyt.Location = new Point(196, 12);
+            dataGridView_lista_wizyt.MultiSelect = false;
             dataGridView_lista_wizyt.Name = "dataGridView_lista_wizyt";
             dataGridView_lista_wizyt.RowHeadersVisible = false;
+            dataGridView_lista_wizyt.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridView_lista_wizyt.RowTemplate.Height = 25;
+            dataGridView_lista_wizyt.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView_lista_wizyt.Size = new Size(500, 150);
             dataGridView_lista_wizyt.TabIndex = 6;
             // 

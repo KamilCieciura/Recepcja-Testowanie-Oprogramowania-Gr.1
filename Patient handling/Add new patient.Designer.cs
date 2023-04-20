@@ -176,7 +176,7 @@
             dateTimePicker1.Format = DateTimePickerFormat.Short;
             dateTimePicker1.Location = new Point(31, 130);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.Size = new Size(219, 23);
             dateTimePicker1.TabIndex = 16;
             dateTimePicker1.Value = new DateTime(2023, 4, 6, 0, 0, 0, 0);
             // 
@@ -186,7 +186,7 @@
             comboBox_gender.Items.AddRange(new object[] { "M", "K" });
             comboBox_gender.Location = new Point(31, 175);
             comboBox_gender.Name = "comboBox_gender";
-            comboBox_gender.Size = new Size(200, 23);
+            comboBox_gender.Size = new Size(219, 23);
             comboBox_gender.TabIndex = 17;
             comboBox_gender.SelectedIndexChanged += comboBox_gender_SelectedIndexChanged;
             // 

@@ -72,26 +72,38 @@ namespace Patient_Handling
              this.Hide();
 
              */
-         
-            string lastname = textBox_form_edit_patient_last_name.Text;
-            string phonenumber = textBox_form_edit_patient_phone_number.Text;
-            string email = textBox_form_edit_patient_adress.Text;
-            string residentialadress = textBox_form_edit_patient_residential_adress.Text;
+
+            Patient patient = new Patient()
+            {
+
+                LastName = textBox_form_edit_patient_last_name.Text,
+                PhoneNumber = textBox_form_edit_patient_phone_number.Text,
+                EmailAddress = textBox_form_edit_patient_adress.Text,
+                ResidentialAddress = textBox_form_edit_patient_residential_adress.Text
+
+            };
+
+
 
             string lastnameBase = dataGridView_patients.SelectedRows[0].Cells["LastName"].Value.ToString();
             string phonenumberBase = dataGridView_patients.SelectedRows[0].Cells["PhoneNumber"].Value.ToString();
             string emailBase = dataGridView_patients.SelectedRows[0].Cells["EmailAdress"].Value.ToString();
             string residentialadressBase = dataGridView_patients.SelectedRows[0].Cells["ResidentialAdress"].Value.ToString();
 
-            if (!Regex.IsMatch(phonenumber, @"^\+?[0-9]{3}-?[0-9]{3}-?[0-9]{3}$"))
+
+            if (patient.LastName == lastnameBase && patient.PhoneNumber == phonenumberBase && patient.EmailAddress == emailBase && patient.ResidentialAddress == residentialadressBase)
+            {
+                MessageBox.Show("The data of this patient to which you want to change is the same");
+                return;
+            }
+            if (!Regex.IsMatch(patient.PhoneNumber, @"^\+?[0-9]{3}-?[0-9]{3}-?[0-9]{3}$"))
             {
                 MessageBox.Show("The phone number must consist of nine number");
                 return;
             }
-
-            if (lastname==lastnameBase && phonenumber==phonenumberBase && email==emailBase && residentialadress==residentialadressBase)
+            if (!System.Text.RegularExpressions.Regex.IsMatch(patient.EmailAddress, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
-                MessageBox.Show("The data of this patient to which you want to change is the same");
+                MessageBox.Show("Adres email jest nieprawidłowy.");
                 return;
             }
 
@@ -101,61 +113,15 @@ namespace Patient_Handling
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
             string[] columnNames = { "LastName", "PhoneNumber", "EmailAdress", "ResidentialAdress" };
-            string[] columnValues = {lastname,phonenumber,email,residentialadress };
+            string[] columnValues = { patient.LastName, patient.PhoneNumber, patient.EmailAddress, patient.ResidentialAddress };
             string condition = $"ID = {selcetedPatientId}";
             databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
 
             DatabaseConnection databaseConnection1 = new DatabaseConnection();
-
             databaseConnection1.LoadDataIntoDataGridView(dataGridView_patients, "Patients");
 
 
-            /* if (textBox_form_edit_patient_last_name.Text != "" && textBox_form_edit_patient_phone_number.Text != "" && textBox_form_edit_patient_residential_adress.Text != "" && textBox_form_edit_patient_residential_adress.Text != "")
-            {
-            string[] columnNames = { "LastName", "PhoneNumber", "EmailAdress", "ResidentialAdress" };
-            string[] columnValues = { textBox_form_edit_patient_last_name.Text, textBox_form_edit_patient_phone_number.Text, textBox_form_edit_patient_adress.Text, textBox_form_edit_patient_residential_adress.Text };
-            string condition = $"ID = {selcetedPatientId}";
-            databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
 
-
-            }
-            else
-            {
-                if (textBox_form_edit_patient_last_name.Text != "")
-                {
-                    string[] columnNames = { "LastName" };
-                    string[] columnValues = { textBox_form_edit_patient_last_name.Text };
-                    string condition = $"ID = {selcetedPatientId}";
-                    databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
-                }
-                if (textBox_form_edit_patient_phone_number.Text != "")
-                {
-
-                    string[] columnNames = { "PhoneNumber", };
-                    string[] columnValues = { textBox_form_edit_patient_phone_number.Text };
-                    string condition = $"ID = {selcetedPatientId}";
-                    databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
-
-                }
-                if (textBox_form_edit_patient_adress.Text != "")
-                {
-                    string[] columnNames = { "EmailAdress" };
-                    string[] columnValues = { textBox_form_edit_patient_adress.Text };
-                    string condition = $"ID = {selcetedPatientId}";
-                    databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
-
-                }
-                if (textBox_form_edit_patient_residential_adress.Text != "")
-                {
-                    string[] columnNames = { "ResidentialAdress" };
-                    string[] columnValues = { textBox_form_edit_patient_residential_adress.Text };
-                    string condition = $"ID = {selcetedPatientId}";
-                    databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
-
-                }
-
-            }
-            */
 
 
 
@@ -173,7 +139,7 @@ namespace Patient_Handling
 
         private void dataGridView_patients_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
 
 
 
@@ -181,7 +147,7 @@ namespace Patient_Handling
 
         private void textBox_form_edit_patient_last_name_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
         private void UpdateTextBoxValues(DataGridViewRow selectedRow)
         {

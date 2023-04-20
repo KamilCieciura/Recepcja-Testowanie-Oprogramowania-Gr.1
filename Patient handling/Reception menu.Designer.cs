@@ -36,7 +36,7 @@
             // 
             // button_menu_activate_patient
             // 
-            button_menu_activate_patient.Location = new Point(317, 240);
+            button_menu_activate_patient.Location = new Point(294, 319);
             button_menu_activate_patient.Name = "button_menu_activate_patient";
             button_menu_activate_patient.Size = new Size(153, 23);
             button_menu_activate_patient.TabIndex = 3;
@@ -46,7 +46,7 @@
             // 
             // button_menu_remove_patient
             // 
-            button_menu_remove_patient.Location = new Point(488, 240);
+            button_menu_remove_patient.Location = new Point(472, 319);
             button_menu_remove_patient.Name = "button_menu_remove_patient";
             button_menu_remove_patient.Size = new Size(153, 23);
             button_menu_remove_patient.TabIndex = 4;
@@ -56,13 +56,18 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToResizeColumns = false;
+            dataGridView1.AllowUserToResizeRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 84);
+            dataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dataGridView1.Location = new Point(12, 40);
+            dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersVisible = false;
+            dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(988, 150);
+            dataGridView1.Size = new Size(1007, 273);
             dataGridView1.TabIndex = 5;
             // 
             // Form_reception_menu

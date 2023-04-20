@@ -129,15 +129,18 @@
             // 
             // dataGridView_patients
             // 
+            dataGridView_patients.AllowUserToResizeColumns = false;
+            dataGridView_patients.AllowUserToResizeRows = false;
             dataGridView_patients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_patients.EditMode = DataGridViewEditMode.EditProgrammatically;
             dataGridView_patients.Location = new Point(242, 57);
+            dataGridView_patients.MultiSelect = false;
             dataGridView_patients.Name = "dataGridView_patients";
             dataGridView_patients.RowHeadersVisible = false;
-            dataGridView_patients.RowHeadersWidth = 51;
+            dataGridView_patients.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridView_patients.RowTemplate.Height = 25;
             dataGridView_patients.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView_patients.Size = new Size(994, 219);
+            dataGridView_patients.Size = new Size(999, 236);
             dataGridView_patients.TabIndex = 19;
             dataGridView_patients.VirtualMode = true;
             dataGridView_patients.CellContentClick += dataGridView_patients_CellContentClick;

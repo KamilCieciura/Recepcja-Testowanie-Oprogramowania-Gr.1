@@ -193,15 +193,18 @@
             // 
             // dataGridView_patients
             // 
+            dataGridView_patients.AllowUserToResizeColumns = false;
+            dataGridView_patients.AllowUserToResizeRows = false;
             dataGridView_patients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_patients.EditMode = DataGridViewEditMode.EditProgrammatically;
             dataGridView_patients.Location = new Point(210, 35);
+            dataGridView_patients.MultiSelect = false;
             dataGridView_patients.Name = "dataGridView_patients";
             dataGridView_patients.RowHeadersVisible = false;
-            dataGridView_patients.RowHeadersWidth = 51;
+            dataGridView_patients.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridView_patients.RowTemplate.Height = 25;
             dataGridView_patients.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView_patients.Size = new Size(802, 165);
+            dataGridView_patients.Size = new Size(942, 364);
             dataGridView_patients.TabIndex = 33;
             dataGridView_patients.VirtualMode = true;
             // 
@@ -222,7 +225,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1110, 435);
+            ClientSize = new Size(1176, 435);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView_patients);
             Controls.Add(label9);

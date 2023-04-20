@@ -59,16 +59,16 @@ namespace Patient_handling
             int patientId = _patientIdsAndNames.FirstOrDefault(x => x.Value == comboBox_patinet_add.SelectedItem.ToString()).Key;
             int doctorId = _doctorIdsAndNames.FirstOrDefault(x => x.Value == comboBox_doctor_add.SelectedItem.ToString()).Key;
 
-            
+
             string[] columnNames = { "Patient", "Doctor", "Date", "Hour" };
             string visitDate = dateTimePicker_add_visit.Value.ToString("yyyy-MM-dd");
             string visitTime = comboBox_hour_add.SelectedItem.ToString();
             string[] columnValues = { patientId.ToString(), doctorId.ToString(), visitDate, visitTime };
 
-            
+
             conn.InsertDataToDatabase("MedicalVisit", columnNames, columnValues);
 
-            
+
             conn.LoadDataIntoDataGridView(dataGridView_patients, "MedicalVisit");
         }
 

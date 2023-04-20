@@ -74,16 +74,32 @@ namespace Patient_Handling
              */
             if (!Regex.IsMatch(textBox_form_edit_patient_phone_number.Text, @"^\+?[0-9]{3}-?[0-9]{3}-?[0-9]{3}$"))
             {
-                MessageBox.Show("Numer telefonu musi składać się z dziewięciu cyfr.");
+                MessageBox.Show("The phone number must consist of nine number");
                 return;
             }
+            string lastname = textBox_form_edit_patient_last_name.Text;
+            string phonenumber = textBox_form_edit_patient_phone_number.Text;
+            string email = textBox_form_edit_patient_adress.Text;
+            string residentialadress = textBox_form_edit_patient_residential_adress.Text;
+
+            string lastnameBase = dataGridView_patients.SelectedRows[0].Cells["LastName"].Value.ToString();
+            string phonenumberBase = dataGridView_patients.SelectedRows[0].Cells["PhoneNumber"].Value.ToString();
+            string emailBase = dataGridView_patients.SelectedRows[0].Cells["EmailAdress"].Value.ToString();
+            string residentialadressBase = dataGridView_patients.SelectedRows[0].Cells["ResidentialAdress"].Value.ToString();
+
+            if(lastname==lastnameBase && phonenumber==phonenumberBase && email==emailBase && residentialadress==residentialadressBase)
+            {
+                MessageBox.Show("The data of this patient to which you want to change is the same");
+                return;
+            }
+
 
 
             int selcetedPatientId = Convert.ToInt32(dataGridView_patients.SelectedRows[0].Cells["ID"].Value);
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
             string[] columnNames = { "LastName", "PhoneNumber", "EmailAdress", "ResidentialAdress" };
-            string[] columnValues = { textBox_form_edit_patient_last_name.Text, textBox_form_edit_patient_phone_number.Text, textBox_form_edit_patient_adress.Text, textBox_form_edit_patient_residential_adress.Text };
+            string[] columnValues = {lastname,phonenumber,email,residentialadress };
             string condition = $"ID = {selcetedPatientId}";
             databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
 
@@ -134,7 +150,12 @@ namespace Patient_Handling
 
             }
             */
-            this.Hide();
+        
+            DatabaseConnection databaseConnection1 = new DatabaseConnection();
+
+            databaseConnection1.LoadDataIntoDataGridView(dataGridView_patients, "Patients");
+
+
 
 
 

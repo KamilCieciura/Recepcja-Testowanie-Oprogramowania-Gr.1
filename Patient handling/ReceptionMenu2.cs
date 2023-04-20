@@ -144,9 +144,10 @@ namespace Patient_handling
             editAppointment.Show();
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
-
-
+        }
     }
 
 }

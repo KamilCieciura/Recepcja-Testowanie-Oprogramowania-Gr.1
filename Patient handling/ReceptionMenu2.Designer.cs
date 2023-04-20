@@ -336,6 +336,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1317, 576);
             panel1.TabIndex = 3;
+            panel1.Paint += panel1_Paint;
             // 
             // form_ReceptionMenu2
             // 

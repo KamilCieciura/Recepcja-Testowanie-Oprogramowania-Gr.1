@@ -104,7 +104,10 @@ namespace Patient_handling
             string condition = $"ID = {selcetedPatientId}";
             databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
 
-            this.Hide();
+
+            DatabaseConnection databaseConnection1 = new DatabaseConnection();
+
+            databaseConnection1.LoadDataIntoDataGridView(dataGridView1, "Patients");
 
         }
 
@@ -155,8 +158,10 @@ namespace Patient_handling
                 string condition = $"ID = {selcetedPatientId}";
                 databaseConnection.UpdateDataInDatabase("Patients", columnNames, columnValues, condition);
 
-                this.Hide();
-            
+            DatabaseConnection databaseConnection1 = new DatabaseConnection();
+
+            databaseConnection1.LoadDataIntoDataGridView(dataGridView1, "Patients");
+
 
 
 

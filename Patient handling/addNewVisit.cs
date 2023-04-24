@@ -49,7 +49,7 @@ namespace Patient_handling
 
             (_patientIdsAndNames, _doctorIdsAndNames) = databaseConnection.LoadPatientsAndDoctorsToComboBoxes(comboBox_patinet_add, comboBox_doctor_add);
 
-            databaseConnection.LoadDataIntoDataGridView(dataGridView_patients, "MedicalVisit");
+            databaseConnection.LoadDataIntoDataGridView(dataGridView_patients, "view_CalendarEntity");
         }
 
         private void button_add_visit_Click(object sender, EventArgs e)

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Patient_handling
 {
@@ -18,43 +19,20 @@ namespace Patient_handling
         public addNewVisit()
         {
             InitializeComponent();
-            List<string> listaStringow = new List<string>();
-            listaStringow.Add("08:30");
-            listaStringow.Add("09:00");
-            listaStringow.Add("09:30");
-            listaStringow.Add("10:00");
-            listaStringow.Add("10:30");
-            listaStringow.Add("11:00");
-            listaStringow.Add("11:30");
-            listaStringow.Add("12:00");
-            listaStringow.Add("12:30");
-            listaStringow.Add("13:00");
-            listaStringow.Add("13:30");
-            listaStringow.Add("14:00");
-            listaStringow.Add("14:30");
-            listaStringow.Add("15:00");
-            listaStringow.Add("15:30");
-            listaStringow.Add("16:00");
-            listaStringow.Add("16:30");
-            listaStringow.Add("17:00");
-            listaStringow.Add("17:30");
-            listaStringow.Add("18:00");
-            listaStringow.Add("18:30");
-            listaStringow.Add("19:00");
-            listaStringow.Add("19:30");
 
-            comboBox_hour_add.Items.AddRange(listaStringow.ToArray());
+
+            //comboBox_hour_add.Items.AddRange(listaStringow.ToArray());
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
 
-            (_patientIdsAndNames, _doctorIdsAndNames) = databaseConnection.LoadPatientsAndDoctorsToComboBoxes(comboBox_patinet_add, comboBox_doctor_add);
+            (_patientIdsAndNames, _doctorIdsAndNames) = databaseConnection.LoadPatientsAndDoctorsToComboBoxes(comboBox_patinet_add);
 
             databaseConnection.LoadDataIntoDataGridView(dataGridView_patients, "view_CalendarEntity");
         }
 
         private void button_add_visit_Click(object sender, EventArgs e)
         {
-            DatabaseConnection conn = new DatabaseConnection();
+            /*DatabaseConnection conn = new DatabaseConnection();
 
             int patientId = _patientIdsAndNames.FirstOrDefault(x => x.Value == comboBox_patinet_add.SelectedItem.ToString()).Key;
             int doctorId = _doctorIdsAndNames.FirstOrDefault(x => x.Value == comboBox_doctor_add.SelectedItem.ToString()).Key;
@@ -70,6 +48,31 @@ namespace Patient_handling
 
 
             conn.LoadDataIntoDataGridView(dataGridView_patients, "MedicalVisit");
+            */
+
+            string namedoctor = dataGridView_patients.SelectedRows[0].Cells["DoctorName"].Value.ToString();
+            string namepatient = comboBox_patinet_add.SelectedItem.ToString();
+
+            DatabaseConnection database = new DatabaseConnection();
+            MedicalVisit medical = new MedicalVisit
+            {
+                Doctorid1 = database.GetDoctorId(namedoctor),
+                Patientid = database.GetPatientId(namepatient),
+                Date = dataGridView_patients.SelectedRows[0].Cells["Date"].Value.ToString(),
+                Time = dataGridView_patients.SelectedRows[0].Cells["Time"].Value.ToString().Substring(0, 5)
+
+            };
+            string[] columnnames = { "Patientid", "DoctorId", "Date", "Hour" };
+            string[] columnvalues = { medical.Patientid.ToString(), medical.Doctorid1.ToString(), medical.Date, medical.Time };
+            database.InsertDataToDatabase("MedicalVisit", columnnames, columnvalues);
+
+
+
+
+
+
+
+
         }
 
         private void addNewVisit_Load(object sender, EventArgs e)

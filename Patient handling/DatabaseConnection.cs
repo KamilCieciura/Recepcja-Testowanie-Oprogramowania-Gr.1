@@ -100,7 +100,7 @@ namespace Patient_handling
         }
 
 
-        public (Dictionary<int, string>, Dictionary<int, string>) LoadPatientsAndDoctorsToComboBoxes(ComboBox cbPatients, ComboBox cbDoctors)
+        public (Dictionary<int, string>, Dictionary<int, string>) LoadPatientsAndDoctorsToComboBoxes(ComboBox cbPatients)
         {
             Dictionary<int, string> patientIdsAndNames = new Dictionary<int, string>();
             Dictionary<int, string> doctorIdsAndNames = new Dictionary<int, string>();
@@ -134,7 +134,7 @@ namespace Patient_handling
                     readerPatients.Close();
 
                     // Pobieranie doktorów
-                    string queryDoctors = "SELECT Id, FirstName, LastName FROM Employees";
+                   /* string queryDoctors = "SELECT Id, FirstName, LastName FROM Employees";
                     SqlCommand commandDoctors = new SqlCommand(queryDoctors, connection);
                     SqlDataReader readerDoctors = commandDoctors.ExecuteReader();
                     if (readerDoctors.HasRows)
@@ -153,7 +153,7 @@ namespace Patient_handling
                         MessageBox.Show("Brak danych o doktorach w bazie danych.");
                         return (patientIdsAndNames, doctorIdsAndNames);
                     }
-                    readerDoctors.Close();
+                    readerDoctors.Close();*/
                 }
             }
             catch (Exception ex)
@@ -212,6 +212,61 @@ namespace Patient_handling
             return dataTable;
         }
 
+        public int GetPatientId(string patientName)
+        {
+            // Odseparuj imię i nazwisko pacjenta
+            string[] nameParts = patientName.Split(' ');
+            string firstName = nameParts[0];
+            string lastName = nameParts[1];
+
+            // Pobierz id pacjenta z bazy
+            int patientId = 0;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT ID FROM Patients WHERE FirstName=@firstName AND LastName=@lastName", connection);
+                command.Parameters.AddWithValue("@firstName", firstName);
+                command.Parameters.AddWithValue("@lastName", lastName);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    patientId = reader.GetInt32(0);
+                }
+
+                reader.Close();
+
+            }
+
+            return patientId;
+        }
+
+        public int GetDoctorId(string doctorName)
+        {
+            // Odseparuj imię i nazwisko pacjenta
+            string[] nameParts = doctorName.Split(' ');
+            string firstName = nameParts[0];
+            string lastName = nameParts[1];
+
+            // Pobierz id pacjenta z bazy
+            int doctorId = 0;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT ID FROM Employees WHERE FirstName=@firstName AND LastName=@lastName", connection);
+                command.Parameters.AddWithValue("@firstName", firstName);
+                command.Parameters.AddWithValue("@lastName", lastName);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    doctorId = reader.GetInt32(0);
+                }
+
+                reader.Close();
+
+            }
+
+            return doctorId;
+        }
 
 
 

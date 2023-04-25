@@ -41,9 +41,11 @@
             dataGridView_lista_wizyt.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_lista_wizyt.Location = new Point(29, 65);
             dataGridView_lista_wizyt.Name = "dataGridView_lista_wizyt";
+            dataGridView_lista_wizyt.ReadOnly = true;
             dataGridView_lista_wizyt.RowHeadersVisible = false;
             dataGridView_lista_wizyt.RowTemplate.Height = 25;
-            dataGridView_lista_wizyt.Size = new Size(500, 150);
+            dataGridView_lista_wizyt.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView_lista_wizyt.Size = new Size(588, 150);
             dataGridView_lista_wizyt.TabIndex = 0;
             dataGridView_lista_wizyt.CellContentClick += dataGridView_lista_wizyt_CellContentClick;
             // 
@@ -55,15 +57,17 @@
             button_cancel_visit.TabIndex = 4;
             button_cancel_visit.Text = "Cancel visit";
             button_cancel_visit.UseVisualStyleBackColor = true;
+            button_cancel_visit.Click += button_cancel_visit_Click;
             // 
             // button_Send_confirmation
             // 
-            button_Send_confirmation.Location = new Point(197, 230);
+            button_Send_confirmation.Location = new Point(236, 230);
             button_Send_confirmation.Name = "button_Send_confirmation";
             button_Send_confirmation.Size = new Size(125, 26);
             button_Send_confirmation.TabIndex = 5;
             button_Send_confirmation.Text = "Send confirmation";
             button_Send_confirmation.UseVisualStyleBackColor = true;
+            button_Send_confirmation.Click += button_Send_confirmation_Click;
             // 
             // button_Clear_the_calendar
             // 
@@ -73,15 +77,17 @@
             button_Clear_the_calendar.TabIndex = 6;
             button_Clear_the_calendar.Text = "Clear the calendar";
             button_Clear_the_calendar.UseVisualStyleBackColor = true;
+            button_Clear_the_calendar.Click += button_Clear_the_calendar_Click;
             // 
             // button1
             // 
-            button1.Location = new Point(408, 230);
+            button1.Location = new Point(499, 230);
             button1.Name = "button1";
             button1.Size = new Size(118, 26);
             button1.TabIndex = 7;
             button1.Text = "visit details";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // ZarzadzanieWizytami
             // 

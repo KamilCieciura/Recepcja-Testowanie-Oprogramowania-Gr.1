@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,6 +51,19 @@ namespace Patient_handling
             conn.LoadDataIntoDataGridView(dataGridView_patients, "MedicalVisit");
             */
 
+            string statusvisit = dataGridView_patients.SelectedRows[0].Cells["Status"].Value.ToString();
+            if(statusvisit =="busy term")
+            {
+                MessageBox.Show("this date is already taken");
+                return;
+            }
+            if(comboBox_patinet_add.SelectedIndex <0) 
+            {
+                MessageBox.Show("please select a patient");
+                return;
+            }
+
+
             string namedoctor = dataGridView_patients.SelectedRows[0].Cells["DoctorName"].Value.ToString();
             string namepatient = comboBox_patinet_add.SelectedItem.ToString();
 
@@ -58,18 +72,25 @@ namespace Patient_handling
             {
                 Doctorid1 = database.GetDoctorId(namedoctor),
                 Patientid = database.GetPatientId(namepatient),
-                Date = dataGridView_patients.SelectedRows[0].Cells["Date"].Value.ToString(),
-                Time = dataGridView_patients.SelectedRows[0].Cells["Time"].Value.ToString().Substring(0, 5)
+                Date1 = (DateTime)dataGridView_patients.SelectedRows[0].Cells["Date"].Value,
+                Time = TimeSpan.Parse(dataGridView_patients.SelectedRows[0].Cells["Time"].Value.ToString())
 
             };
             string[] columnnames = { "Patientid", "DoctorId", "Date", "Hour" };
-            string[] columnvalues = { medical.Patientid.ToString(), medical.Doctorid1.ToString(), medical.Date, medical.Time };
+            string[] columnvalues = { medical.Patientid.ToString(), medical.Doctorid1.ToString(), medical.Date1.ToString("yyyy-MM-dd"), medical.Time.ToString(@"hh\:mm\:ss") };
             database.InsertDataToDatabase("MedicalVisit", columnnames, columnvalues);
 
+            int selcetedcalendarId = Convert.ToInt32(dataGridView_patients.SelectedRows[0].Cells["ID"].Value);
 
 
+            DatabaseConnection databaseConnection = new DatabaseConnection();
 
+            string[] columnNames = { "Status" };
+            string[] columnValues = { "busy term" };
+            string condition = $"ID = {selcetedcalendarId}";
+            databaseConnection.UpdateDataInDatabase("CalendarEntity", columnNames, columnValues, condition);
 
+            databaseConnection.LoadDataIntoDataGridView(dataGridView_patients, "view_CalendarEntity");
 
 
 

@@ -17,15 +17,14 @@ namespace Patient_handling
     {
         private int Doctorid ;
         private int patientid ;
-        private string date ;
-        private string time ;
+        private DateTime date1 ;
+        private TimeSpan time ;
 
         public int Doctorid1 { get => Doctorid; set => Doctorid = value; }
         public int Patientid { get => patientid; set => patientid = value; }
-        public string Date { get => date; set => date = value; }
-        public string Time { get => time; set => time = value; }
 
-
+        public DateTime Date1 { get => date1; set => date1 = value; }
+        public TimeSpan Time { get => time; set => time = value; }
 
         public void ExportToPDF(DataGridViewRow row)
         {

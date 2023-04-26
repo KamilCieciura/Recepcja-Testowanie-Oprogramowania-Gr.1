@@ -31,7 +31,7 @@ namespace Patient_handling
 
 
         }
-        public void AddPatient(Patient patient)
+        internal void AddPatient(Patient patient)
         {
             /*int maxId = Patients.Any() ? Patients.Max(p => p.Id) : 0;
             patient.Id = maxId + 1;

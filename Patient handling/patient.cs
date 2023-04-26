@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Patient_handling
 {
-    public class Patient
+    internal class Patient
     {
     
         private string _firstName;

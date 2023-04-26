@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Patient_handling
 {
-    public class DatabaseConnection
+    internal class DatabaseConnection
     {
 
         private SqlConnection connection;

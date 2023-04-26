@@ -65,9 +65,8 @@
             pnlSideMenu.Controls.Add(pnlLogo);
             pnlSideMenu.Dock = DockStyle.Left;
             pnlSideMenu.Location = new Point(0, 0);
-            pnlSideMenu.Margin = new Padding(3, 4, 3, 4);
             pnlSideMenu.Name = "pnlSideMenu";
-            pnlSideMenu.Size = new Size(286, 935);
+            pnlSideMenu.Size = new Size(250, 701);
             pnlSideMenu.TabIndex = 1;
             // 
             // panel2
@@ -77,10 +76,9 @@
             panel2.Controls.Add(button1);
             panel2.Controls.Add(button3);
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 448);
-            panel2.Margin = new Padding(3, 4, 3, 4);
+            panel2.Location = new Point(0, 336);
             panel2.Name = "panel2";
-            panel2.Size = new Size(286, 152);
+            panel2.Size = new Size(250, 114);
             panel2.TabIndex = 4;
             // 
             // button6
@@ -93,11 +91,10 @@
             button6.FlatStyle = FlatStyle.Flat;
             button6.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button6.ForeColor = Color.WhiteSmoke;
-            button6.Location = new Point(0, 108);
-            button6.Margin = new Padding(3, 4, 3, 4);
+            button6.Location = new Point(0, 81);
             button6.Name = "button6";
-            button6.Padding = new Padding(40, 0, 0, 0);
-            button6.Size = new Size(286, 44);
+            button6.Padding = new Padding(35, 0, 0, 0);
+            button6.Size = new Size(250, 33);
             button6.TabIndex = 2;
             button6.Tag = "Add";
             button6.Text = "Edit appoitment";
@@ -115,11 +112,10 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.WhiteSmoke;
-            button1.Location = new Point(0, 56);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(0, 42);
             button1.Name = "button1";
-            button1.Padding = new Padding(40, 0, 0, 0);
-            button1.Size = new Size(286, 52);
+            button1.Padding = new Padding(35, 0, 0, 0);
+            button1.Size = new Size(250, 39);
             button1.TabIndex = 1;
             button1.Tag = "Add";
             button1.Text = "Add";
@@ -138,10 +134,9 @@
             button3.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = Color.WhiteSmoke;
             button3.Location = new Point(0, 0);
-            button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
-            button3.Padding = new Padding(40, 0, 0, 0);
-            button3.Size = new Size(286, 56);
+            button3.Padding = new Padding(35, 0, 0, 0);
+            button3.Size = new Size(250, 42);
             button3.TabIndex = 0;
             button3.Tag = "List";
             button3.Text = "List";
@@ -157,11 +152,10 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.WhiteSmoke;
-            button2.Location = new Point(0, 388);
-            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Location = new Point(0, 291);
             button2.Name = "button2";
-            button2.Padding = new Padding(11, 0, 0, 0);
-            button2.Size = new Size(286, 60);
+            button2.Padding = new Padding(10, 0, 0, 0);
+            button2.Size = new Size(250, 45);
             button2.TabIndex = 3;
             button2.Tag = "Employee";
             button2.Text = "Medical Visit";
@@ -175,10 +169,9 @@
             pnlEmployeeSubmenu.Controls.Add(btnEmployeeAdd);
             pnlEmployeeSubmenu.Controls.Add(btnEmployeeList);
             pnlEmployeeSubmenu.Dock = DockStyle.Top;
-            pnlEmployeeSubmenu.Location = new Point(0, 227);
-            pnlEmployeeSubmenu.Margin = new Padding(3, 4, 3, 4);
+            pnlEmployeeSubmenu.Location = new Point(0, 170);
             pnlEmployeeSubmenu.Name = "pnlEmployeeSubmenu";
-            pnlEmployeeSubmenu.Size = new Size(286, 161);
+            pnlEmployeeSubmenu.Size = new Size(250, 121);
             pnlEmployeeSubmenu.TabIndex = 2;
             // 
             // panel3
@@ -187,10 +180,9 @@
             panel3.Controls.Add(button4);
             panel3.Controls.Add(button5);
             panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(0, 89);
-            panel3.Margin = new Padding(3, 4, 3, 4);
+            panel3.Location = new Point(0, 67);
             panel3.Name = "panel3";
-            panel3.Size = new Size(286, 161);
+            panel3.Size = new Size(250, 121);
             panel3.TabIndex = 3;
             // 
             // button4
@@ -203,11 +195,10 @@
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = Color.WhiteSmoke;
-            button4.Location = new Point(0, 41);
-            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Location = new Point(0, 31);
             button4.Name = "button4";
-            button4.Padding = new Padding(40, 0, 0, 0);
-            button4.Size = new Size(286, 31);
+            button4.Padding = new Padding(35, 0, 0, 0);
+            button4.Size = new Size(250, 23);
             button4.TabIndex = 2;
             button4.Tag = "Add";
             button4.Text = "Edit patient Data";
@@ -226,10 +217,9 @@
             button5.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button5.ForeColor = Color.WhiteSmoke;
             button5.Location = new Point(0, 0);
-            button5.Margin = new Padding(3, 4, 3, 4);
             button5.Name = "button5";
-            button5.Padding = new Padding(40, 0, 0, 0);
-            button5.Size = new Size(286, 41);
+            button5.Padding = new Padding(35, 0, 0, 0);
+            button5.Size = new Size(250, 31);
             button5.TabIndex = 0;
             button5.Tag = "List";
             button5.Text = "Filter data";
@@ -247,11 +237,10 @@
             btnEmployeeAdd.FlatStyle = FlatStyle.Flat;
             btnEmployeeAdd.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnEmployeeAdd.ForeColor = Color.WhiteSmoke;
-            btnEmployeeAdd.Location = new Point(0, 48);
-            btnEmployeeAdd.Margin = new Padding(3, 4, 3, 4);
+            btnEmployeeAdd.Location = new Point(0, 36);
             btnEmployeeAdd.Name = "btnEmployeeAdd";
-            btnEmployeeAdd.Padding = new Padding(40, 0, 0, 0);
-            btnEmployeeAdd.Size = new Size(286, 41);
+            btnEmployeeAdd.Padding = new Padding(35, 0, 0, 0);
+            btnEmployeeAdd.Size = new Size(250, 31);
             btnEmployeeAdd.TabIndex = 1;
             btnEmployeeAdd.Tag = "Add";
             btnEmployeeAdd.Text = "Add";
@@ -270,10 +259,9 @@
             btnEmployeeList.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnEmployeeList.ForeColor = Color.WhiteSmoke;
             btnEmployeeList.Location = new Point(0, 0);
-            btnEmployeeList.Margin = new Padding(3, 4, 3, 4);
             btnEmployeeList.Name = "btnEmployeeList";
-            btnEmployeeList.Padding = new Padding(40, 0, 0, 0);
-            btnEmployeeList.Size = new Size(286, 48);
+            btnEmployeeList.Padding = new Padding(35, 0, 0, 0);
+            btnEmployeeList.Size = new Size(250, 36);
             btnEmployeeList.TabIndex = 0;
             btnEmployeeList.Tag = "List";
             btnEmployeeList.Text = "List";
@@ -289,11 +277,10 @@
             btnEmployee.FlatStyle = FlatStyle.Flat;
             btnEmployee.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnEmployee.ForeColor = Color.WhiteSmoke;
-            btnEmployee.Location = new Point(0, 167);
-            btnEmployee.Margin = new Padding(3, 4, 3, 4);
+            btnEmployee.Location = new Point(0, 125);
             btnEmployee.Name = "btnEmployee";
-            btnEmployee.Padding = new Padding(11, 0, 0, 0);
-            btnEmployee.Size = new Size(286, 60);
+            btnEmployee.Padding = new Padding(10, 0, 0, 0);
+            btnEmployee.Size = new Size(250, 45);
             btnEmployee.TabIndex = 1;
             btnEmployee.Tag = "Employee";
             btnEmployee.Text = "Patient";
@@ -306,19 +293,17 @@
             pnlLogo.Controls.Add(btnMenu);
             pnlLogo.Dock = DockStyle.Top;
             pnlLogo.Location = new Point(0, 0);
-            pnlLogo.Margin = new Padding(3, 4, 3, 4);
             pnlLogo.Name = "pnlLogo";
-            pnlLogo.Size = new Size(286, 167);
+            pnlLogo.Size = new Size(250, 125);
             pnlLogo.TabIndex = 0;
             // 
             // btnMenu
             // 
             btnMenu.FlatAppearance.BorderSize = 0;
             btnMenu.FlatStyle = FlatStyle.Flat;
-            btnMenu.Location = new Point(207, 4);
-            btnMenu.Margin = new Padding(3, 4, 3, 4);
+            btnMenu.Location = new Point(181, 3);
             btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(75, 71);
+            btnMenu.Size = new Size(66, 53);
             btnMenu.TabIndex = 1;
             btnMenu.UseVisualStyleBackColor = true;
             // 
@@ -327,10 +312,9 @@
             pnlTitle.BackColor = Color.FromArgb(23, 35, 49);
             pnlTitle.Controls.Add(labelTitle);
             pnlTitle.Dock = DockStyle.Top;
-            pnlTitle.Location = new Point(286, 0);
-            pnlTitle.Margin = new Padding(3, 4, 3, 4);
+            pnlTitle.Location = new Point(250, 0);
             pnlTitle.Name = "pnlTitle";
-            pnlTitle.Size = new Size(1505, 167);
+            pnlTitle.Size = new Size(1317, 125);
             pnlTitle.TabIndex = 2;
             pnlTitle.Paint += pnlTitle_Paint;
             // 
@@ -339,31 +323,29 @@
             labelTitle.AutoSize = true;
             labelTitle.Font = new Font("Microsoft Sans Serif", 30F, FontStyle.Bold, GraphicsUnit.Point);
             labelTitle.ForeColor = Color.WhiteSmoke;
-            labelTitle.Location = new Point(475, 51);
+            labelTitle.Location = new Point(416, 38);
             labelTitle.Name = "labelTitle";
-            labelTitle.Size = new Size(404, 58);
+            labelTitle.Size = new Size(325, 46);
             labelTitle.TabIndex = 0;
             labelTitle.Text = "Reception Menu";
             // 
             // panel1
             // 
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(286, 167);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Location = new Point(250, 125);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1505, 768);
+            panel1.Size = new Size(1317, 576);
             panel1.TabIndex = 3;
             panel1.Paint += panel1_Paint;
             // 
             // form_ReceptionMenu2
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1791, 935);
+            ClientSize = new Size(1567, 701);
             Controls.Add(panel1);
             Controls.Add(pnlTitle);
             Controls.Add(pnlSideMenu);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "form_ReceptionMenu2";
             Text = " ";
             Load += ReceptionMenu2_Load;
@@ -388,7 +370,6 @@
         private Button btnMenu;
         private Panel pnlTitle;
         private Label labelTitle;
-        public Panel panel1;
         private Panel panel2;
         private Button button1;
         private Button button3;
@@ -397,5 +378,6 @@
         private Button button5;
         private Button button4;
         private Button button6;
+        public Panel panel1;
     }
 }

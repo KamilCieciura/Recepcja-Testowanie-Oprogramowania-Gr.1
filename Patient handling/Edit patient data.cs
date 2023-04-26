@@ -179,5 +179,6 @@ namespace Patient_Handling
                 UpdateTextBoxValues(selectedRow);
             }
         }
+
     }
 }

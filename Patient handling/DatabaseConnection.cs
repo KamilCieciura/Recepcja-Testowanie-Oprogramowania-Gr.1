@@ -22,7 +22,7 @@ namespace Patient_handling
             connection = new SqlConnection(connectionString);
         }
 
-      
+
         public void LoadDataIntoDataGridView(DataGridView dataGridView, string tableName)
         {
             try
@@ -35,7 +35,7 @@ namespace Patient_handling
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
                     DataTable dataTable = new DataTable();
                     dataAdapter.Fill(dataTable);
-               
+
 
 
                     dataGridView.DataSource = dataTable; // ustawienie źródła danych dla DataGridView
@@ -134,26 +134,26 @@ namespace Patient_handling
                     readerPatients.Close();
 
                     // Pobieranie doktorów
-                   /* string queryDoctors = "SELECT Id, FirstName, LastName FROM Employees";
-                    SqlCommand commandDoctors = new SqlCommand(queryDoctors, connection);
-                    SqlDataReader readerDoctors = commandDoctors.ExecuteReader();
-                    if (readerDoctors.HasRows)
-                    {
-                        while (readerDoctors.Read())
-                        {
-                            int id = Convert.ToInt32(readerDoctors["Id"]);
-                            string firstName = readerDoctors["FirstName"].ToString();
-                            string lastName = readerDoctors["LastName"].ToString();
-                            cbDoctors.Items.Add($"{firstName} {lastName}");
-                            doctorIdsAndNames.Add(id, $"{firstName} {lastName}");
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Brak danych o doktorach w bazie danych.");
-                        return (patientIdsAndNames, doctorIdsAndNames);
-                    }
-                    readerDoctors.Close();*/
+                    /* string queryDoctors = "SELECT Id, FirstName, LastName FROM Employees";
+                     SqlCommand commandDoctors = new SqlCommand(queryDoctors, connection);
+                     SqlDataReader readerDoctors = commandDoctors.ExecuteReader();
+                     if (readerDoctors.HasRows)
+                     {
+                         while (readerDoctors.Read())
+                         {
+                             int id = Convert.ToInt32(readerDoctors["Id"]);
+                             string firstName = readerDoctors["FirstName"].ToString();
+                             string lastName = readerDoctors["LastName"].ToString();
+                             cbDoctors.Items.Add($"{firstName} {lastName}");
+                             doctorIdsAndNames.Add(id, $"{firstName} {lastName}");
+                         }
+                     }
+                     else
+                     {
+                         MessageBox.Show("Brak danych o doktorach w bazie danych.");
+                         return (patientIdsAndNames, doctorIdsAndNames);
+                     }
+                     readerDoctors.Close();*/
                 }
             }
             catch (Exception ex)
@@ -309,8 +309,53 @@ namespace Patient_handling
 
 
 
+      /* public void DisplayVisits(TextBox doctorNameTextBox, TextBox patientNameTextBox,
+                 TextBox officeNumberTextBox, TextBox dateTextBox, TextBox timeTextBox, string visitId)
+        {
+            try
+            {
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    SqlCommand command = new SqlCommand("SELECT e.FirstName + ' ' + e.LastName AS DoctorName, " +
+                        "p.FirstName + ' ' + p.LastName AS PatientName, " +
+                        "o.Number AS OfficeNumber, " +
+                        "c.Date, " +
+                        "c.Time " +
+                        "FROM CalendarEntity c " +
+                        "JOIN Employees e ON e.Id = c.DoctorId " +
+                        "JOIN MedicalVisit m ON m.ID = c.CalendarId " +
+                        "JOIN Employees p ON p.Id = m.PatientID " +
+                        "JOIN Offices o ON o.Id = c.OfficeId " +
+                        "WHERE m.ID = @visitId", connection);
+                    command.Parameters.AddWithValue("@visitId", visitId);
+                    SqlDataReader reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        string doctorName = reader["DoctorName"].ToString();
+                        string patientName = reader["PatientName"].ToString();
+                        string officeNumber = reader["OfficeNumber"].ToString();
+                        string date = reader["Date"].ToString();
+                        string time = reader["Time"].ToString();
+
+                        doctorNameTextBox.Text = doctorName;
+                        patientNameTextBox.Text = patientName;
+                        officeNumberTextBox.Text = officeNumber;
+                        dateTextBox.Text = date;
+                        timeTextBox.Text = time;
+                    }
+                    reader.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Obsługa wyjątku - np. wyświetlenie komunikatu o błędzie
+                MessageBox.Show("Error: " + ex.Message);
+            }
 
 
 
+        }*/
     }
 }

@@ -51,7 +51,18 @@ namespace Patient_handling
             conn.LoadDataIntoDataGridView(dataGridView_patients, "MedicalVisit");
             */
 
+
+
             string statusvisit = dataGridView_patients.SelectedRows[0].Cells["Status"].Value.ToString();
+            DateTime dateTime = DateTime.Now;
+            DateTime datetimevisit =(DateTime) dataGridView_patients.SelectedRows[0].Cells["Date"].Value;
+
+            if (datetimevisit<dateTime)
+            {
+                MessageBox.Show("you can't add a visit with a date from the past");
+                return;
+            }
+
             if(statusvisit =="busy term")
             {
                 MessageBox.Show("this date is already taken");

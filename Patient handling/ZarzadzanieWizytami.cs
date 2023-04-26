@@ -133,7 +133,7 @@ namespace Patient_handling
             DatabaseConnection databaseConnection2 = new DatabaseConnection();
 
             string[] columnNames1 = { "Status" };
-            string[] columnValues1 = { "free" };
+            string[] columnValues1 = { "" };
             string condition1 = $"Date = '{selectedDate.ToString("yyyy-MM-dd")}' AND Time = '{selectedTime.ToString(@"hh\:mm\:ss")}'";
 
             databaseConnection2.UpdateDataInDatabase("CalendarEntity", columnNames1, columnValues1, condition1);
@@ -146,6 +146,12 @@ namespace Patient_handling
         {
             MedicalVisit medicalVisit = new MedicalVisit();
             medicalVisit.ExportToPDF(dataGridView_lista_wizyt.SelectedRows[0]);
+        }
+
+        private void button_Clear_the_calendar_Click(object sender, EventArgs e)
+        {
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            databaseConnection.LoadDataIntoDataGridView(dataGridView_lista_wizyt, "view_TodaysMedicalVisits");
         }
     }
 }

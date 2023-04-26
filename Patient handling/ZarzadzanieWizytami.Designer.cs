@@ -82,7 +82,7 @@
             button_Clear_the_calendar.TabIndex = 6;
             button_Clear_the_calendar.Text = "Clear the calendar";
             button_Clear_the_calendar.UseVisualStyleBackColor = true;
-            button_Clear_the_calendar.Click += button_Clear_the_calendar_Click;
+            //button_Clear_the_calendar.Click += button_Clear_the_calendar_Click;
             // 
             // button1
             // 

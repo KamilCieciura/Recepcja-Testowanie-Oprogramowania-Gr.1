@@ -204,7 +204,7 @@
             dataGridView_patients.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridView_patients.RowTemplate.Height = 25;
             dataGridView_patients.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView_patients.Size = new Size(942, 364);
+            dataGridView_patients.Size = new Size(994, 364);
             dataGridView_patients.TabIndex = 33;
             dataGridView_patients.VirtualMode = true;
             // 
@@ -225,7 +225,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1176, 435);
+            ClientSize = new Size(1216, 435);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView_patients);
             Controls.Add(label9);

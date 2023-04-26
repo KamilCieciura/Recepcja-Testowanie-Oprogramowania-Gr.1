@@ -46,7 +46,7 @@ namespace Patient_handling
             string text = "Doctor Name: " + doctorId + "\nPatient Name: " + patientId + "\nDate: " + date + "\nTime: " + time;
 
             // set the path for the PDF file
-            string path = @"C:\Users\kubax\Documents\potwierdzenia\";
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "potwierdzenia");
             string fileName = "potwierdzenie_" + doctorId + "_" + patientId + ".pdf";
             string filePath = Path.Combine(path, fileName);
 

@@ -174,8 +174,15 @@ namespace Patient_handling
         }
         private void button_Send_confirmation_Click(object sender, EventArgs e)
         {
-            MedicalVisit medicalVisit = new MedicalVisit();
-            medicalVisit.ExportToPDF(dataGridView_lista_wizyt.SelectedRows[0]);
+            if (dataGridView_lista_wizyt.SelectedRows.Count > 0)
+            {
+                MedicalVisit medicalVisit = new MedicalVisit();
+                medicalVisit.ExportToPDF(dataGridView_lista_wizyt.SelectedRows[0]);
+            }
+            else
+            {
+                MessageBox.Show("Proszę wybrać wizytę do eksportu.");
+            }
         }
 
         private void button_Clear_the_calendar_Click(object sender, EventArgs e)

@@ -267,7 +267,44 @@ namespace Patient_handling
 
             return doctorId;
         }
+        /*
+       public bool DeleteDataFromDatabase(string tableName, string condition)
+       {
+           bool result = false;
 
+           // Tworzymy połączenie z bazą danych
+           using (SqlConnection connection = new SqlConnection(connectionString))
+           {
+               try
+               {
+                   // Otwieramy połączenie
+                   connection.Open();
+
+                   // Tworzymy zapytanie SQL usuwające wiersze z podanej tabeli spełniające podany warunek
+                   string query = $"DELETE FROM {tableName} WHERE {condition}";
+
+                   // Tworzymy nowy obiekt SqlCommand z zapytaniem i połączeniem
+                   SqlCommand command = new SqlCommand(query, connection);
+
+                   // Wykonujemy zapytanie
+                   int rowsAffected = command.ExecuteNonQuery();
+
+                   // Sprawdzamy, czy coś zostało usunięte
+                   if (rowsAffected > 0)
+                   {
+                       result = true;
+                   }
+               }
+               catch (Exception ex)
+               {
+                   // Obsługujemy wyjątek
+                   Console.WriteLine(ex.Message);
+               }
+           }
+
+           return result;
+       }
+       */
 
 
 

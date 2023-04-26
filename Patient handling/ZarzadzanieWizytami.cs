@@ -36,12 +36,65 @@ namespace Patient_handling
         {
 
         }
-
+        /*
         private void button_Clear_the_calendar_Click(object sender, EventArgs e)
         {
+            // Tworzymy listę indeksów wierszy, które mają zostać usunięte
+            List<int> rowsToDelete = new List<int>();
 
+            // Przechodzimy przez każdy wiersz w dataGridView_lista_wizyt
+            foreach (DataGridViewRow row in dataGridView_lista_wizyt.Rows)
+            {
+                // Sprawdzamy, czy wartość w kolumnie "Status" jest równa 0
+                if (Convert.ToInt32(row.Cells["Status"].Value) == 0)
+                {
+                    // Jeśli tak i wiersz nie jest nowy, dodajemy indeks wiersza do listy rowsToDelete
+                    if (!row.IsNewRow)
+                    {
+                        // Ustawiamy status lekarza na "free"
+                        int calendarId = Convert.ToInt32(row.Cells["ID"].Value);
+                        DatabaseConnection databaseConnection = new DatabaseConnection();
+                        string[] columnNames = { "Status" };
+                        string[] columnValues = { "free" };
+                        string condition = $"ID = {calendarId}";
+                        databaseConnection.UpdateDataInDatabase("CalendarEntity", columnNames, columnValues, condition);
 
+                        // Usuwamy wiersz z bazy danych
+                        int visitId = Convert.ToInt32(row.Cells["ID"].Value);
+                        DatabaseConnection databaseConnection3 = new DatabaseConnection();
+                        string condition3 = $"ID = {visitId}";
+                        databaseConnection3.DeleteDataFromDatabase("MedicalVisit", condition3);
+
+                        // Dodajemy indeks wiersza do listy rowsToDelete
+                        rowsToDelete.Add(row.Index);
+                    }
+                }
+            }
+
+            // Usuwamy wiersze z listy, zaczynając od ostatniego, aby uniknąć przesuwania indeksów
+            for (int i = rowsToDelete.Count - 1; i >= 0; i--)
+            {
+                dataGridView_lista_wizyt.Rows.RemoveAt(rowsToDelete[i]);
+            }
+
+            // Usuwamy wiersze, których data jest mniejsza niż dzisiejsza
+            DatabaseConnection databaseConnection5 = new DatabaseConnection();
+            string currentDate = DateTime.Now.ToString("yyyy-MM-dd");
+            string condition5 = $"Date < '{currentDate}'";
+            databaseConnection5.DeleteDataFromDatabase("MedicalVisit", condition5);
+
+            // Aktualizujemy status lekarzy na "free"
+            DatabaseConnection databaseConnection2 = new DatabaseConnection();
+            string[] columnNames1 = { "status" };
+            string[] columnValues1 = { "free" };
+            string condition6 = $"Date < '{currentDate}'";
+            databaseConnection2.UpdateDataInDatabase("CalendarEntity", columnNames1, columnValues1, condition6);
+
+            // Odświeżamy dane w dataGridView_lista_wizyt
+            DatabaseConnection databaseConnection7 = new DatabaseConnection();
+            databaseConnection7.LoadDataIntoDataGridView(dataGridView_lista_wizyt, "view_listMedicalVisit");
         }
+        */
 
         private void button1_Click(object sender, EventArgs e)
         {

@@ -28,10 +28,7 @@ namespace Patient_handling
 
         }
 
-        private void btnEmployee_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void ReceptionMenu2_Load(object sender, EventArgs e)
         {
@@ -145,6 +142,11 @@ namespace Patient_handling
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlSideMenu_Paint(object sender, PaintEventArgs e)
         {
 
         }

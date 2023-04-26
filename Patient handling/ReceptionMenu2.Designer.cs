@@ -68,6 +68,7 @@
             pnlSideMenu.Name = "pnlSideMenu";
             pnlSideMenu.Size = new Size(250, 701);
             pnlSideMenu.TabIndex = 1;
+            pnlSideMenu.Paint += pnlSideMenu_Paint;
             // 
             // panel2
             // 

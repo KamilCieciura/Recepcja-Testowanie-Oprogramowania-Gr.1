@@ -14,12 +14,12 @@ namespace Patient_Handling
 {
     public partial class Form_edit_patient : Form
     {
-        /*private Patient _selectedPatient;*/
 
-        public Form_edit_patient()/*Patient *//*selectedPatient*/
+
+        public Form_edit_patient()
         {
             InitializeComponent();
-            /*_selectedPatient = selectedPatient;*/
+
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
 

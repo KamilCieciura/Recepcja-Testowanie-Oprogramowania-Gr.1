@@ -133,27 +133,7 @@ namespace Patient_handling
                     }
                     readerPatients.Close();
 
-                    // Pobieranie doktorów
-                    /* string queryDoctors = "SELECT Id, FirstName, LastName FROM Employees";
-                     SqlCommand commandDoctors = new SqlCommand(queryDoctors, connection);
-                     SqlDataReader readerDoctors = commandDoctors.ExecuteReader();
-                     if (readerDoctors.HasRows)
-                     {
-                         while (readerDoctors.Read())
-                         {
-                             int id = Convert.ToInt32(readerDoctors["Id"]);
-                             string firstName = readerDoctors["FirstName"].ToString();
-                             string lastName = readerDoctors["LastName"].ToString();
-                             cbDoctors.Items.Add($"{firstName} {lastName}");
-                             doctorIdsAndNames.Add(id, $"{firstName} {lastName}");
-                         }
-                     }
-                     else
-                     {
-                         MessageBox.Show("Brak danych o doktorach w bazie danych.");
-                         return (patientIdsAndNames, doctorIdsAndNames);
-                     }
-                     readerDoctors.Close();*/
+               
                 }
             }
             catch (Exception ex)
@@ -214,12 +194,12 @@ namespace Patient_handling
 
         public int GetPatientId(string patientName)
         {
-            // Odseparuj imię i nazwisko pacjenta
+     
             string[] nameParts = patientName.Split(' ');
             string firstName = nameParts[0];
             string lastName = nameParts[1];
 
-            // Pobierz id pacjenta z bazy
+
             int patientId = 0;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

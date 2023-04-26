@@ -30,12 +30,6 @@ namespace Patient_handling
             this.dataGridView_lista_wizyt.SelectionChanged += new System.EventHandler(this.dataGridView_lista_wizyt_SelectionChanged);
         }
 
-        private void button_edit_appointment_Click(object sender, EventArgs e)
-        {
-            EditAppointment editAppointment = new EditAppointment();
-            editAppointment.Show();
-        }
-
         private void ZarządzanieWizytami_Load(object sender, EventArgs e)
         {
 

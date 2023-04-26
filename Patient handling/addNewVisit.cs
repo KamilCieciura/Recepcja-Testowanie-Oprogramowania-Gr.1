@@ -91,9 +91,9 @@ namespace Patient_handling
             string[] columnvalues = { medical.Patientid.ToString(), medical.Doctorid1.ToString(), medical.Date1.ToString("yyyy-MM-dd"), medical.Time.ToString(@"hh\:mm\:ss") };
             database.InsertDataToDatabase("MedicalVisit", columnnames, columnvalues);
 
+
+
             int selcetedcalendarId = Convert.ToInt32(dataGridView_patients.SelectedRows[0].Cells["ID"].Value);
-
-
             DatabaseConnection databaseConnection = new DatabaseConnection();
 
             string[] columnNames = { "Status" };

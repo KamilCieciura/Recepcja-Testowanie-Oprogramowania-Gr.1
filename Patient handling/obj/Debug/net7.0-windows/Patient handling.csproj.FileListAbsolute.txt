@@ -34,3 +34,6 @@ C:\Users\kubax\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.
 C:\Users\kubax\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient handling.pdb
 C:\Users\kubax\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient handling.genruntimeconfig.cache
 C:\Users\kubax\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\ref\Patient handling.dll
+C:\Users\kubax\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient_handling.CalenderAddNewVisit.resources
+C:\Users\kubax\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient_handling.UserControlBlank.resources
+C:\Users\kubax\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient_handling.UserControlday.resources

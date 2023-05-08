@@ -66,7 +66,7 @@
             pnlSideMenu.Dock = DockStyle.Left;
             pnlSideMenu.Location = new Point(0, 0);
             pnlSideMenu.Name = "pnlSideMenu";
-            pnlSideMenu.Size = new Size(250, 701);
+            pnlSideMenu.Size = new Size(250, 890);
             pnlSideMenu.TabIndex = 1;
             pnlSideMenu.Paint += pnlSideMenu_Paint;
             // 
@@ -335,7 +335,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(250, 125);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1317, 576);
+            panel1.Size = new Size(1317, 765);
             panel1.TabIndex = 3;
             panel1.Paint += panel1_Paint;
             // 
@@ -343,7 +343,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1567, 701);
+            ClientSize = new Size(1567, 890);
             Controls.Add(panel1);
             Controls.Add(pnlTitle);
             Controls.Add(pnlSideMenu);

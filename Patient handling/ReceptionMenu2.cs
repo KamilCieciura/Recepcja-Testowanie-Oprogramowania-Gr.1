@@ -99,7 +99,8 @@ namespace Patient_handling
 
         private void button1_Click(object sender, EventArgs e)
         {
-            addNewVisit add = new addNewVisit();
+            // addNewVisit add = new addNewVisit();
+            CalenderAddNewVisit add = new CalenderAddNewVisit();
             add.TopLevel = false;
             add.FormBorderStyle = FormBorderStyle.None;
             add.Dock = DockStyle.Fill;

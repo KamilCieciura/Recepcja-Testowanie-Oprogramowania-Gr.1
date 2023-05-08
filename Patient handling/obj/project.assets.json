@@ -521,11 +521,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kubax\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj",
+      "projectUniqueName": "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj",
       "projectName": "Patient handling",
-      "projectPath": "C:\\Users\\kubax\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj",
+      "projectPath": "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj",
       "packagesPath": "C:\\Users\\kubax\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kubax\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\obj\\",
+      "outputPath": "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

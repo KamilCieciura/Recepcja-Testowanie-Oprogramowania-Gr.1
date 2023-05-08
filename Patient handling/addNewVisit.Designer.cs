@@ -66,7 +66,7 @@
             // 
             dataGridView_patients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_patients.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dataGridView_patients.Location = new Point(178, 37);
+            dataGridView_patients.Location = new Point(187, 3);
             dataGridView_patients.MultiSelect = false;
             dataGridView_patients.Name = "dataGridView_patients";
             dataGridView_patients.RowHeadersVisible = false;
@@ -82,7 +82,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(829, 309);
+            ClientSize = new Size(841, 230);
             Controls.Add(dataGridView_patients);
             Controls.Add(button_add_visit);
             Controls.Add(label1);

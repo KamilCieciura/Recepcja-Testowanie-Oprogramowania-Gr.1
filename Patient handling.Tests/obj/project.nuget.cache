@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DKqABsQpr18xB2SeX71bNJKMvEy+klt7oIWAjV+cD89LRWgTq4p7FWckyasLGImyBTAV9lf0aneuwrBhF+1Arg==",
+  "dgSpecHash": "hd6WTrC29sY/n6mYCSq2j5VwsTfeb7v+LzZUjVZR/wNqCQ6w1A7SbTX3Eo/EYG+iITX5w9ZB425XpfTfziOGqA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kubax\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\Patient handling.Tests.csproj",
+  "projectFilePath": "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\Patient handling.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kubax\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\kubax\\.nuget\\packages\\microsoft.codecoverage\\17.5.0\\microsoft.codecoverage.17.5.0.nupkg.sha512",

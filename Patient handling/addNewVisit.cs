@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +29,21 @@ namespace Patient_handling
 
             (_patientIdsAndNames, _doctorIdsAndNames) = databaseConnection.LoadPatientsAndDoctorsToComboBoxes(comboBox_patinet_add);
 
-            databaseConnection.LoadDataIntoDataGridView(dataGridView_patients, "view_CalendarEntity");
+            string day = UserControlday.static_day;
+            string month = CalenderAddNewVisit.static_month;
+            string year = CalenderAddNewVisit.static_year;
+
+            string dayFormatted = day.PadLeft(2, '0');
+            string monthFormatted = month.PadLeft(2, '0');
+
+            string dateString = year + "-" + monthFormatted + "-" + dayFormatted;
+
+
+            DateTime date = DateTime.ParseExact(dateString, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+
+
+
+            databaseConnection.LoadDataIntoDataGridViewCalendar(dataGridView_patients, "view_CalendarEntity", date);
         }
 
         private void button_add_visit_Click(object sender, EventArgs e)
@@ -55,20 +70,20 @@ namespace Patient_handling
 
             string statusvisit = dataGridView_patients.SelectedRows[0].Cells["Status"].Value.ToString();
             DateTime dateTime = DateTime.Now;
-            DateTime datetimevisit =(DateTime) dataGridView_patients.SelectedRows[0].Cells["Date"].Value;
+            DateTime datetimevisit = (DateTime)dataGridView_patients.SelectedRows[0].Cells["Date"].Value;
 
-            if (datetimevisit<dateTime)
+            if (datetimevisit < dateTime)
             {
                 MessageBox.Show("you can't add a visit with a date from the past");
                 return;
             }
 
-            if(statusvisit =="busy term")
+            if (statusvisit == "busy term")
             {
                 MessageBox.Show("this date is already taken");
                 return;
             }
-            if(comboBox_patinet_add.SelectedIndex <0) 
+            if (comboBox_patinet_add.SelectedIndex < 0)
             {
                 MessageBox.Show("please select a patient");
                 return;

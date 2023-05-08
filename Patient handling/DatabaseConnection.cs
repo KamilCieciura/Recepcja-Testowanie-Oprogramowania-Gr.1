@@ -289,53 +289,80 @@ namespace Patient_handling
 
 
 
-      /* public void DisplayVisits(TextBox doctorNameTextBox, TextBox patientNameTextBox,
-                 TextBox officeNumberTextBox, TextBox dateTextBox, TextBox timeTextBox, string visitId)
+        /* public void DisplayVisits(TextBox doctorNameTextBox, TextBox patientNameTextBox,
+                   TextBox officeNumberTextBox, TextBox dateTextBox, TextBox timeTextBox, string visitId)
+          {
+              try
+              {
+
+                  using (SqlConnection connection = new SqlConnection(connectionString))
+                  {
+                      connection.Open();
+                      SqlCommand command = new SqlCommand("SELECT e.FirstName + ' ' + e.LastName AS DoctorName, " +
+                          "p.FirstName + ' ' + p.LastName AS PatientName, " +
+                          "o.Number AS OfficeNumber, " +
+                          "c.Date, " +
+                          "c.Time " +
+                          "FROM CalendarEntity c " +
+                          "JOIN Employees e ON e.Id = c.DoctorId " +
+                          "JOIN MedicalVisit m ON m.ID = c.CalendarId " +
+                          "JOIN Employees p ON p.Id = m.PatientID " +
+                          "JOIN Offices o ON o.Id = c.OfficeId " +
+                          "WHERE m.ID = @visitId", connection);
+                      command.Parameters.AddWithValue("@visitId", visitId);
+                      SqlDataReader reader = command.ExecuteReader();
+                      if (reader.Read())
+                      {
+                          string doctorName = reader["DoctorName"].ToString();
+                          string patientName = reader["PatientName"].ToString();
+                          string officeNumber = reader["OfficeNumber"].ToString();
+                          string date = reader["Date"].ToString();
+                          string time = reader["Time"].ToString();
+
+                          doctorNameTextBox.Text = doctorName;
+                          patientNameTextBox.Text = patientName;
+                          officeNumberTextBox.Text = officeNumber;
+                          dateTextBox.Text = date;
+                          timeTextBox.Text = time;
+                      }
+                      reader.Close();
+                  }
+              }
+              catch (Exception ex)
+              {
+                  // Obsługa wyjątku - np. wyświetlenie komunikatu o błędzie
+                  MessageBox.Show("Error: " + ex.Message);
+              }
+
+
+
+          }*/
+
+
+        public void LoadDataIntoDataGridViewCalendar(DataGridView dataGridView, string tableName, DateTime comparisonDate)
         {
             try
             {
-
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    SqlCommand command = new SqlCommand("SELECT e.FirstName + ' ' + e.LastName AS DoctorName, " +
-                        "p.FirstName + ' ' + p.LastName AS PatientName, " +
-                        "o.Number AS OfficeNumber, " +
-                        "c.Date, " +
-                        "c.Time " +
-                        "FROM CalendarEntity c " +
-                        "JOIN Employees e ON e.Id = c.DoctorId " +
-                        "JOIN MedicalVisit m ON m.ID = c.CalendarId " +
-                        "JOIN Employees p ON p.Id = m.PatientID " +
-                        "JOIN Offices o ON o.Id = c.OfficeId " +
-                        "WHERE m.ID = @visitId", connection);
-                    command.Parameters.AddWithValue("@visitId", visitId);
-                    SqlDataReader reader = command.ExecuteReader();
-                    if (reader.Read())
-                    {
-                        string doctorName = reader["DoctorName"].ToString();
-                        string patientName = reader["PatientName"].ToString();
-                        string officeNumber = reader["OfficeNumber"].ToString();
-                        string date = reader["Date"].ToString();
-                        string time = reader["Time"].ToString();
 
-                        doctorNameTextBox.Text = doctorName;
-                        patientNameTextBox.Text = patientName;
-                        officeNumberTextBox.Text = officeNumber;
-                        dateTextBox.Text = date;
-                        timeTextBox.Text = time;
-                    }
-                    reader.Close();
+                    string query = $"SELECT * FROM {tableName} WHERE Date = @ComparisonDate"; // zapytanie SQL z warunkiem WHERE
+                    SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
+                    dataAdapter.SelectCommand.Parameters.AddWithValue("@ComparisonDate", comparisonDate);
+
+                    DataTable dataTable = new DataTable();
+                    dataAdapter.Fill(dataTable);
+
+                    dataGridView.DataSource = dataTable; // ustawienie źródła danych dla DataGridView
+
+                    connection.Close();
                 }
             }
             catch (Exception ex)
             {
-                // Obsługa wyjątku - np. wyświetlenie komunikatu o błędzie
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show($"Wystąpił błąd podczas odczytu danych: {ex.Message}", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
-
-        }*/
+        }
     }
 }

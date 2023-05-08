@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "I9DLM8WzfDFZQPkWNbL35Z0XB9zbj1Ng6rw9hqBa72awIVWNB1bVh2Y9uL4Xr+IjEFXrLLp2x6K9pRj+aG2enQ==",
+  "dgSpecHash": "FJos6FMqKlcwA9HQs4ctNoH2rmAkVqzDTWrlFMtrPkRUcXKku2ZpfUq15CvkC5BrWzqaZ/P47EUjrsaWJmmCnw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kubax\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj",
+  "projectFilePath": "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kubax\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\kubax\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

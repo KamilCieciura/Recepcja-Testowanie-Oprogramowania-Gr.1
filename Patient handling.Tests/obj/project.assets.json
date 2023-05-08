@@ -2810,9 +2810,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kubax\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\Patient handling.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\Patient handling.Tests.csproj",
       "projectName": "Patient handling.Tests",
-      "projectPath": "C:\\Users\\kubax\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\Patient handling.Tests.csproj",
+      "projectPath": "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\Patient handling.Tests.csproj",
       "packagesPath": "C:\\Users\\kubax\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\kubax\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\obj\\",
       "projectStyle": "PackageReference",
@@ -2835,8 +2835,8 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\kubax\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj": {
-              "projectPath": "C:\\Users\\kubax\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj"
+            "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj": {
+              "projectPath": "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj"
             }
           }
         }

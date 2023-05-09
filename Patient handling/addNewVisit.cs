@@ -116,8 +116,8 @@ namespace Patient_handling
             string condition = $"ID = {selcetedcalendarId}";
             databaseConnection.UpdateDataInDatabase("CalendarEntity", columnNames, columnValues, condition);
 
-            databaseConnection.LoadDataIntoDataGridView(dataGridView_patients, "view_CalendarEntity");
-
+            //databaseConnection.LoadDataIntoDataGridView(dataGridView_patients, "view_CalendarEntity");
+            this.Hide();
 
 
         }

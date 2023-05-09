@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.DirectoryServices.ActiveDirectory;
 using System.Drawing;
 using System.Linq;
@@ -124,6 +125,17 @@ namespace Patient_handling
             int selcetedcalendarId = Convert.ToInt32(dataGridView_lista_wizyt.SelectedRows[0].Cells["ID"].Value);
             int selcetedVisitStatus = Convert.ToInt32(dataGridView_lista_wizyt.SelectedRows[0].Cells["Status"].Value);
 
+
+            DateTime selectedDate = (DateTime)dataGridView_lista_wizyt.SelectedRows[0].Cells["Date"].Value;
+            TimeSpan selectedTime = (TimeSpan)dataGridView_lista_wizyt.SelectedRows[0].Cells["Hour"].Value;
+
+            string fullName = dataGridView_lista_wizyt.SelectedRows[0].Cells["DoctorName"].Value.ToString();
+            string[] nameParts = fullName.Split(' ');
+
+            string firstName = nameParts[0];
+            string lastName = nameParts[1];
+
+
             if (selcetedVisitStatus == 0)
             {
                 MessageBox.Show("this visit is already cancel");
@@ -144,17 +156,44 @@ namespace Patient_handling
             databaseConnection1.LoadDataIntoDataGridView(dataGridView_lista_wizyt, "view_listMedicalVisit");
 
 
-            DateTime selectedDate = (DateTime)dataGridView_lista_wizyt.SelectedRows[0].Cells["Date"].Value;
-            TimeSpan selectedTime = (TimeSpan)dataGridView_lista_wizyt.SelectedRows[0].Cells["Hour"].Value;
 
 
-            DatabaseConnection databaseConnection2 = new DatabaseConnection();
 
-            string[] columnNames1 = { "Status" };
-            string[] columnValues1 = { "" };
-            string condition1 = $"Date = '{selectedDate.ToString("yyyy-MM-dd")}' AND Time = '{selectedTime.ToString(@"hh\:mm\:ss")}'";
 
-            databaseConnection2.UpdateDataInDatabase("CalendarEntity", columnNames1, columnValues1, condition1);
+
+          
+
+            using (SqlConnection connection = new SqlConnection("Data Source=localhost;Initial Catalog=testowanie;Integrated Security=True;"))
+            {
+                connection.Open();
+
+                string query = "SELECT Id FROM Employees WHERE FirstName = @FirstName AND LastName = @LastName";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@FirstName", firstName);
+                    command.Parameters.AddWithValue("@LastName", lastName);
+
+                    int doctorId = -1;
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            doctorId = reader.GetInt32(0);
+                        }
+                    }
+
+                    DatabaseConnection databaseConnection3 = new DatabaseConnection();
+
+                    string[] columnNames1 = { "Status" };
+                    string[] columnValues1 = { "" };
+                    string condition1 = $"Date = '{selectedDate.ToString("yyyy-MM-dd")}' AND Time = '{selectedTime.ToString(@"hh\:mm\:ss")}' AND doctorid ='{doctorId}'";
+
+                    databaseConnection3.UpdateDataInDatabase("CalendarEntity", columnNames1, columnValues1, condition1);
+                    MessageBox.Show(doctorId + " " + selectedTime + " " + selectedDate);
+                }
+            }
+
 
 
 

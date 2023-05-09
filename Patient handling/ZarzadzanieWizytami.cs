@@ -190,7 +190,7 @@ namespace Patient_handling
                     string condition1 = $"Date = '{selectedDate.ToString("yyyy-MM-dd")}' AND Time = '{selectedTime.ToString(@"hh\:mm\:ss")}' AND doctorid ='{doctorId}'";
 
                     databaseConnection3.UpdateDataInDatabase("CalendarEntity", columnNames1, columnValues1, condition1);
-                    MessageBox.Show(doctorId + " " + selectedTime + " " + selectedDate);
+            
                 }
             }
 

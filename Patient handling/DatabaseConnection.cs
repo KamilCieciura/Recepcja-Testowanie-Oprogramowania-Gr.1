@@ -21,10 +21,6 @@ namespace Patient_handling
             connectionString = "Data Source=localhost;Initial Catalog=testowanie;Integrated Security=True;";
             connection = new SqlConnection(connectionString);
         }
-        public SqlConnection Connection
-        {
-            get { return connection; }
-        }
 
 
         public void LoadDataIntoDataGridView(DataGridView dataGridView, string tableName)

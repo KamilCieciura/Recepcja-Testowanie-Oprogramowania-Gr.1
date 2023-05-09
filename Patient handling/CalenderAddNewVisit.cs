@@ -103,6 +103,36 @@ namespace Patient_handling
             catch (ArgumentOutOfRangeException)
             {
                 year++;
+               
+                dayContainer.Controls.Clear();
+
+                month=1;
+                static_month = month.ToString();
+                static_year = year.ToString();
+
+                String Monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+
+                label_date.Text = Monthname + " " + year;
+                DateTime startOfTheMonth = new DateTime(year, month, 1);
+
+                int day = DateTime.DaysInMonth(year, month);
+
+                int dayOfTheWeek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d"));
+
+
+                for (int i = 0; i < dayOfTheWeek; i++)
+                {
+                    UserControlBlank ucblank = new UserControlBlank();
+                    dayContainer.Controls.Add(ucblank);
+
+                }
+
+                for (int i = 1; i < day + 1; i++)
+                {
+                    UserControlday ucday = new UserControlday();
+                    ucday.day(i);
+                    dayContainer.Controls.Add(ucday);
+                }
 
             }
         }
@@ -157,6 +187,35 @@ namespace Patient_handling
             catch (ArgumentOutOfRangeException)
             {
                 year--;
+
+                month = 12;
+                static_month = month.ToString();
+                static_year = year.ToString();
+
+                String Monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+
+                label_date.Text = Monthname + " " + year;
+                DateTime startOfTheMonth = new DateTime(year, month, 1);
+
+                int day = DateTime.DaysInMonth(year, month);
+
+                int dayOfTheWeek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d"));
+
+
+                for (int i = 0; i < dayOfTheWeek; i++)
+                {
+                    UserControlBlank ucblank = new UserControlBlank();
+                    dayContainer.Controls.Add(ucblank);
+
+                }
+
+                for (int i = 1; i < day + 1; i++)
+                {
+                    UserControlday ucday = new UserControlday();
+                    ucday.day(i);
+                    dayContainer.Controls.Add(ucday);
+                }
+
             }
         }
 

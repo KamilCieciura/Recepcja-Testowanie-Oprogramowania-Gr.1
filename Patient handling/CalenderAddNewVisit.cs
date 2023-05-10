@@ -19,7 +19,7 @@ namespace Patient_handling
         {
             InitializeComponent();
         }
-        public static string static_month,static_year;
+        public static string static_month, static_year;
         private void CalenderAddNewVisit_Load(object sender, EventArgs e)
         {
 
@@ -103,10 +103,10 @@ namespace Patient_handling
             catch (ArgumentOutOfRangeException)
             {
                 year++;
-               
+
                 dayContainer.Controls.Clear();
 
-                month=1;
+                month = 1;
                 static_month = month.ToString();
                 static_year = year.ToString();
 

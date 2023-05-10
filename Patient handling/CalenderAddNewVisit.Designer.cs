@@ -45,7 +45,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Microsoft JhengHei", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(1106, 95);
+            label8.Location = new Point(1139, 94);
             label8.Name = "label8";
             label8.Size = new Size(76, 20);
             label8.TabIndex = 43;
@@ -55,7 +55,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Microsoft JhengHei", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(941, 95);
+            label7.Location = new Point(974, 94);
             label7.Name = "label7";
             label7.Size = new Size(54, 20);
             label7.TabIndex = 42;
@@ -65,7 +65,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft JhengHei", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(753, 95);
+            label6.Location = new Point(786, 94);
             label6.Name = "label6";
             label6.Size = new Size(78, 20);
             label6.TabIndex = 41;
@@ -75,7 +75,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft JhengHei", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(566, 95);
+            label4.Location = new Point(599, 94);
             label4.Name = "label4";
             label4.Size = new Size(97, 20);
             label4.TabIndex = 40;
@@ -85,7 +85,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft JhengHei", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(397, 95);
+            label3.Location = new Point(430, 94);
             label3.Name = "label3";
             label3.Size = new Size(71, 20);
             label3.TabIndex = 39;
@@ -95,7 +95,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft JhengHei", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(218, 95);
+            label5.Location = new Point(251, 94);
             label5.Name = "label5";
             label5.Size = new Size(71, 20);
             label5.TabIndex = 38;
@@ -106,7 +106,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft JhengHei", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(61, 95);
+            label2.Location = new Point(94, 94);
             label2.Name = "label2";
             label2.Size = new Size(65, 20);
             label2.TabIndex = 37;

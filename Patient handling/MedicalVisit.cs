@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace Patient_handling
 {
-    internal class MedicalVisit
+    public class MedicalVisit
     {
         private int Doctorid ;
         private int patientid ;

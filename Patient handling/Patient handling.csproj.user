@@ -35,7 +35,7 @@
     <Compile Update="visitDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ZarzadzanieWizytami.cs">
+    <Compile Update="visitsManagement.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -38,25 +38,27 @@
             // comboBox_patinet_add
             // 
             comboBox_patinet_add.FormattingEnabled = true;
-            comboBox_patinet_add.Location = new Point(42, 97);
+            comboBox_patinet_add.Location = new Point(48, 129);
+            comboBox_patinet_add.Margin = new Padding(3, 4, 3, 4);
             comboBox_patinet_add.Name = "comboBox_patinet_add";
-            comboBox_patinet_add.Size = new Size(130, 23);
+            comboBox_patinet_add.Size = new Size(148, 28);
             comboBox_patinet_add.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(41, 81);
+            label1.Location = new Point(47, 108);
             label1.Name = "label1";
-            label1.Size = new Size(44, 15);
+            label1.Size = new Size(54, 20);
             label1.TabIndex = 4;
             label1.Text = "Patient";
             // 
             // button_add_visit
             // 
-            button_add_visit.Location = new Point(41, 126);
+            button_add_visit.Location = new Point(47, 168);
+            button_add_visit.Margin = new Padding(3, 4, 3, 4);
             button_add_visit.Name = "button_add_visit";
-            button_add_visit.Size = new Size(131, 23);
+            button_add_visit.Size = new Size(150, 31);
             button_add_visit.TabIndex = 8;
             button_add_visit.Text = "Add ";
             button_add_visit.UseVisualStyleBackColor = true;
@@ -67,7 +69,8 @@
             dataGridView_patients.AllowUserToAddRows = false;
             dataGridView_patients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_patients.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dataGridView_patients.Location = new Point(187, 3);
+            dataGridView_patients.Location = new Point(214, 4);
+            dataGridView_patients.Margin = new Padding(3, 4, 3, 4);
             dataGridView_patients.MultiSelect = false;
             dataGridView_patients.Name = "dataGridView_patients";
             dataGridView_patients.RowHeadersVisible = false;
@@ -75,21 +78,22 @@
             dataGridView_patients.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridView_patients.RowTemplate.Height = 25;
             dataGridView_patients.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView_patients.Size = new Size(580, 156);
+            dataGridView_patients.Size = new Size(663, 208);
             dataGridView_patients.TabIndex = 21;
             dataGridView_patients.VirtualMode = true;
             // 
             // addNewVisit
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(841, 230);
+            ClientSize = new Size(961, 307);
             Controls.Add(dataGridView_patients);
             Controls.Add(button_add_visit);
             Controls.Add(label1);
             Controls.Add(comboBox_patinet_add);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "addNewVisit";
-            Text = "addNewVisit";
+            Text = "Add new visit";
             Load += addNewVisit_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView_patients).EndInit();
             ResumeLayout(false);

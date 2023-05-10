@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\Patient handling.Tests.csproj": {}
+    "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\Patient handling.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\Patient handling.Tests.csproj": {
+    "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\Patient handling.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\Patient handling.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\Patient handling.Tests.csproj",
         "projectName": "Patient handling.Tests",
-        "projectPath": "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\Patient handling.Tests.csproj",
-        "packagesPath": "C:\\Users\\kubax\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\obj\\",
+        "projectPath": "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\Patient handling.Tests.csproj",
+        "packagesPath": "C:\\Users\\R3F1N\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\kubax\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\R3F1N\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj": {
-                "projectPath": "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj"
+              "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj": {
+                "projectPath": "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj"
               }
             }
           }
@@ -81,24 +81,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj": {
+    "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj",
+        "projectUniqueName": "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj",
         "projectName": "Patient handling",
-        "projectPath": "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj",
-        "packagesPath": "C:\\Users\\kubax\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\obj\\",
+        "projectPath": "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj",
+        "packagesPath": "C:\\Users\\R3F1N\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\kubax\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\R3F1N\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -153,7 +153,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

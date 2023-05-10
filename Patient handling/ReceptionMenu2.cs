@@ -86,7 +86,7 @@ namespace Patient_handling
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ZarzadzanieWizytami zarzadzaniewizytami = new ZarzadzanieWizytami();
+            visitsManagement zarzadzaniewizytami = new visitsManagement();
             zarzadzaniewizytami.TopLevel = false;
             zarzadzaniewizytami.FormBorderStyle = FormBorderStyle.None;
             zarzadzaniewizytami.Dock = DockStyle.Fill;

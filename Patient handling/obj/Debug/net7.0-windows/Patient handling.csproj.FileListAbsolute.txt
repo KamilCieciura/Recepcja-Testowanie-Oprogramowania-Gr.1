@@ -37,3 +37,42 @@ C:\Users\kubax\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.
 C:\Users\kubax\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient_handling.CalenderAddNewVisit.resources
 C:\Users\kubax\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient_handling.UserControlBlank.resources
 C:\Users\kubax\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient_handling.UserControlday.resources
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\bin\Debug\net7.0-windows\Patient handling.exe
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\bin\Debug\net7.0-windows\Patient handling.deps.json
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\bin\Debug\net7.0-windows\Patient handling.runtimeconfig.json
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\bin\Debug\net7.0-windows\Patient handling.dll
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\bin\Debug\net7.0-windows\Patient handling.pdb
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\bin\Debug\net7.0-windows\PdfSharp.Charting.dll
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\bin\Debug\net7.0-windows\PdfSharp.dll
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\bin\Debug\net7.0-windows\System.Data.SqlClient.dll
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\bin\Debug\net7.0-windows\de\PdfSharp.Charting.resources.dll
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\bin\Debug\net7.0-windows\de\PdfSharp.resources.dll
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\bin\Debug\net7.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\bin\Debug\net7.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\bin\Debug\net7.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\bin\Debug\net7.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient handling.csproj.AssemblyReference.cache
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient_Handling.Form_add_patient.resources
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient_handling.addNewVisit.resources
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient_handling.CalenderAddNewVisit.resources
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient_Handling.Form_edit_patient.resources
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient_handling.EditAppointment.resources
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient_handling.Form_filter_data.resources
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient_handling.Form_reception_menu.resources
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient_handling.form_ReceptionMenu2.resources
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient_handling.UserControlBlank.resources
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient_handling.UserControlday.resources
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient_handling.form_visitDetails.resources
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient_handling.ZarzadzanieWizytami.resources
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient handling.csproj.GenerateResource.cache
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient handling.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient handling.AssemblyInfoInputs.cache
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient handling.AssemblyInfo.cs
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient handling.csproj.CoreCompileInputs.cache
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient handling.csproj.CopyComplete
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient handling.dll
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\refint\Patient handling.dll
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient handling.pdb
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\Patient handling.genruntimeconfig.cache
+C:\Users\R3F1N\Source\Repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling\obj\Debug\net7.0-windows\ref\Patient handling.dll

@@ -14,6 +14,9 @@ namespace Patient_handling
 {
     public partial class ZarzadzanieWizytami : Form
     {
+
+        public static string patientName, doctorName, date, hour;
+
         public string visitId { get; set; }
         public ZarzadzanieWizytami()
         {
@@ -113,12 +116,12 @@ namespace Patient_handling
             form_VisitDetails.BringToFront();
             form_VisitDetails.Show();
 
-            
 
- 
+
+
         }
 
-   
+
 
         private void button_cancel_visit_Click(object sender, EventArgs e)
         {
@@ -161,7 +164,7 @@ namespace Patient_handling
 
 
 
-          
+
 
             using (SqlConnection connection = new SqlConnection("Data Source=localhost;Initial Catalog=testowanie;Integrated Security=True;"))
             {
@@ -190,7 +193,7 @@ namespace Patient_handling
                     string condition1 = $"Date = '{selectedDate.ToString("yyyy-MM-dd")}' AND Time = '{selectedTime.ToString(@"hh\:mm\:ss")}' AND doctorid ='{doctorId}'";
 
                     databaseConnection3.UpdateDataInDatabase("CalendarEntity", columnNames1, columnValues1, condition1);
-            
+
                 }
             }
 
@@ -203,7 +206,7 @@ namespace Patient_handling
 
 
 
- 
+
         }
         private void button_Send_confirmation_Click(object sender, EventArgs e)
         {
@@ -229,9 +232,9 @@ namespace Patient_handling
             if (e.RowIndex >= 0)
             {
                 string visitId = dataGridView_lista_wizyt.Rows[e.RowIndex].Cells["ID"].Value.ToString();
-        
-                
-           
+
+
+
 
             }
 
@@ -244,5 +247,7 @@ namespace Patient_handling
                 UpdateTextBoxValues(selectedRow);
             }
         }
+
+
     }
 }

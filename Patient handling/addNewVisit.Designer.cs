@@ -64,6 +64,7 @@
             // 
             // dataGridView_patients
             // 
+            dataGridView_patients.AllowUserToAddRows = false;
             dataGridView_patients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_patients.EditMode = DataGridViewEditMode.EditProgrammatically;
             dataGridView_patients.Location = new Point(187, 3);

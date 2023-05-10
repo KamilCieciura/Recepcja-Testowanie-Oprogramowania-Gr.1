@@ -72,6 +72,12 @@ namespace Patient_handling
             DateTime dateTime = DateTime.Now;
             DateTime datetimevisit = (DateTime)dataGridView_patients.SelectedRows[0].Cells["Date"].Value;
 
+
+            if (comboBox_patinet_add.SelectedIndex < 0)
+            {
+                MessageBox.Show("please select a patient");
+            }
+
             if (datetimevisit < dateTime)
             {
                 MessageBox.Show("you can't add a visit with a date from the past");

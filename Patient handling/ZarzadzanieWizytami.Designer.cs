@@ -38,6 +38,7 @@
             // 
             // dataGridView_lista_wizyt
             // 
+            dataGridView_lista_wizyt.AllowUserToAddRows = false;
             dataGridView_lista_wizyt.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_lista_wizyt.Location = new Point(29, 65);
             dataGridView_lista_wizyt.Name = "dataGridView_lista_wizyt";

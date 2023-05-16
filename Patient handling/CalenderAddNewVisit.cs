@@ -28,20 +28,14 @@ namespace Patient_handling
 
 
         }
-        private void DisplayDay()
+        public void DisplayMonthCalendar()
         {
-            DateTime now = DateTime.Now;
+            dayContainer.Controls.Clear();
 
-            year = now.Year;
-            month = now.Month;
 
-            static_month = month.ToString();
-            static_year = year.ToString();
-
-            String Monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+            string Monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
 
             label_date.Text = Monthname + " " + year;
-
             DateTime startOfTheMonth = new DateTime(year, month, 1);
 
             int day = DateTime.DaysInMonth(year, month);
@@ -59,82 +53,41 @@ namespace Patient_handling
             for (int i = 1; i < day + 1; i++)
             {
                 UserControlday ucday = new UserControlday();
-                ucday.day(i);
+                ucday.day(i); //wielka litera
                 dayContainer.Controls.Add(ucday);
             }
+
+
+        }
+        private void DisplayDay()
+        {
+            DateTime now = DateTime.Now;
+
+            year = now.Year;
+            month = now.Month;
+
+            DisplayMonthCalendar();
+
 
         }
 
         private void button_next_Click(object sender, EventArgs e)
         {
-            try
-            {
-                dayContainer.Controls.Clear();
 
+            if (month == 12)
+            {
+                month = 1;
+                year++;
+            }
+            else 
+            {
                 month++;
                 static_month = month.ToString();
                 static_year = year.ToString();
-
-                String Monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
-
-                label_date.Text = Monthname + " " + year;
-                DateTime startOfTheMonth = new DateTime(year, month, 1);
-
-                int day = DateTime.DaysInMonth(year, month);
-
-                int dayOfTheWeek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d"));
-
-
-                for (int i = 0; i < dayOfTheWeek; i++)
-                {
-                    UserControlBlank ucblank = new UserControlBlank();
-                    dayContainer.Controls.Add(ucblank);
-
-                }
-
-                for (int i = 1; i < day + 1; i++)
-                {
-                    UserControlday ucday = new UserControlday();
-                    ucday.day(i);
-                    dayContainer.Controls.Add(ucday);
-                }
-
             }
-            catch (ArgumentOutOfRangeException)
-            {
-                year++;
 
-                dayContainer.Controls.Clear();
+            DisplayMonthCalendar();
 
-                month = 1;
-                static_month = month.ToString();
-                static_year = year.ToString();
-
-                String Monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
-
-                label_date.Text = Monthname + " " + year;
-                DateTime startOfTheMonth = new DateTime(year, month, 1);
-
-                int day = DateTime.DaysInMonth(year, month);
-
-                int dayOfTheWeek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d"));
-
-
-                for (int i = 0; i < dayOfTheWeek; i++)
-                {
-                    UserControlBlank ucblank = new UserControlBlank();
-                    dayContainer.Controls.Add(ucblank);
-
-                }
-
-                for (int i = 1; i < day + 1; i++)
-                {
-                    UserControlday ucday = new UserControlday();
-                    ucday.day(i);
-                    dayContainer.Controls.Add(ucday);
-                }
-
-            }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -149,74 +102,25 @@ namespace Patient_handling
 
         private void button_previous_Click(object sender, EventArgs e)
         {
-            try
+
+            if (month == 1)
             {
-                dayContainer.Controls.Clear();
-
-
-
+                month = 12;
+                year--;
+            }
+            else
+            {
                 month--;
                 static_month = month.ToString();
                 static_year = year.ToString();
-
-                String Monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
-
-                label_date.Text = Monthname + " " + year;
-                DateTime startOfTheMonth = new DateTime(year, month, 1);
-
-                int day = DateTime.DaysInMonth(year, month);
-
-                int dayOfTheWeek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d"));
-
-
-                for (int i = 0; i < dayOfTheWeek; i++)
-                {
-                    UserControlBlank ucblank = new UserControlBlank();
-                    dayContainer.Controls.Add(ucblank);
-
-                }
-
-                for (int i = 1; i < day + 1; i++)
-                {
-                    UserControlday ucday = new UserControlday();
-                    ucday.day(i);
-                    dayContainer.Controls.Add(ucday);
-                }
-
             }
-            catch (ArgumentOutOfRangeException)
-            {
-                year--;
-
-                month = 12;
-                static_month = month.ToString();
-                static_year = year.ToString();
-
-                String Monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
-
-                label_date.Text = Monthname + " " + year;
-                DateTime startOfTheMonth = new DateTime(year, month, 1);
-
-                int day = DateTime.DaysInMonth(year, month);
-
-                int dayOfTheWeek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d"));
 
 
-                for (int i = 0; i < dayOfTheWeek; i++)
-                {
-                    UserControlBlank ucblank = new UserControlBlank();
-                    dayContainer.Controls.Add(ucblank);
 
-                }
+            DisplayMonthCalendar();
 
-                for (int i = 1; i < day + 1; i++)
-                {
-                    UserControlday ucday = new UserControlday();
-                    ucday.day(i);
-                    dayContainer.Controls.Add(ucday);
-                }
 
-            }
+
         }
 
         private void label_date_Click(object sender, EventArgs e)

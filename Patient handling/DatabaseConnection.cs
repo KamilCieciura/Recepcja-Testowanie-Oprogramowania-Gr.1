@@ -31,14 +31,14 @@ namespace Patient_handling
                 {
                     connection.Open();
 
-                    string query = $"SELECT * FROM {tableName}"; // zapytanie SQL do odczytu danych z tabeli
+                    string query = $"SELECT * FROM {tableName}"; 
                     SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
                     DataTable dataTable = new DataTable();
                     dataAdapter.Fill(dataTable);
 
 
 
-                    dataGridView.DataSource = dataTable; // ustawienie źródła danych dla DataGridView
+                    dataGridView.DataSource = dataTable; 
 
                     connection.Close();
                 }

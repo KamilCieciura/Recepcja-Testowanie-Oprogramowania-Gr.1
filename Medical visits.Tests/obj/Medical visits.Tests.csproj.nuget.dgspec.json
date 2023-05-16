@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Medical visits.Tests\\Medical visits.Tests.csproj": {}
+    "C:\\Users\\tymso\\Desktop\\repa\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Medical visits.Tests\\Medical visits.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Medical visits.Tests\\Medical visits.Tests.csproj": {
+    "C:\\Users\\tymso\\Desktop\\repa\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Medical visits.Tests\\Medical visits.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Medical visits.Tests\\Medical visits.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\tymso\\Desktop\\repa\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Medical visits.Tests\\Medical visits.Tests.csproj",
         "projectName": "Medical visits.Tests",
-        "projectPath": "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Medical visits.Tests\\Medical visits.Tests.csproj",
-        "packagesPath": "C:\\Users\\R3F1N\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Medical visits.Tests\\obj\\",
+        "projectPath": "C:\\Users\\tymso\\Desktop\\repa\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Medical visits.Tests\\Medical visits.Tests.csproj",
+        "packagesPath": "C:\\Users\\tymso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tymso\\Desktop\\repa\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Medical visits.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\R3F1N\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tymso\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj": {
-                "projectPath": "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj"
+              "C:\\Users\\tymso\\Desktop\\repa\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj": {
+                "projectPath": "C:\\Users\\tymso\\Desktop\\repa\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj"
               }
             }
           }
@@ -85,20 +85,20 @@
         }
       }
     },
-    "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj": {
+    "C:\\Users\\tymso\\Desktop\\repa\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj",
+        "projectUniqueName": "C:\\Users\\tymso\\Desktop\\repa\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj",
         "projectName": "Patient handling",
-        "projectPath": "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj",
-        "packagesPath": "C:\\Users\\R3F1N\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\obj\\",
+        "projectPath": "C:\\Users\\tymso\\Desktop\\repa\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj",
+        "packagesPath": "C:\\Users\\tymso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tymso\\Desktop\\repa\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\R3F1N\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tymso\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

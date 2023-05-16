@@ -2804,23 +2804,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\R3F1N\\.nuget\\packages\\": {},
+    "C:\\Users\\tymso\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\Patient handling.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\tymso\\Desktop\\repa\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\Patient handling.Tests.csproj",
       "projectName": "Patient handling.Tests",
-      "projectPath": "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\Patient handling.Tests.csproj",
-      "packagesPath": "C:\\Users\\R3F1N\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\obj\\",
+      "projectPath": "C:\\Users\\tymso\\Desktop\\repa\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\Patient handling.Tests.csproj",
+      "packagesPath": "C:\\Users\\tymso\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tymso\\Desktop\\repa\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\R3F1N\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tymso\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2835,8 +2835,8 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj": {
-              "projectPath": "C:\\Users\\R3F1N\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj"
+            "C:\\Users\\tymso\\Desktop\\repa\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj": {
+              "projectPath": "C:\\Users\\tymso\\Desktop\\repa\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj"
             }
           }
         }
@@ -2893,7 +2893,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'PDFsharp 1.50.5147' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0-windows7.0'. This package may not be fully compatible with your project.",
+      "message": "Pakiet „PDFsharp 1.50.5147” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1” zamiast platformy docelowej projektu „net7.0-windows7.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
       "libraryId": "PDFsharp",
       "targetGraphs": [
         "net7.0-windows7.0"

@@ -8,4 +8,8 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Patient_handling.Tests
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\kubax\source\repos\KamilCieciura\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling.Tests\
+=======
+build_property.ProjectDir = C:\Users\tymso\Desktop\repa\Recepcja-Testowanie-Oprogramowania-Gr.1\Patient handling.Tests\
+>>>>>>> 9df92fd5d541e4a64aaa003d042739410d906416

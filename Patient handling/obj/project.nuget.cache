@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "FJos6FMqKlcwA9HQs4ctNoH2rmAkVqzDTWrlFMtrPkRUcXKku2ZpfUq15CvkC5BrWzqaZ/P47EUjrsaWJmmCnw==",
   "success": true,
   "projectFilePath": "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj",
@@ -14,6 +15,22 @@
     "C:\\Users\\kubax\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\system.data.sqlclient.4.8.5.nupkg.sha512",
     "C:\\Users\\kubax\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\kubax\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+=======
+  "dgSpecHash": "9AtncTydYSUg9ITNmSMC7jqB13tSSKfsuIVYK/+xHsplyGJ6MNpluVqm7AWWmYRB9vNUke+a8vzs0SDOE7zzgw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\tymso\\Desktop\\repa\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling\\Patient handling.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tymso\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\tymso\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\tymso\\.nuget\\packages\\pdfsharp\\1.50.5147\\pdfsharp.1.50.5147.nupkg.sha512",
+    "C:\\Users\\tymso\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\tymso\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\tymso\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\tymso\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\tymso\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\system.data.sqlclient.4.8.5.nupkg.sha512",
+    "C:\\Users\\tymso\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\tymso\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+>>>>>>> 9df92fd5d541e4a64aaa003d042739410d906416
   ],
   "logs": [
     {

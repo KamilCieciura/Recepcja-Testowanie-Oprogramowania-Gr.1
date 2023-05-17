@@ -19,7 +19,9 @@ namespace Patient_handling
         {
             InitializeComponent();
         }
+
         public static string static_month, static_year;
+        
         private void CalenderAddNewVisit_Load(object sender, EventArgs e)
         {
 
@@ -31,6 +33,7 @@ namespace Patient_handling
         public void DisplayMonthCalendar()
         {
             dayContainer.Controls.Clear();
+
 
 
             string Monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
@@ -53,10 +56,11 @@ namespace Patient_handling
             for (int i = 1; i < day + 1; i++)
             {
                 UserControlday ucday = new UserControlday();
-                ucday.day(i); //wielka litera
+                ucday.Day(i); 
                 dayContainer.Controls.Add(ucday);
             }
-
+            static_month = month.ToString();
+            static_year = year.ToString();
 
         }
         private void DisplayDay()
@@ -82,8 +86,7 @@ namespace Patient_handling
             else 
             {
                 month++;
-                static_month = month.ToString();
-                static_year = year.ToString();
+       
             }
 
             DisplayMonthCalendar();
@@ -111,8 +114,7 @@ namespace Patient_handling
             else
             {
                 month--;
-                static_month = month.ToString();
-                static_year = year.ToString();
+
             }
 
 

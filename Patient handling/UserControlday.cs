@@ -23,7 +23,7 @@ namespace Patient_handling
         {
 
         }
-        public void day(int numday)
+        public void Day(int numday)
         {
             labelday.Text = numday + "" ;
         }

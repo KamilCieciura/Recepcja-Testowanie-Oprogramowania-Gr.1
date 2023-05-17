@@ -2814,7 +2814,7 @@
       "projectName": "Patient handling.Tests",
       "projectPath": "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\Patient handling.Tests.csproj",
       "packagesPath": "C:\\Users\\kubax\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kubax\\Source\\Repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\obj\\",
+      "outputPath": "C:\\Users\\kubax\\source\\repos\\KamilCieciura\\Recepcja-Testowanie-Oprogramowania-Gr.1\\Patient handling.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

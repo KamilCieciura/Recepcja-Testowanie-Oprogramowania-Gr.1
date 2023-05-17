@@ -41,51 +41,55 @@
             // dateTimePicker_edit_appointment
             // 
             dateTimePicker_edit_appointment.Format = DateTimePickerFormat.Short;
-            dateTimePicker_edit_appointment.Location = new Point(12, 47);
+            dateTimePicker_edit_appointment.Location = new Point(14, 63);
+            dateTimePicker_edit_appointment.Margin = new Padding(3, 4, 3, 4);
             dateTimePicker_edit_appointment.Name = "dateTimePicker_edit_appointment";
-            dateTimePicker_edit_appointment.Size = new Size(146, 23);
+            dateTimePicker_edit_appointment.Size = new Size(166, 27);
             dateTimePicker_edit_appointment.TabIndex = 0;
             // 
             // comboBox_edit_apointment
             // 
             comboBox_edit_apointment.FormattingEnabled = true;
-            comboBox_edit_apointment.Location = new Point(12, 93);
+            comboBox_edit_apointment.Location = new Point(14, 124);
+            comboBox_edit_apointment.Margin = new Padding(3, 4, 3, 4);
             comboBox_edit_apointment.Name = "comboBox_edit_apointment";
-            comboBox_edit_apointment.Size = new Size(146, 23);
+            comboBox_edit_apointment.Size = new Size(166, 28);
             comboBox_edit_apointment.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(10, 29);
+            label1.Location = new Point(11, 39);
             label1.Name = "label1";
-            label1.Size = new Size(68, 15);
+            label1.Size = new Size(87, 20);
             label1.TabIndex = 2;
             label1.Text = "date of visit";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(10, 75);
+            label2.Location = new Point(11, 100);
             label2.Name = "label2";
-            label2.Size = new Size(105, 15);
+            label2.Size = new Size(131, 20);
             label2.TabIndex = 3;
             label2.Text = "Appointment time";
             // 
             // button_edit_appointment
             // 
-            button_edit_appointment.Location = new Point(12, 122);
+            button_edit_appointment.Location = new Point(14, 163);
+            button_edit_appointment.Margin = new Padding(3, 4, 3, 4);
             button_edit_appointment.Name = "button_edit_appointment";
-            button_edit_appointment.Size = new Size(66, 23);
+            button_edit_appointment.Size = new Size(75, 31);
             button_edit_appointment.TabIndex = 4;
             button_edit_appointment.Text = "Edit";
             button_edit_appointment.UseVisualStyleBackColor = true;
             // 
             // button_Cancel_edit
             // 
-            button_Cancel_edit.Location = new Point(83, 122);
+            button_Cancel_edit.Location = new Point(95, 163);
+            button_Cancel_edit.Margin = new Padding(3, 4, 3, 4);
             button_Cancel_edit.Name = "button_Cancel_edit";
-            button_Cancel_edit.Size = new Size(75, 23);
+            button_Cancel_edit.Size = new Size(86, 31);
             button_Cancel_edit.TabIndex = 5;
             button_Cancel_edit.Text = "Cancel";
             button_Cancel_edit.UseVisualStyleBackColor = true;
@@ -93,21 +97,23 @@
             // dataGridView_lista_wizyt
             // 
             dataGridView_lista_wizyt.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_lista_wizyt.Location = new Point(196, 12);
+            dataGridView_lista_wizyt.Location = new Point(224, 16);
+            dataGridView_lista_wizyt.Margin = new Padding(3, 4, 3, 4);
             dataGridView_lista_wizyt.MultiSelect = false;
             dataGridView_lista_wizyt.Name = "dataGridView_lista_wizyt";
             dataGridView_lista_wizyt.RowHeadersVisible = false;
+            dataGridView_lista_wizyt.RowHeadersWidth = 51;
             dataGridView_lista_wizyt.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridView_lista_wizyt.RowTemplate.Height = 25;
             dataGridView_lista_wizyt.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView_lista_wizyt.Size = new Size(500, 150);
+            dataGridView_lista_wizyt.Size = new Size(571, 200);
             dataGridView_lista_wizyt.TabIndex = 6;
             // 
             // EditAppointment
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(763, 226);
+            ClientSize = new Size(872, 301);
             Controls.Add(dataGridView_lista_wizyt);
             Controls.Add(button_Cancel_edit);
             Controls.Add(button_edit_appointment);
@@ -115,8 +121,9 @@
             Controls.Add(label1);
             Controls.Add(comboBox_edit_apointment);
             Controls.Add(dateTimePicker_edit_appointment);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "EditAppointment";
-            Text = "EditAppointment";
+            Text = "Edit appoitment";
             Load += EditAppointment_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView_lista_wizyt).EndInit();
             ResumeLayout(false);
